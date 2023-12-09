@@ -716,7 +716,7 @@ VALUES
 
 	-- Insert data into the Activity table with activityEndDate and activityFormat columns
 INSERT INTO
-    `unitydodb`.`activity` (
+    `unityDoDB`.`Activity` (
         `activityOwner`,
         `activityName`,
         `activityBriefDescription`,
