@@ -46,7 +46,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `unityDoDB`.`mainCategory`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `unityDoDB`.`mainCategory` ;
+DROP TABLE IF EXISTS `unity
+DoDB`.`mainCategory` ;
 
 CREATE TABLE IF NOT EXISTS `unityDoDB`.`mainCategory` (
   `mainCategoryId` INT NOT NULL auto_increment,
@@ -110,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`Activity` (
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Activity_Category1`
     FOREIGN KEY (`categoryId`)
-    REFERENCES `unityDoDB`.`Category` (`categoryId`)
+    REFERENCES `unityDoDB`.`category` (`categoryId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Activity_User1`
