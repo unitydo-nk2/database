@@ -1,15 +1,5 @@
-create database unityDoDB;
+create database IF NOT EXISTS unityDoDB DEFAULT CHARACTER SET utf8;
 use unityDoDB;
--- user
-DROP USER 'nk2'@'%';
-CREATE USER 'nk2'@'%' IDENTIFIED BY 'dreamtongphop';
-GRANT ALL PRIVILEGES ON unityDoDB.* TO 'nk2'@'%';
-FLUSH PRIVILEGES;
--- -----------------------------------------------------
--- Schema unityDoDB
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `unityDoDB` DEFAULT CHARACTER SET utf8 ;
-USE `unityDoDB` ;
 -- -----------------------------------------------------
 -- Table `unityDoDB`.`User`
 -- -----------------------------------------------------
@@ -366,6 +356,11 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`Validation` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+-- user
+DROP USER 'nk2'@'%';
+CREATE USER 'nk2'@'%' IDENTIFIED BY 'dreamtongphop';
+GRANT ALL PRIVILEGES ON unityDoDB.* TO 'nk2'@'%';
+FLUSH PRIVILEGES;
 INSERT INTO
     mainCategory (mainCategory)
 VALUES
