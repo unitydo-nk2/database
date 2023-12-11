@@ -107,7 +107,7 @@ CREATE TABLE `activityreview` (
   PRIMARY KEY (`activityReviewId`),
   KEY `fk_activityReview_Activity1_idx` (`activityId`),
   KEY `fk_activityReview_Users1_idx` (`userId`),
-  CONSTRAINT `fk_activityReview_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`),
+  CONSTRAINT `fk_activityReview_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`) ON DELETE CASCADE,
   CONSTRAINT `fk_activityReview_Users1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -192,7 +192,7 @@ CREATE TABLE `image` (
   `imagepath` varchar(300) NOT NULL,
   PRIMARY KEY (`imageId`),
   KEY `fk_image_Activity1_idx` (`activityId`),
-  CONSTRAINT `fk_image_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`)
+  CONSTRAINT `fk_image_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -294,7 +294,7 @@ CREATE TABLE `questiontitle` (
   `activityId` int DEFAULT NULL,
   PRIMARY KEY (`quetionId`),
   KEY `fk_questionTitle_Activity1_idx` (`activityId`),
-  CONSTRAINT `fk_questionTitle_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`)
+  CONSTRAINT `fk_questionTitle_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -326,7 +326,7 @@ CREATE TABLE `registration` (
   KEY `fk_Registeration_Activity1_idx` (`activityId`),
   KEY `fk_Registration_Activity1_idx` (`activityId`),
   KEY `fk_Registration_Users1_idx` (`userId`),
-  CONSTRAINT `fk_Registeration_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`),
+  CONSTRAINT `fk_Registeration_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`) ON DELETE CASCADE,
   CONSTRAINT `fk_Registeration_Users1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -355,7 +355,7 @@ CREATE TABLE `requirements` (
   PRIMARY KEY (`requirementId`),
   KEY `fk_requirements_Activity1_idx` (`activityId`),
   KEY `fk_requirements_medicalInfomation1_idx` (`medicalInfomation`),
-  CONSTRAINT `fk_requirements_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`),
+  CONSTRAINT `fk_requirements_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`) ON DELETE CASCADE,
   CONSTRAINT `fk_requirements_medicalInfomation1` FOREIGN KEY (`medicalInfomation`) REFERENCES `medicalinfomation` (`idmedicalInfomation`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -425,7 +425,7 @@ CREATE TABLE `useractivityhistory` (
   PRIMARY KEY (`activityHistoryId`),
   KEY `fk_activityHistory_Users1_idx` (`userId`),
   KEY `fk_activityHistory_Activity1_idx` (`activityId`),
-  CONSTRAINT `fk_activityHistory_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`),
+  CONSTRAINT `fk_activityHistory_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`) ON DELETE CASCADE,
   CONSTRAINT `fk_activityHistory_Users1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=271 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -482,7 +482,7 @@ CREATE TABLE `validation` (
   `validationRule` double NOT NULL,
   PRIMARY KEY (`validationId`),
   KEY `fk_Validation_Activity1_idx` (`activityId`),
-  CONSTRAINT `fk_Validation_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`)
+  CONSTRAINT `fk_Validation_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

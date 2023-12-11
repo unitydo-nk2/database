@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`Registration` (
   CONSTRAINT `fk_Registration_Activity1`
     FOREIGN KEY (`activityId`)
     REFERENCES `unityDoDB`.`Activity` (`activityId`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
@@ -162,7 +162,7 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`QuestionTitle` (
   CONSTRAINT `fk_questionTitle_Activity1`
     FOREIGN KEY (`activityId`)
     REFERENCES `unityDoDB`.`Activity` (`activityId`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
@@ -211,7 +211,7 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`userActivityHistory` (
   CONSTRAINT `fk_activityHistory_Activity1`
     FOREIGN KEY (`activityId`)
     REFERENCES `unityDoDB`.`Activity` (`activityId`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
@@ -232,7 +232,7 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`ActivityReview` (
   CONSTRAINT `fk_activityReview_Activity1`
     FOREIGN KEY (`activityId`)
     REFERENCES `unityDoDB`.`Activity` (`activityId`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_activityReview_Users1`
     FOREIGN KEY (`userId`)
@@ -292,7 +292,7 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`requirements` (
   CONSTRAINT `fk_requirements_Activity1`
     FOREIGN KEY (`activityId`)
     REFERENCES `unityDoDB`.`Activity` (`activityId`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_requirements_medicalInfomation1`
     FOREIGN KEY (`medicalInfomation`)
@@ -335,7 +335,7 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`image` (
   CONSTRAINT `fk_image_Activity1`
     FOREIGN KEY (`activityId`)
     REFERENCES `unityDoDB`.`Activity` (`activityId`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
@@ -354,7 +354,7 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`Validation` (
   CONSTRAINT `fk_Validation_Activity1`
     FOREIGN KEY (`activityId`)
     REFERENCES `unityDoDB`.`Activity` (`activityId`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 -- user
