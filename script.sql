@@ -304,18 +304,25 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `unityDoDB`.`activityFavorite`
 -- -----------------------------------------------------
+
 DROP TABLE IF EXISTS `unityDoDB`.`activityFavorite` ;
 
 CREATE TABLE IF NOT EXISTS `unityDoDB`.`activityFavorite` (
-  `activityFavoriteID` INT NOT NULL auto_increment,
-  `activityHistoryId` INT NOT NULL,
-  `isFavorite` TINYINT NOT NULL,
-  PRIMARY KEY (`activityFavoriteID`),
-  INDEX `fk_activityFavorite_ActivityHistory1_idx` (`activityHistoryId` ASC) VISIBLE,
-  CONSTRAINT `fk_activityFavorite_ActivityHistory1`
-    FOREIGN KEY (`activityHistoryId`)
-    REFERENCES `unityDoDB`.`userActivityHistory` (`activityHistoryId`)
+  `activityFavoriteId` INT NOT NULL auto_increment,
+  `userId` INT NOT NULL,
+  `activityId` INT NOT NULL,
+  PRIMARY KEY (`activityFavoriteId`),
+  INDEX `fk_activityFavorite_Users1_idx` (`userId` ASC) VISIBLE,
+  INDEX `fk_activityFavorite_Activity1_idx` (`activityId` ASC) VISIBLE,
+  CONSTRAINT `fk_activityFavorite_Users1`
+    FOREIGN KEY (`userId`)
+    REFERENCES `unityDoDB`.`User` (`userId`)
     ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_activityFavorite_Activity1`
+    FOREIGN KEY (`activityId`)
+    REFERENCES `unityDoDB`.`Activity` (`activityId`)
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
