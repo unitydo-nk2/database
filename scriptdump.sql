@@ -18,13 +18,13 @@ USE `unityDoDB`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Activity`
+-- Table structure for table `activity`
 --
 
-DROP TABLE IF EXISTS `Activity`;
+DROP TABLE IF EXISTS `activity`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Activity` (
+CREATE TABLE `activity` (
   `activityId` int NOT NULL AUTO_INCREMENT,
   `activityOwner` int NOT NULL,
   `activityName` varchar(150) NOT NULL,
@@ -50,268 +50,9 @@ CREATE TABLE `Activity` (
   KEY `fk_Activity_Category1_idx` (`categoryId`),
   KEY `fk_Activity_User1_idx` (`activityOwner`),
   CONSTRAINT `fk_Activity_Category1` FOREIGN KEY (`categoryId`) REFERENCES `category` (`categoryId`),
-  CONSTRAINT `fk_Activity_location1` FOREIGN KEY (`locationId`) REFERENCES `Location` (`locationId`),
-  CONSTRAINT `fk_Activity_User1` FOREIGN KEY (`activityOwner`) REFERENCES `User` (`userId`)
+  CONSTRAINT `fk_Activity_location1` FOREIGN KEY (`locationId`) REFERENCES `location` (`locationId`),
+  CONSTRAINT `fk_Activity_User1` FOREIGN KEY (`activityOwner`) REFERENCES `user` (`userId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Activity`
---
-
-LOCK TABLES `Activity` WRITE;
-/*!40000 ALTER TABLE `Activity` DISABLE KEYS */;
-INSERT INTO `Activity` VALUES (1,7,'Paint and Sip Night','Artistic expression with a twist','Join us for a creative evening of painting and sipping your favorite drinks.','2024-01-15 11:00:00','2024-01-15 15:00:00','2023-12-25 08:00:00','2024-01-10 11:00:00',20,10,'2023-12-15 03:00:00','Active',1,'Unleash your inner artist while enjoying a social atmosphere!',29,'2023-12-25 08:00:00','2023-12-25 08:00:00','onsite'),(2,2,'Photography Expedition','Capture the beauty of nature','Embark on a photography expedition to capture stunning landscapes and wildlife.','2024-02-20 01:00:00','2024-02-21 11:00:00','2024-02-01 07:00:00','2024-02-15 11:00:00',15,12,'2024-01-25 02:00:00','Active',1,'Discover the art of photography in the great outdoors!',24,'2024-02-01 07:00:00','2024-02-01 07:00:00','onsiteOverNight'),(3,6,'Cooking Masterclass','Culinary delights for everyone','Join our cooking masterclass to enhance your culinary skills and enjoy delicious dishes.','2024-03-10 09:30:00','2024-03-10 13:30:00','2024-02-20 03:00:00','2024-03-05 11:00:00',25,15,'2024-02-10 07:00:00','Active',1,'Become a master chef with our expert chefs!',30,'2024-02-20 03:00:00','2024-02-20 03:00:00','onsite'),(4,7,'Gardening Workshop','Connect with nature through gardening','Learn the art of gardening and cultivate your own green space at home.','2024-04-05 03:00:00','2024-04-05 08:00:00','2024-03-15 02:00:00','2024-03-30 11:00:00',0,14,'2024-03-01 07:00:00','Active',1,'Create your own garden oasis with our gardening experts!',23,'2024-03-15 02:00:00','2024-03-15 02:00:00','onsite'),(5,2,'Fitness Bootcamp','Get fit and stay active','Join our fitness bootcamp for a high-energy workout to achieve your fitness goals.','2024-05-15 00:00:00','2024-05-15 02:30:00','2024-03-31 23:00:00','2024-05-10 11:00:00',10,5,'2024-04-10 03:00:00','Active',1,'Transform your body with our dynamic fitness program!',15,'2024-03-31 23:00:00','2024-03-31 23:00:00','onsite'),(6,2,'Swimming Challenge','Dive into the fun','Join our swimming challenge for a day of aquatic excitement.','2023-04-20 07:00:00','2023-04-20 11:00:00','2023-03-10 02:00:00','2023-04-15 11:00:00',15,4,'2023-03-20 04:00:00','Active',1,'Compete and win prizes in our swimming contest!',17,'2023-03-10 02:00:00','2023-03-10 02:00:00','onsite'),(7,6,'Online Coding Bootcamp','Enhance your coding skills','Join our online coding bootcamp to boost your programming knowledge.','2023-06-01 11:00:00','2023-06-10 13:00:00','2023-05-15 03:00:00','2023-05-30 11:00:00',0,16,'2023-05-01 07:00:00','Active',1,'Level up your coding game with us!',12,'2023-05-15 03:00:00','2023-05-15 03:00:00','online'),(8,7,'Campfire and Stargazing','Experience the night sky','Join us for an overnight adventure with campfire and stargazing.','2023-07-15 12:00:00','2023-07-16 01:00:00','2023-06-25 08:00:00','2023-07-10 11:00:00',12,7,'2023-06-30 03:00:00','Active',1,'Connect with nature under the stars!',21,'2023-06-25 08:00:00','2023-06-25 08:00:00','onsiteOverNight'),(9,2,'Salsa Dance Workshop','Feel the rhythm','Join our one-day salsa dance workshop to spice up your dance moves.','2023-11-15 07:30:00','2023-11-15 11:00:00','2023-10-25 05:30:00','2023-11-10 11:00:00',10,6,'2023-11-01 03:00:00','Active',1,'Learn to dance to the vibrant beats!',28,'2023-10-25 05:30:00','2023-10-25 05:30:00','onsite'),(10,6,'Digital Art Webinar','Unleash your creativity','Participate in our online webinar to explore the world of digital art.','2023-12-05 09:00:00','2023-12-05 11:30:00','2023-11-20 07:00:00','2023-12-01 11:00:00',0,16,'2023-11-10 02:00:00','Active',1,'Discover the magic of digital art!',33,'2023-11-20 07:00:00','2023-11-20 07:00:00','online');
-/*!40000 ALTER TABLE `Activity` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ActivityReview`
---
-
-DROP TABLE IF EXISTS `ActivityReview`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `ActivityReview` (
-  `activityReviewId` int NOT NULL AUTO_INCREMENT,
-  `activityId` int NOT NULL,
-  `userId` int NOT NULL,
-  `score` int NOT NULL,
-  `reviewDescription` varchar(500) NOT NULL,
-  PRIMARY KEY (`activityReviewId`),
-  KEY `fk_activityReview_Activity1_idx` (`activityId`),
-  KEY `fk_activityReview_Users1_idx` (`userId`),
-  CONSTRAINT `fk_activityReview_Activity1` FOREIGN KEY (`activityId`) REFERENCES `Activity` (`activityId`) ON DELETE CASCADE,
-  CONSTRAINT `fk_activityReview_Users1` FOREIGN KEY (`userId`) REFERENCES `User` (`userId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `ActivityReview`
---
-
-LOCK TABLES `ActivityReview` WRITE;
-/*!40000 ALTER TABLE `ActivityReview` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ActivityReview` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `Answer`
---
-
-DROP TABLE IF EXISTS `Answer`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Answer` (
-  `answerId` int NOT NULL AUTO_INCREMENT,
-  `registrationId` int DEFAULT NULL,
-  `questionId` int NOT NULL,
-  `answer` varchar(400) NOT NULL,
-  PRIMARY KEY (`answerId`),
-  KEY `fk_answer_Registration1_idx` (`registrationId`),
-  KEY `fk_Answer_QuestionTitle1_idx` (`questionId`),
-  CONSTRAINT `fk_Answer_QuestionTitle1` FOREIGN KEY (`questionId`) REFERENCES `QuestionTitle` (`questionId`),
-  CONSTRAINT `fk_answer_Registration1` FOREIGN KEY (`registrationId`) REFERENCES `Registration` (`registrationId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Answer`
---
-
-LOCK TABLES `Answer` WRITE;
-/*!40000 ALTER TABLE `Answer` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Answer` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `Location`
---
-
-DROP TABLE IF EXISTS `Location`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Location` (
-  `locationId` int NOT NULL AUTO_INCREMENT,
-  `locationName` varchar(150) NOT NULL,
-  `googleMapLink` varchar(300) NOT NULL,
-  `locationLongitude` double NOT NULL,
-  `locationLatitude` double NOT NULL,
-  PRIMARY KEY (`locationId`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Location`
---
-
-LOCK TABLES `Location` WRITE;
-/*!40000 ALTER TABLE `Location` DISABLE KEYS */;
-INSERT INTO `Location` VALUES (1,'Doi Suthep Temple','https://maps.google.com/maps?q=Doi+Suthep+Temple,Chiang+Mai,Thailand',98.842499,18.804388),(2,'James Bond Island','https://maps.google.com/maps?q=James+Bond+Island,Phang+Nga,Thailand',98.529864,8.269304),(3,'Hua Hin Beach','https://maps.google.com/maps?q=Hua+Hin+Beach,Prachuap+Khiri+Khan,Thailand',99.956897,12.561806),(4,'Pai Canyon','https://maps.google.com/maps?q=Pai+Canyon,Mae+Hong+Son,Thailand',98.440406,19.365791),(5,'Ko Phi Phi Leh','https://maps.google.com/maps?q=Ko+Phi+Phi+Leh,Krabi,Thailand',98.764579,7.681415),(6,'Erawan National Park','https://maps.google.com/maps?q=Erawan+National+Park,Kanchanaburi,Thailand',99.2132,14.402426),(7,'Similan Islands','https://maps.google.com/maps?q=Similan+Islands,Phang+Nga,Thailand',97.645233,8.655676),(8,'Ko Samui','https://maps.google.com/maps?q=Ko+Samui,Surat+Thani,Thailand',100.06316,9.512017),(9,'Wat Rong Khun (White Temple)','https://maps.google.com/maps?q=Wat+Rong+Khun,Chiang+Rai,Thailand',99.779937,19.82428),(10,'Ko Tao','https://maps.google.com/maps?q=Ko+Tao,Surat+Thani,Thailand',99.840411,10.100359),(11,'Wat Pho','https://maps.google.com/maps?q=Wat+Pho,Bangkok,Thailand',100.493941,13.746703),(12,'Phuket Beach','https://maps.google.com/maps?q=Patong+Beach,Phuket,Thailand',98.293087,7.89568),(13,'Chiang Mai Old City','https://maps.google.com/maps?q=Chiang+Mai+Old+City,Chiang+Mai,Thailand',98.993685,18.785124),(14,'Krabi Railay Beach','https://maps.google.com/maps?q=Railay+Beach,Krabi,Thailand',98.838603,8.010108),(15,'Ayutthaya Historical Park','https://maps.google.com/maps?q=Ayutthaya,Historical+Park,Ayutthaya,Thailand',100.552113,14.361914),(16,'ZOOM','https://demo-zoomlink.com/',0,0);
-/*!40000 ALTER TABLE `Location` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `QuestionTitle`
---
-
-DROP TABLE IF EXISTS `QuestionTitle`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `QuestionTitle` (
-  `questionId` int NOT NULL,
-  `Question` varchar(100) NOT NULL,
-  `activityId` int DEFAULT NULL,
-  PRIMARY KEY (`questionId`),
-  KEY `fk_questionTitle_Activity1_idx` (`activityId`),
-  CONSTRAINT `fk_questionTitle_Activity1` FOREIGN KEY (`activityId`) REFERENCES `Activity` (`activityId`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `QuestionTitle`
---
-
-LOCK TABLES `QuestionTitle` WRITE;
-/*!40000 ALTER TABLE `QuestionTitle` DISABLE KEYS */;
-/*!40000 ALTER TABLE `QuestionTitle` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `Registration`
---
-
-DROP TABLE IF EXISTS `Registration`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Registration` (
-  `registrationId` int NOT NULL AUTO_INCREMENT,
-  `userId` int NOT NULL,
-  `registrationDate` datetime NOT NULL,
-  `status` enum('registered','selected','confirmed','success','review') NOT NULL,
-  `activityId` int NOT NULL,
-  PRIMARY KEY (`registrationId`),
-  UNIQUE KEY `registrationId_UNIQUE` (`registrationId`),
-  KEY `fk_Registration_Users1_idx` (`userId`),
-  KEY `fk_Registration_Activity1_idx` (`activityId`),
-  CONSTRAINT `fk_Registration_Activity1` FOREIGN KEY (`activityId`) REFERENCES `Activity` (`activityId`) ON DELETE CASCADE,
-  CONSTRAINT `fk_Registration_Users1` FOREIGN KEY (`userId`) REFERENCES `User` (`userId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Registration`
---
-
-LOCK TABLES `Registration` WRITE;
-/*!40000 ALTER TABLE `Registration` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Registration` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `User`
---
-
-DROP TABLE IF EXISTS `User`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `User` (
-  `userId` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(100) NOT NULL,
-  `password` varchar(250) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `surName` varchar(100) NOT NULL,
-  `nickName` varchar(70) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `gender` varchar(50) NOT NULL,
-  `dateOfBirth` date NOT NULL,
-  `religion` varchar(50) NOT NULL,
-  `telephoneNumber` varchar(50) NOT NULL,
-  `address` varchar(400) NOT NULL,
-  `role` enum('user','activityOwner','admin') NOT NULL,
-  `emergencyPhoneNumber` varchar(45) NOT NULL,
-  `profileImg` varchar(300) DEFAULT NULL,
-  `line` varchar(100) DEFAULT NULL,
-  `instagram` varchar(100) DEFAULT NULL,
-  `x` varchar(100) DEFAULT NULL,
-  `createTime` timestamp NOT NULL,
-  `updateTime` timestamp NOT NULL,
-  PRIMARY KEY (`userId`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `User`
---
-
-LOCK TABLES `User` WRITE;
-/*!40000 ALTER TABLE `User` DISABLE KEYS */;
-INSERT INTO `User` VALUES (1,'user1','password123','John','Doe','JD123','john.doe@email.com','Male','1990-05-15','Christian','+1234567890','123 Main St, City, Country','user','+0987654321','profile1.jpg','john_doe_line','john_doe_instagram','john_doe_x','2023-10-09 07:50:00','2023-10-09 07:50:00'),(2,'user2','password456','Jane','Smith','JS456','jane.smith@email.com','Female','1985-08-20','Buddhist','+9876543210','456 Elm St, City, Country','activityOwner','+1234509876','profile2.jpg','jane_smith_line','jane_smith_instagram','jane_smith_x','2023-10-09 07:50:00','2023-10-09 07:50:00'),(3,'admin1','adminpassword','Admin','User','Admin123','admin@email.com','Other','1970-01-01','None','+1111111111','789 Oak St, City, Country','admin','+2222222222','admin_profile.jpg','admin_line','admin_instagram','admin_x','2023-10-09 07:50:00','2023-10-09 07:50:00'),(4,'user3','userpass123','Alice','Johnson','AJ123','alice@email.com','Female','1995-03-10','Hindu','+3333333333','789 Elm St, City, Country','user','+3333333333','alice_profile.jpg','alice_line','alice_instagram','alice_x','2023-01-15 05:30:00','2023-01-15 05:30:00'),(5,'user4','userpass456','Bob','Williams','BW456','bob@email.com','Male','1988-11-25','Atheist','+4444444444','123 Oak St, City, Country','user','+4444444444','bob_profile.jpg','bob_line','bob_instagram','bob_x','2023-01-16 02:45:00','2023-01-16 02:45:00'),(6,'activityOwner1','activitypass123','Sarah','Miller','SM123','sarah@email.com','Female','1980-07-05','Jewish','+5555555555','456 Pine St, City, Country','activityOwner','+5555555555','sarah_profile.jpg','sarah_line','sarah_instagram','sarah_x','2023-01-17 07:20:00','2023-01-17 07:20:00'),(7,'activityOwner2','activitypass456','Michael','Brown','MB456','michael@email.com','Male','1982-04-12','Christian','+6666666666','789 Maple St, City, Country','activityOwner','+6666666666','michael_profile.jpg','michael_line','michael_instagram','michael_x','2023-01-18 11:10:00','2023-01-18 11:10:00'),(8,'admin2','adminpassword2','Admin','User2','Admin234','admin2@email.com','Other','1975-02-15','None','+7777777777','456 Cedar St, City, Country','admin','+7777777777','admin2_profile.jpg','admin2_line','admin2_instagram','admin2_x','2023-01-19 14:05:00','2023-01-19 14:05:00');
-/*!40000 ALTER TABLE `User` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `Validation`
---
-
-DROP TABLE IF EXISTS `Validation`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Validation` (
-  `validationId` int NOT NULL AUTO_INCREMENT,
-  `activityId` int NOT NULL,
-  `validationType` enum('QRCode','stepCounter','GPS','heartRate','distanceCal') DEFAULT NULL,
-  `validationRule` double NOT NULL,
-  PRIMARY KEY (`validationId`),
-  KEY `fk_Validation_Activity1_idx` (`activityId`),
-  CONSTRAINT `fk_Validation_Activity1` FOREIGN KEY (`activityId`) REFERENCES `Activity` (`activityId`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Validation`
---
-
-LOCK TABLES `Validation` WRITE;
-/*!40000 ALTER TABLE `Validation` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Validation` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `activity`
---
-
-DROP TABLE IF EXISTS `activity`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `activity` (
-  `activityId` int NOT NULL AUTO_INCREMENT,
-  `activityBriefDescription` varchar(100) NOT NULL,
-  `activityDate` datetime(6) NOT NULL,
-  `activityDescription` varchar(300) NOT NULL,
-  `activityEndDate` datetime(6) NOT NULL,
-  `activityFormat` varchar(255) NOT NULL,
-  `activityName` varchar(150) NOT NULL,
-  `activityStatus` varchar(255) NOT NULL,
-  `amount` int NOT NULL,
-  `announcementDate` datetime(6) NOT NULL,
-  `createTime` datetime(6) NOT NULL,
-  `isGamification` int NOT NULL,
-  `lastUpdate` datetime(6) NOT NULL,
-  `registerEndDate` datetime(6) NOT NULL,
-  `registerStartDate` datetime(6) NOT NULL,
-  `suggestionNotes` varchar(500) DEFAULT NULL,
-  `activityOwner` int NOT NULL,
-  `categoryId` int NOT NULL,
-  `locationId` int DEFAULT NULL,
-  PRIMARY KEY (`activityId`),
-  KEY `fk_Activity_location1_idx` (`locationId`),
-  KEY `fk_Activity_Category1_idx` (`categoryId`),
-  KEY `fk_Activity_User1_idx` (`activityOwner`),
-  CONSTRAINT `FKi9ew92oxsbav43x9tcstlyli9` FOREIGN KEY (`activityOwner`) REFERENCES `user` (`userId`),
-  CONSTRAINT `FKl9gpm37q076bxcinvxwjuteoi` FOREIGN KEY (`categoryId`) REFERENCES `category` (`categoryId`),
-  CONSTRAINT `FKn2gujgjn8s0fo916v8n486tbc` FOREIGN KEY (`locationId`) REFERENCES `location` (`locationId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -320,6 +61,7 @@ CREATE TABLE `activity` (
 
 LOCK TABLES `activity` WRITE;
 /*!40000 ALTER TABLE `activity` DISABLE KEYS */;
+INSERT INTO `activity` VALUES (1,7,'Paint and Sip Night','Artistic expression with a twist','Join us for a creative evening of painting and sipping your favorite drinks.','2024-01-15 11:00:00','2024-01-15 15:00:00','2023-12-25 08:00:00','2024-01-10 11:00:00',20,10,'2023-12-15 03:00:00','Active',1,'Unleash your inner artist while enjoying a social atmosphere!',29,'2023-12-25 08:00:00','2023-12-25 08:00:00','onsite'),(2,2,'Photography Expedition','Capture the beauty of nature','Embark on a photography expedition to capture stunning landscapes and wildlife.','2024-02-20 01:00:00','2024-02-21 11:00:00','2024-02-01 07:00:00','2024-02-15 11:00:00',15,12,'2024-01-25 02:00:00','Active',1,'Discover the art of photography in the great outdoors!',24,'2024-02-01 07:00:00','2024-02-01 07:00:00','onsiteOverNight'),(3,6,'Cooking Masterclass','Culinary delights for everyone','Join our cooking masterclass to enhance your culinary skills and enjoy delicious dishes.','2024-03-10 09:30:00','2024-03-10 13:30:00','2024-02-20 03:00:00','2024-03-05 11:00:00',25,15,'2024-02-10 07:00:00','Active',1,'Become a master chef with our expert chefs!',30,'2024-02-20 03:00:00','2024-02-20 03:00:00','onsite'),(4,7,'Gardening Workshop','Connect with nature through gardening','Learn the art of gardening and cultivate your own green space at home.','2024-04-05 03:00:00','2024-04-05 08:00:00','2024-03-15 02:00:00','2024-03-30 11:00:00',0,14,'2024-03-01 07:00:00','Active',1,'Create your own garden oasis with our gardening experts!',23,'2024-03-15 02:00:00','2024-03-15 02:00:00','onsite'),(5,2,'Fitness Bootcamp','Get fit and stay active','Join our fitness bootcamp for a high-energy workout to achieve your fitness goals.','2024-05-15 00:00:00','2024-05-15 02:30:00','2024-03-31 23:00:00','2024-05-10 11:00:00',10,5,'2024-04-10 03:00:00','Active',1,'Transform your body with our dynamic fitness program!',15,'2024-03-31 23:00:00','2024-03-31 23:00:00','onsite'),(6,2,'Swimming Challenge','Dive into the fun','Join our swimming challenge for a day of aquatic excitement.','2023-04-20 07:00:00','2023-04-20 11:00:00','2023-03-10 02:00:00','2023-04-15 11:00:00',15,4,'2023-03-20 04:00:00','Active',1,'Compete and win prizes in our swimming contest!',17,'2023-03-10 02:00:00','2023-03-10 02:00:00','onsite'),(7,6,'Online Coding Bootcamp','Enhance your coding skills','Join our online coding bootcamp to boost your programming knowledge.','2023-06-01 11:00:00','2023-06-10 13:00:00','2023-05-15 03:00:00','2023-05-30 11:00:00',0,16,'2023-05-01 07:00:00','Active',1,'Level up your coding game with us!',12,'2023-05-15 03:00:00','2023-05-15 03:00:00','online'),(8,7,'Campfire and Stargazing','Experience the night sky','Join us for an overnight adventure with campfire and stargazing.','2023-07-15 12:00:00','2023-07-16 01:00:00','2023-06-25 08:00:00','2023-07-10 11:00:00',12,7,'2023-06-30 03:00:00','Active',1,'Connect with nature under the stars!',21,'2023-06-25 08:00:00','2023-06-25 08:00:00','onsiteOverNight'),(9,2,'Salsa Dance Workshop','Feel the rhythm','Join our one-day salsa dance workshop to spice up your dance moves.','2023-11-15 07:30:00','2023-11-15 11:00:00','2023-10-25 05:30:00','2023-11-10 11:00:00',10,6,'2023-11-01 03:00:00','Active',1,'Learn to dance to the vibrant beats!',28,'2023-10-25 05:30:00','2023-10-25 05:30:00','onsite'),(10,6,'Digital Art Webinar','Unleash your creativity','Participate in our online webinar to explore the world of digital art.','2023-12-05 09:00:00','2023-12-05 11:30:00','2023-11-20 07:00:00','2023-12-01 11:00:00',0,16,'2023-11-10 02:00:00','Active',1,'Discover the magic of digital art!',33,'2023-11-20 07:00:00','2023-11-20 07:00:00','online');
 /*!40000 ALTER TABLE `activity` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -337,8 +79,8 @@ CREATE TABLE `activityFavorite` (
   PRIMARY KEY (`activityFavoriteId`),
   KEY `fk_activityFavorite_Users1_idx` (`userId`),
   KEY `fk_activityFavorite_Activity1_idx` (`activityId`),
-  CONSTRAINT `fk_activityFavorite_Activity1` FOREIGN KEY (`activityId`) REFERENCES `Activity` (`activityId`) ON DELETE CASCADE,
-  CONSTRAINT `fk_activityFavorite_Users1` FOREIGN KEY (`userId`) REFERENCES `User` (`userId`)
+  CONSTRAINT `fk_activityFavorite_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`) ON DELETE CASCADE,
+  CONSTRAINT `fk_activityFavorite_Users1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -352,61 +94,33 @@ LOCK TABLES `activityFavorite` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `activityfavorite`
+-- Table structure for table `activityReview`
 --
 
-DROP TABLE IF EXISTS `activityfavorite`;
+DROP TABLE IF EXISTS `activityReview`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `activityfavorite` (
-  `activityFavoriteId` int NOT NULL AUTO_INCREMENT,
-  `activityId` int NOT NULL,
-  `userId` int NOT NULL,
-  PRIMARY KEY (`activityFavoriteId`),
-  KEY `fk_activityFavorite_Users1_idx` (`userId`),
-  KEY `fk_activityFavorite_Activity1_idx` (`activityId`),
-  CONSTRAINT `FK3nekstbuyo1sxfs7h23upqjrr` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`),
-  CONSTRAINT `FKbx96opv7e4689lrohjml61hal` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `activityfavorite`
---
-
-LOCK TABLES `activityfavorite` WRITE;
-/*!40000 ALTER TABLE `activityfavorite` DISABLE KEYS */;
-/*!40000 ALTER TABLE `activityfavorite` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `activityreview`
---
-
-DROP TABLE IF EXISTS `activityreview`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `activityreview` (
+CREATE TABLE `activityReview` (
   `activityReviewId` int NOT NULL AUTO_INCREMENT,
-  `reviewDescription` varchar(500) NOT NULL,
-  `score` int NOT NULL,
   `activityId` int NOT NULL,
   `userId` int NOT NULL,
+  `score` int NOT NULL,
+  `reviewDescription` varchar(500) NOT NULL,
   PRIMARY KEY (`activityReviewId`),
-  KEY `fk_activityReview_Users1_idx` (`userId`),
   KEY `fk_activityReview_Activity1_idx` (`activityId`),
-  CONSTRAINT `FK89cifnkh60koaincr5lvcqplr` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`),
-  CONSTRAINT `FKi6w5hi97dhex42d7iwi5nhwwb` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`)
+  KEY `fk_activityReview_Users1_idx` (`userId`),
+  CONSTRAINT `fk_activityReview_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`) ON DELETE CASCADE,
+  CONSTRAINT `fk_activityReview_Users1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `activityreview`
+-- Dumping data for table `activityReview`
 --
 
-LOCK TABLES `activityreview` WRITE;
-/*!40000 ALTER TABLE `activityreview` DISABLE KEYS */;
-/*!40000 ALTER TABLE `activityreview` ENABLE KEYS */;
+LOCK TABLES `activityReview` WRITE;
+/*!40000 ALTER TABLE `activityReview` DISABLE KEYS */;
+/*!40000 ALTER TABLE `activityReview` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -418,14 +132,14 @@ DROP TABLE IF EXISTS `answer`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `answer` (
   `answerId` int NOT NULL AUTO_INCREMENT,
-  `answer` varchar(400) NOT NULL,
-  `questionId` int NOT NULL,
   `registrationId` int DEFAULT NULL,
+  `questionId` int NOT NULL,
+  `answer` varchar(400) NOT NULL,
   PRIMARY KEY (`answerId`),
-  KEY `fk_answer_Registeration1_idx` (`registrationId`),
+  KEY `fk_answer_Registration1_idx` (`registrationId`),
   KEY `fk_Answer_QuestionTitle1_idx` (`questionId`),
-  CONSTRAINT `FKefht3a9g4ovh0yb4ii1l0yby5` FOREIGN KEY (`registrationId`) REFERENCES `registration` (`registrationId`),
-  CONSTRAINT `FKegibbaprs2c3ih9xgk4nhhpng` FOREIGN KEY (`questionId`) REFERENCES `questiontitle` (`quetionId`)
+  CONSTRAINT `fk_Answer_QuestionTitle1` FOREIGN KEY (`questionId`) REFERENCES `questionTitle` (`questionId`),
+  CONSTRAINT `fk_answer_Registration1` FOREIGN KEY (`registrationId`) REFERENCES `registration` (`registrationId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -480,7 +194,7 @@ CREATE TABLE `image` (
   `imagepath` varchar(300) NOT NULL,
   PRIMARY KEY (`imageId`),
   KEY `fk_image_Activity1_idx` (`activityId`),
-  CONSTRAINT `fk_image_Activity1` FOREIGN KEY (`activityId`) REFERENCES `Activity` (`activityId`) ON DELETE CASCADE
+  CONSTRAINT `fk_image_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -502,12 +216,12 @@ DROP TABLE IF EXISTS `location`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `location` (
   `locationId` int NOT NULL AUTO_INCREMENT,
-  `googleMapLink` varchar(300) NOT NULL,
-  `locationLatitude` double NOT NULL,
-  `locationLongitude` double NOT NULL,
   `locationName` varchar(150) NOT NULL,
+  `googleMapLink` varchar(300) NOT NULL,
+  `locationLongitude` double NOT NULL,
+  `locationLatitude` double NOT NULL,
   PRIMARY KEY (`locationId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -516,6 +230,7 @@ CREATE TABLE `location` (
 
 LOCK TABLES `location` WRITE;
 /*!40000 ALTER TABLE `location` DISABLE KEYS */;
+INSERT INTO `location` VALUES (1,'Doi Suthep Temple','https://maps.google.com/maps?q=Doi+Suthep+Temple,Chiang+Mai,Thailand',98.842499,18.804388),(2,'James Bond Island','https://maps.google.com/maps?q=James+Bond+Island,Phang+Nga,Thailand',98.529864,8.269304),(3,'Hua Hin Beach','https://maps.google.com/maps?q=Hua+Hin+Beach,Prachuap+Khiri+Khan,Thailand',99.956897,12.561806),(4,'Pai Canyon','https://maps.google.com/maps?q=Pai+Canyon,Mae+Hong+Son,Thailand',98.440406,19.365791),(5,'Ko Phi Phi Leh','https://maps.google.com/maps?q=Ko+Phi+Phi+Leh,Krabi,Thailand',98.764579,7.681415),(6,'Erawan National Park','https://maps.google.com/maps?q=Erawan+National+Park,Kanchanaburi,Thailand',99.2132,14.402426),(7,'Similan Islands','https://maps.google.com/maps?q=Similan+Islands,Phang+Nga,Thailand',97.645233,8.655676),(8,'Ko Samui','https://maps.google.com/maps?q=Ko+Samui,Surat+Thani,Thailand',100.06316,9.512017),(9,'Wat Rong Khun (White Temple)','https://maps.google.com/maps?q=Wat+Rong+Khun,Chiang+Rai,Thailand',99.779937,19.82428),(10,'Ko Tao','https://maps.google.com/maps?q=Ko+Tao,Surat+Thani,Thailand',99.840411,10.100359),(11,'Wat Pho','https://maps.google.com/maps?q=Wat+Pho,Bangkok,Thailand',100.493941,13.746703),(12,'Phuket Beach','https://maps.google.com/maps?q=Patong+Beach,Phuket,Thailand',98.293087,7.89568),(13,'Chiang Mai Old City','https://maps.google.com/maps?q=Chiang+Mai+Old+City,Chiang+Mai,Thailand',98.993685,18.785124),(14,'Krabi Railay Beach','https://maps.google.com/maps?q=Railay+Beach,Krabi,Thailand',98.838603,8.010108),(15,'Ayutthaya Historical Park','https://maps.google.com/maps?q=Ayutthaya,Historical+Park,Ayutthaya,Thailand',100.552113,14.361914),(16,'ZOOM','https://demo-zoomlink.com/',0,0);
 /*!40000 ALTER TABLE `location` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -545,30 +260,6 @@ INSERT INTO `mainCategory` VALUES (1,'Volunteers',NULL),(2,'Education',NULL),(3,
 UNLOCK TABLES;
 
 --
--- Table structure for table `maincategory`
---
-
-DROP TABLE IF EXISTS `maincategory`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `maincategory` (
-  `mainCategoryId` int NOT NULL AUTO_INCREMENT,
-  `description` varchar(300) DEFAULT NULL,
-  `mainCategory` varchar(100) NOT NULL,
-  PRIMARY KEY (`mainCategoryId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `maincategory`
---
-
-LOCK TABLES `maincategory` WRITE;
-/*!40000 ALTER TABLE `maincategory` DISABLE KEYS */;
-/*!40000 ALTER TABLE `maincategory` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `medicalInfomation`
 --
 
@@ -593,53 +284,29 @@ LOCK TABLES `medicalInfomation` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `medicalinfomation`
+-- Table structure for table `questionTitle`
 --
 
-DROP TABLE IF EXISTS `medicalinfomation`;
+DROP TABLE IF EXISTS `questionTitle`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `medicalinfomation` (
-  `idmedicalInfomation` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(150) NOT NULL,
-  `type` varchar(255) NOT NULL,
-  PRIMARY KEY (`idmedicalInfomation`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `medicalinfomation`
---
-
-LOCK TABLES `medicalinfomation` WRITE;
-/*!40000 ALTER TABLE `medicalinfomation` DISABLE KEYS */;
-/*!40000 ALTER TABLE `medicalinfomation` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `questiontitle`
---
-
-DROP TABLE IF EXISTS `questiontitle`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `questiontitle` (
-  `quetionId` int NOT NULL,
+CREATE TABLE `questionTitle` (
+  `questionId` int NOT NULL,
   `Question` varchar(100) NOT NULL,
   `activityId` int DEFAULT NULL,
-  PRIMARY KEY (`quetionId`),
+  PRIMARY KEY (`questionId`),
   KEY `fk_questionTitle_Activity1_idx` (`activityId`),
-  CONSTRAINT `FK77ven2dfgwpkg5mcnodcmq2u8` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`)
+  CONSTRAINT `fk_questionTitle_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `questiontitle`
+-- Dumping data for table `questionTitle`
 --
 
-LOCK TABLES `questiontitle` WRITE;
-/*!40000 ALTER TABLE `questiontitle` DISABLE KEYS */;
-/*!40000 ALTER TABLE `questiontitle` ENABLE KEYS */;
+LOCK TABLES `questionTitle` WRITE;
+/*!40000 ALTER TABLE `questionTitle` DISABLE KEYS */;
+/*!40000 ALTER TABLE `questionTitle` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -651,15 +318,16 @@ DROP TABLE IF EXISTS `registration`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `registration` (
   `registrationId` int NOT NULL AUTO_INCREMENT,
-  `registrationDate` datetime(6) NOT NULL,
-  `status` tinytext NOT NULL,
-  `activityId` int NOT NULL,
   `userId` int NOT NULL,
+  `registrationDate` datetime NOT NULL,
+  `status` enum('registered','selected','confirmed','success','review') NOT NULL,
+  `activityId` int NOT NULL,
   PRIMARY KEY (`registrationId`),
-  KEY `fk_Registration_Activity1_idx` (`activityId`),
+  UNIQUE KEY `registrationId_UNIQUE` (`registrationId`),
   KEY `fk_Registration_Users1_idx` (`userId`),
-  CONSTRAINT `FKoxv6bw8ee44mgngbw1dlce71q` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`),
-  CONSTRAINT `FKr9rglxsxkestmkk17g5s1t4e7` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`)
+  KEY `fk_Registration_Activity1_idx` (`activityId`),
+  CONSTRAINT `fk_Registration_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`) ON DELETE CASCADE,
+  CONSTRAINT `fk_Registration_Users1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -686,7 +354,7 @@ CREATE TABLE `requirements` (
   PRIMARY KEY (`requirementId`),
   KEY `fk_requirements_Activity1_idx` (`activityId`),
   KEY `fk_requirements_medicalInfomation1_idx` (`medicalInfomation`),
-  CONSTRAINT `fk_requirements_Activity1` FOREIGN KEY (`activityId`) REFERENCES `Activity` (`activityId`) ON DELETE CASCADE,
+  CONSTRAINT `fk_requirements_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`) ON DELETE CASCADE,
   CONSTRAINT `fk_requirements_medicalInfomation1` FOREIGN KEY (`medicalInfomation`) REFERENCES `medicalInfomation` (`idmedicalInfomation`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -709,27 +377,27 @@ DROP TABLE IF EXISTS `user`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user` (
   `userId` int NOT NULL AUTO_INCREMENT,
-  `address` varchar(400) NOT NULL,
-  `createTime` datetime(6) NOT NULL,
-  `dateOfBirth` date NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `emergencyPhoneNumber` varchar(45) NOT NULL,
-  `gender` varchar(50) NOT NULL,
-  `instagram` varchar(100) DEFAULT NULL,
-  `line` varchar(100) DEFAULT NULL,
-  `name` varchar(100) NOT NULL,
-  `nickName` varchar(70) NOT NULL,
-  `password` varchar(250) NOT NULL,
-  `profileImg` varchar(300) DEFAULT NULL,
-  `religion` varchar(50) NOT NULL,
-  `role` varchar(255) NOT NULL,
-  `surName` varchar(100) NOT NULL,
-  `telephoneNumber` varchar(50) NOT NULL,
-  `updateTime` datetime(6) NOT NULL,
   `username` varchar(100) NOT NULL,
+  `password` varchar(250) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `surName` varchar(100) NOT NULL,
+  `nickName` varchar(70) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `gender` varchar(50) NOT NULL,
+  `dateOfBirth` date NOT NULL,
+  `religion` varchar(50) NOT NULL,
+  `telephoneNumber` varchar(50) NOT NULL,
+  `address` varchar(400) NOT NULL,
+  `role` enum('user','activityOwner','admin') NOT NULL,
+  `emergencyPhoneNumber` varchar(45) NOT NULL,
+  `profileImg` varchar(300) DEFAULT NULL,
+  `line` varchar(100) DEFAULT NULL,
+  `instagram` varchar(100) DEFAULT NULL,
   `x` varchar(100) DEFAULT NULL,
+  `createTime` timestamp NOT NULL,
+  `updateTime` timestamp NOT NULL,
   PRIMARY KEY (`userId`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -738,7 +406,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'11/12','2024-02-18 19:41:22.826666','2002-08-29','popandtamama@gmail.com','0918017549','male',NULL,NULL,'siraphop','phop','$argon2id$v=19$m=16,t=2,p=1$YA8j6HqKlryteJF6/XWC8w$seiKZ+7+TlJhagJruQ8fLYdvp1NHjctonvgLcuk',NULL,'Christianity','User','pattaragatewit','0918017549','2024-02-18 19:41:22.826666','popandtamama@gmail.com',NULL);
+INSERT INTO `user` VALUES (1,'user1','password123','John','Doe','JD123','john.doe@email.com','Male','1990-05-15','Christian','+1234567890','123 Main St, City, Country','user','+0987654321','profile1.jpg','john_doe_line','john_doe_instagram','john_doe_x','2023-10-09 07:50:00','2023-10-09 07:50:00'),(2,'user2','password456','Jane','Smith','JS456','jane.smith@email.com','Female','1985-08-20','Buddhist','+9876543210','456 Elm St, City, Country','activityOwner','+1234509876','profile2.jpg','jane_smith_line','jane_smith_instagram','jane_smith_x','2023-10-09 07:50:00','2023-10-09 07:50:00'),(3,'admin1','adminpassword','Admin','User','Admin123','admin@email.com','Other','1970-01-01','None','+1111111111','789 Oak St, City, Country','admin','+2222222222','admin_profile.jpg','admin_line','admin_instagram','admin_x','2023-10-09 07:50:00','2023-10-09 07:50:00'),(4,'user3','userpass123','Alice','Johnson','AJ123','alice@email.com','Female','1995-03-10','Hindu','+3333333333','789 Elm St, City, Country','user','+3333333333','alice_profile.jpg','alice_line','alice_instagram','alice_x','2023-01-15 05:30:00','2023-01-15 05:30:00'),(5,'user4','userpass456','Bob','Williams','BW456','bob@email.com','Male','1988-11-25','Atheist','+4444444444','123 Oak St, City, Country','user','+4444444444','bob_profile.jpg','bob_line','bob_instagram','bob_x','2023-01-16 02:45:00','2023-01-16 02:45:00'),(6,'activityOwner1','activitypass123','Sarah','Miller','SM123','sarah@email.com','Female','1980-07-05','Jewish','+5555555555','456 Pine St, City, Country','activityOwner','+5555555555','sarah_profile.jpg','sarah_line','sarah_instagram','sarah_x','2023-01-17 07:20:00','2023-01-17 07:20:00'),(7,'activityOwner2','activitypass456','Michael','Brown','MB456','michael@email.com','Male','1982-04-12','Christian','+6666666666','789 Maple St, City, Country','activityOwner','+6666666666','michael_profile.jpg','michael_line','michael_instagram','michael_x','2023-01-18 11:10:00','2023-01-18 11:10:00'),(8,'admin2','adminpassword2','Admin','User2','Admin234','admin2@email.com','Other','1975-02-15','None','+7777777777','456 Cedar St, City, Country','admin','+7777777777','admin2_profile.jpg','admin2_line','admin2_instagram','admin2_x','2023-01-19 14:05:00','2023-01-19 14:05:00');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -756,8 +424,8 @@ CREATE TABLE `userActivityHistory` (
   PRIMARY KEY (`activityHistoryId`),
   KEY `fk_activityHistory_Users1_idx` (`userId`),
   KEY `fk_activityHistory_Activity1_idx` (`activityId`),
-  CONSTRAINT `fk_activityHistory_Activity1` FOREIGN KEY (`activityId`) REFERENCES `Activity` (`activityId`) ON DELETE CASCADE,
-  CONSTRAINT `fk_activityHistory_Users1` FOREIGN KEY (`userId`) REFERENCES `User` (`userId`)
+  CONSTRAINT `fk_activityHistory_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`) ON DELETE CASCADE,
+  CONSTRAINT `fk_activityHistory_Users1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -785,7 +453,7 @@ CREATE TABLE `userMedicalInfo` (
   KEY `fk_congenitalDiseases_Users1_idx` (`userId`),
   KEY `fk_CongenitalDiseases_medicalInfomation1_idx` (`medicalInfomation`),
   CONSTRAINT `fk_CongenitalDiseases_medicalInfomation1` FOREIGN KEY (`medicalInfomation`) REFERENCES `medicalInfomation` (`idmedicalInfomation`),
-  CONSTRAINT `fk_congenitalDiseases_Users1` FOREIGN KEY (`userId`) REFERENCES `User` (`userId`)
+  CONSTRAINT `fk_congenitalDiseases_Users1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -799,62 +467,6 @@ LOCK TABLES `userMedicalInfo` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `useractivityhistory`
---
-
-DROP TABLE IF EXISTS `useractivityhistory`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `useractivityhistory` (
-  `activityHistoryId` int NOT NULL AUTO_INCREMENT,
-  `activityId` int NOT NULL,
-  `userId` int NOT NULL,
-  PRIMARY KEY (`activityHistoryId`),
-  KEY `fk_activityHistory_Activity1_idx` (`activityId`),
-  KEY `fk_activityHistory_Users1_idx` (`userId`),
-  CONSTRAINT `FK9oomx4vt9j9v8vc3m7q9mgd0w` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`),
-  CONSTRAINT `FKbtl2p1xdxgj41vup0bmelhcux` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `useractivityhistory`
---
-
-LOCK TABLES `useractivityhistory` WRITE;
-/*!40000 ALTER TABLE `useractivityhistory` DISABLE KEYS */;
-/*!40000 ALTER TABLE `useractivityhistory` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `usermedicalinfo`
---
-
-DROP TABLE IF EXISTS `usermedicalinfo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `usermedicalinfo` (
-  `congenitalDiseasesID` int NOT NULL AUTO_INCREMENT,
-  `medicalInfomation` int NOT NULL,
-  `userId` int DEFAULT NULL,
-  PRIMARY KEY (`congenitalDiseasesID`),
-  KEY `fk_CongenitalDiseases_medicalInfomation1_idx` (`medicalInfomation`),
-  KEY `fk_congenitalDiseases_Users1_idx` (`userId`),
-  CONSTRAINT `FKjqb80b53jxyo8jri7l3f3gxa8` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`),
-  CONSTRAINT `FKt5j5aymfl62djd1e9fjoyub93` FOREIGN KEY (`medicalInfomation`) REFERENCES `medicalinfomation` (`idmedicalInfomation`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `usermedicalinfo`
---
-
-LOCK TABLES `usermedicalinfo` WRITE;
-/*!40000 ALTER TABLE `usermedicalinfo` DISABLE KEYS */;
-/*!40000 ALTER TABLE `usermedicalinfo` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `validation`
 --
 
@@ -863,12 +475,12 @@ DROP TABLE IF EXISTS `validation`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `validation` (
   `validationId` int NOT NULL AUTO_INCREMENT,
-  `validationRule` double NOT NULL,
-  `validationType` varchar(100) NOT NULL,
   `activityId` int NOT NULL,
+  `validationType` enum('QRCode','stepCounter','GPS','heartRate','distanceCal') DEFAULT NULL,
+  `validationRule` double NOT NULL,
   PRIMARY KEY (`validationId`),
   KEY `fk_Validation_Activity1_idx` (`activityId`),
-  CONSTRAINT `FK5n8kl0n0sj6d03mup837gobbc` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`)
+  CONSTRAINT `fk_Validation_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -890,4 +502,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-19  3:15:33
+-- Dump completed on 2024-02-19  4:07:34

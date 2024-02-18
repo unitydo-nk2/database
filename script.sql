@@ -1,11 +1,11 @@
 create database IF NOT EXISTS unityDoDB DEFAULT CHARACTER SET utf8;
 use unityDoDB;
 -- -----------------------------------------------------
--- Table `unityDoDB`.`User`
+-- Table `unityDoDB`.`user`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `unityDoDB`.`User` ;
+DROP TABLE IF EXISTS `unityDoDB`.`user` ;
 
-CREATE TABLE IF NOT EXISTS `unityDoDB`.`User` (
+CREATE TABLE IF NOT EXISTS `unityDoDB`.`user` (
   `userId` INT NOT NULL auto_increment,
   `username` VARCHAR(100) NOT NULL,
   `password` VARCHAR(250) NOT NULL,
@@ -32,9 +32,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `unityDoDB`.`Location`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `unityDoDB`.`Location` ;
+DROP TABLE IF EXISTS `unityDoDB`.`location` ;
 
-CREATE TABLE IF NOT EXISTS `unityDoDB`.`Location` (
+CREATE TABLE IF NOT EXISTS `unityDoDB`.`location` (
   `locationId` INT NOT NULL auto_increment,
   `locationName` VARCHAR(150) NOT NULL,
   `googleMapLink` VARCHAR(300) NOT NULL,
@@ -46,8 +46,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `unityDoDB`.`mainCategory`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `unity
-DoDB`.`mainCategory` ;
+DROP TABLE IF EXISTS `unityDoDB`.`mainCategory` ;
 
 CREATE TABLE IF NOT EXISTS `unityDoDB`.`mainCategory` (
   `mainCategoryId` INT NOT NULL auto_increment,
@@ -75,11 +74,11 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`category` (
 ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- Table `unityDoDB`.`Activity`
+-- Table `unityDoDB`.`activity`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `unityDoDB`.`Activity` ;
+DROP TABLE IF EXISTS `unityDoDB`.`activity` ;
 
-CREATE TABLE IF NOT EXISTS `unityDoDB`.`Activity` (
+CREATE TABLE IF NOT EXISTS `unityDoDB`.`activity` (
   `activityId` INT NOT NULL auto_increment,
   `activityOwner` INT NOT NULL,
   `activityName` VARCHAR(150) NOT NULL,
@@ -106,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`Activity` (
   INDEX `fk_Activity_User1_idx` (`activityOwner` ASC) VISIBLE,
   CONSTRAINT `fk_Activity_location1`
     FOREIGN KEY (`locationId`)
-    REFERENCES `unityDoDB`.`Location` (`locationId`)
+    REFERENCES `unityDoDB`.`location` (`locationId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Activity_Category1`
@@ -116,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`Activity` (
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Activity_User1`
     FOREIGN KEY (`activityOwner`)
-    REFERENCES `unityDoDB`.`User` (`userId`)
+    REFERENCES `unityDoDB`.`user` (`userId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -124,9 +123,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `unityDoDB`.`Registration`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `unityDoDB`.`Registration` ;
+DROP TABLE IF EXISTS `unityDoDB`.`registration` ;
 
-CREATE TABLE IF NOT EXISTS `unityDoDB`.`Registration` (
+CREATE TABLE IF NOT EXISTS `unityDoDB`.`registration` (
   `registrationId` INT NOT NULL auto_increment,
   `userId` INT NOT NULL,
   `registrationDate` DATETIME NOT NULL,
@@ -138,12 +137,12 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`Registration` (
   INDEX `fk_Registration_Activity1_idx` (`activityId` ASC) VISIBLE,
   CONSTRAINT `fk_Registration_Users1`
     FOREIGN KEY (`userId`)
-    REFERENCES `unityDoDB`.`User` (`userId`)
+    REFERENCES `unityDoDB`.`user` (`userId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Registration_Activity1`
     FOREIGN KEY (`activityId`)
-    REFERENCES `unityDoDB`.`Activity` (`activityId`)
+    REFERENCES `unityDoDB`.`activity` (`activityId`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -151,9 +150,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `unityDoDB`.`QuestionTitle`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `unityDoDB`.`QuestionTitle` ;
+DROP TABLE IF EXISTS `unityDoDB`.`questionTitle` ;
 
-CREATE TABLE IF NOT EXISTS `unityDoDB`.`QuestionTitle` (
+CREATE TABLE IF NOT EXISTS `unityDoDB`.`questionTitle` (
   `questionId` INT NOT NULL,
   `Question` VARCHAR(100) NOT NULL,
   `activityId` INT NULL,
@@ -161,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`QuestionTitle` (
   INDEX `fk_questionTitle_Activity1_idx` (`activityId` ASC) VISIBLE,
   CONSTRAINT `fk_questionTitle_Activity1`
     FOREIGN KEY (`activityId`)
-    REFERENCES `unityDoDB`.`Activity` (`activityId`)
+    REFERENCES `unityDoDB`.`activity` (`activityId`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -169,9 +168,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `unityDoDB`.`Answer`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `unityDoDB`.`Answer` ;
+DROP TABLE IF EXISTS `unityDoDB`.`answer` ;
 
-CREATE TABLE IF NOT EXISTS `unityDoDB`.`Answer` (
+CREATE TABLE IF NOT EXISTS `unityDoDB`.`answer` (
   `answerId` INT NOT NULL auto_increment,
   `registrationId` INT NULL,
   `questionId` INT NOT NULL,
@@ -181,12 +180,12 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`Answer` (
   INDEX `fk_Answer_QuestionTitle1_idx` (`questionId` ASC) VISIBLE,
   CONSTRAINT `fk_answer_Registration1`
     FOREIGN KEY (`registrationId`)
-    REFERENCES `unityDoDB`.`Registration` (`registrationId`)
+    REFERENCES `unityDoDB`.`registration` (`registrationId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Answer_QuestionTitle1`
     FOREIGN KEY (`questionId`)
-    REFERENCES `unityDoDB`.`QuestionTitle` (`questionId`)
+    REFERENCES `unityDoDB`.`questionTitle` (`questionId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -205,12 +204,12 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`userActivityHistory` (
   INDEX `fk_activityHistory_Activity1_idx` (`activityId` ASC) VISIBLE,
   CONSTRAINT `fk_activityHistory_Users1`
     FOREIGN KEY (`userId`)
-    REFERENCES `unityDoDB`.`User` (`userId`)
+    REFERENCES `unityDoDB`.`user` (`userId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_activityHistory_Activity1`
     FOREIGN KEY (`activityId`)
-    REFERENCES `unityDoDB`.`Activity` (`activityId`)
+    REFERENCES `unityDoDB`.`activity` (`activityId`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -218,9 +217,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `unityDoDB`.`ActivityReview`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `unityDoDB`.`ActivityReview` ;
+DROP TABLE IF EXISTS `unityDoDB`.`activityReview` ;
 
-CREATE TABLE IF NOT EXISTS `unityDoDB`.`ActivityReview` (
+CREATE TABLE IF NOT EXISTS `unityDoDB`.`activityReview` (
   `activityReviewId` INT NOT NULL auto_increment,
   `activityId` INT NOT NULL,
   `userId` INT NOT NULL,
@@ -231,12 +230,12 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`ActivityReview` (
   INDEX `fk_activityReview_Users1_idx` (`userId` ASC) VISIBLE,
   CONSTRAINT `fk_activityReview_Activity1`
     FOREIGN KEY (`activityId`)
-    REFERENCES `unityDoDB`.`Activity` (`activityId`)
+    REFERENCES `unityDoDB`.`activity` (`activityId`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_activityReview_Users1`
     FOREIGN KEY (`userId`)
-    REFERENCES `unityDoDB`.`User` (`userId`)
+    REFERENCES `unityDoDB`.`user` (`userId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -267,7 +266,7 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`userMedicalInfo` (
   INDEX `fk_CongenitalDiseases_medicalInfomation1_idx` (`medicalInfomation` ASC) VISIBLE,
   CONSTRAINT `fk_congenitalDiseases_Users1`
     FOREIGN KEY (`userId`)
-    REFERENCES `unityDoDB`.`User` (`userId`)
+    REFERENCES `unityDoDB`.`user` (`userId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_CongenitalDiseases_medicalInfomation1`
@@ -291,7 +290,7 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`requirements` (
   INDEX `fk_requirements_medicalInfomation1_idx` (`medicalInfomation` ASC) VISIBLE,
   CONSTRAINT `fk_requirements_Activity1`
     FOREIGN KEY (`activityId`)
-    REFERENCES `unityDoDB`.`Activity` (`activityId`)
+    REFERENCES `unityDoDB`.`activity` (`activityId`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_requirements_medicalInfomation1`
@@ -316,12 +315,12 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`activityFavorite` (
   INDEX `fk_activityFavorite_Activity1_idx` (`activityId` ASC) VISIBLE,
   CONSTRAINT `fk_activityFavorite_Users1`
     FOREIGN KEY (`userId`)
-    REFERENCES `unityDoDB`.`User` (`userId`)
+    REFERENCES `unityDoDB`.`user` (`userId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_activityFavorite_Activity1`
     FOREIGN KEY (`activityId`)
-    REFERENCES `unityDoDB`.`Activity` (`activityId`)
+    REFERENCES `unityDoDB`.`activity` (`activityId`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -341,7 +340,7 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`image` (
   INDEX `fk_image_Activity1_idx` (`activityId` ASC) VISIBLE,
   CONSTRAINT `fk_image_Activity1`
     FOREIGN KEY (`activityId`)
-    REFERENCES `unityDoDB`.`Activity` (`activityId`)
+    REFERENCES `unityDoDB`.`activity` (`activityId`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -349,9 +348,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `unityDoDB`.`Validation`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `unityDoDB`.`Validation` ;
+DROP TABLE IF EXISTS `unityDoDB`.`validation` ;
 
-CREATE TABLE IF NOT EXISTS `unityDoDB`.`Validation` (
+CREATE TABLE IF NOT EXISTS `unityDoDB`.`validation` (
   `validationId` INT NOT NULL auto_increment,
   `activityId` INT NOT NULL,
   `validationType` ENUM('QRCode', 'stepCounter', 'GPS', 'heartRate', 'distanceCal'),
@@ -360,7 +359,7 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`Validation` (
   INDEX `fk_Validation_Activity1_idx` (`activityId` ASC) VISIBLE,
   CONSTRAINT `fk_Validation_Activity1`
     FOREIGN KEY (`activityId`)
-    REFERENCES `unityDoDB`.`Activity` (`activityId`)
+    REFERENCES `unityDoDB`.`activity` (`activityId`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -431,7 +430,7 @@ VALUES
     ('Others', 7);
 
 INSERT INTO
-    User (
+    user (
         username,
         password,
         name,
@@ -624,7 +623,7 @@ VALUES
 
 -- Insert more data into the Location table for places in Thailand
 INSERT INTO
-    `unityDoDB`.`Location` (
+    `unityDoDB`.`location` (
         `locationName`,
         `googleMapLink`,
         `locationLongitude`,
@@ -732,7 +731,7 @@ VALUES
 
 	-- Insert data into the Activity table with activityEndDate and activityFormat columns
 INSERT INTO
-    `unityDoDB`.`Activity` (
+    `unityDoDB`.`activity` (
         `activityOwner`,
         `activityName`,
         `activityBriefDescription`,
