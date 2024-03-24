@@ -1283,7 +1283,30 @@ VALUES
 (6,'Online Coding Bootcamp','Enhance your coding skills','Join our online coding bootcamp to boost your programming knowledge.','2023-06-01 18:00:00','2023-06-10 20:00:00','2023-05-15 10:00:00','2023-05-30 18:00:00',0,16, '2023-05-01 14:00:00','Active',1,'Level up your coding game with us!',12,'2023-05-15 10:00:00','2023-05-15 10:00:00','online'),
 (7,'Campfire and Stargazing','Experience the night sky','Join us for an overnight adventure with campfire and stargazing.','2023-07-15 19:00:00','2023-07-16 08:00:00','2023-06-25 15:00:00','2023-07-10 18:00:00',12,7,'2023-06-30 10:00:00','Active',1,'Connect with nature under the stars!',21,'2023-06-25 15:00:00','2023-06-25 15:00:00','onsiteOverNight'),
 (2,'Salsa Dance Workshop','Feel the rhythm','Join our one-day salsa dance workshop to spice up your dance moves.','2023-11-15 14:30:00','2023-11-15 18:00:00','2023-10-25 12:30:00','2023-11-10 18:00:00',10,6,'2023-11-01 10:00:00','Active',1,'Learn to dance to the vibrant beats!',28,'2023-10-25 12:30:00','2023-10-25 12:30:00','onsite'),
-(6,'Digital Art Webinar','Unleash your creativity','Participate in our online webinar to explore the world of digital art.','2023-12-05 16:00:00','2023-12-05 18:30:00','2023-11-20 14:00:00','2023-12-01 18:00:00',0,16,'2023-11-10 09:00:00','Active',1,'Discover the magic of digital art!',33,'2023-11-20 14:00:00','2023-11-20 14:00:00','online'),
+(6,'Digital Art Webinar','Unleash your creativity','Participate in our online webinar to explore the world of digital art.','2023-12-05 16:00:00','2023-12-05 18:30:00','2023-11-20 14:00:00','2023-12-01 18:00:00',0,16,'2023-11-10 09:00:00','Active',1,'Discover the magic of digital art!',33,'2023-11-20 14:00:00','2023-11-20 14:00:00','online');
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
 (38,'Animal Shelter Assistance', 'Care for shelter animals', 'Assist in caring for animals at the shelter by feeding, grooming, and providing companionship, helping to improve their well-being and chances of adoption.','2020-06-15 4:00:00', '2020-06-18 4:00:00','2020-06-01 4:00:00', '2020-06-06 4:00:00', 50,16,'2020-06-07 4:00:00', 'Active',0, 'Come to join',1, '2024-04-01 6:00:00', '2023-03-10 9:00:00', 'online'),
 (20, 'Community Soup Kitchen', 'Serve meals to those in need', 'Volunteer at a local soup kitchen, preparing and serving meals to those in need, fostering community connections and providing nourishment for vulnerable populations.', '2024-10-30 17:00:00', '2024-11-01 17:00:00','2024-10-16 17:00:00', '2024-10-21 17:00:00', 95,17,'2024-10-26 17:00:00','Active',0,'Join us for a thrilling hike through the wilderness!',2, '2024-04-01 06:00:00', '2023-03-11 09:00:00', 'onsite'),
 (205, 'Healthcare Clinic Support', 'Assist with administrative tasks','Support healthcare professionals at clinics by assisting with administrative tasks, patient intake, and providing comfort and assistance to patients.', '2022-08-03 02:00:00', '2022-08-06 03:00:00', '2022-07-20 02:00:00', '2022-07-25 02:00:00', 185, 16, '2022-07-30 02:00:00', 'Active', 0, 'Love books? Come join our monthly book club!', 3, '2024-04-02 06:00:00', '2023-03-12 09:00:00', 'online'),
@@ -1293,17 +1316,63 @@ VALUES
 (17, 'Animal Sanctuary Volunteering', 'Help care for rescued animals', 'Volunteer at an animal sanctuary, assisting with feeding, cleaning, and providing enrichment activities for rescued animals, ensuring their well-being and happiness.', '2021-12-03 23:00:00', '2021-12-14 0:00:00', '2021-11-19 23:00:00', '2021-11-24 23:00:00', 105, 36, '2021-11-29 23:00:00', 'Active', 0, 'Dive into the world of painting at our art workshop!', 1, '2024-04-06 6:00:00', '2023-03-16 9:00:00', 'onsite'),
 (34, 'Homeless Shelter Support', 'Assist individuals experiencing homelessness', 'Volunteer at a homeless shelter, offering support services such as meal distribution, clothing donations, and companionship to individuals experiencing homelessness.', '2023-09-10 13:00:00', '2023-09-14 14:00:00', '2023-08-26 13:00:00', '2023-08-31 13:00:00', 70, 21, '2023-09-05 13:00:00', 'Active', 0, 'Calling all foodies! Lets explore new restaurants together!', 2, '2024-04-07 6:00:00', '2023-03-17 9:00:00', 'onsite'),
 (68, 'Hospital Visitation Program', 'Visit patients in hospitals', 'Visit patients in hospitals to provide companionship, emotional support, and a listening ear, helping to alleviate feelings of loneliness and isolation.', '2021-02-06 15:00:00', '2021-02-12 16:00:00', '2021-01-24 15:00:00', '2021-01-29 15:00:00', 130, 22, '2021-02-03 15:00:00', 'Active', 0, 'Love to dance? Join us for a fun salsa class!', 3, '2024-04-08 6:00:00', '2023-03-18 9:00:00', 'onsite'),
-(93, 'Community Sports Event Assistance', 'Assist with organizing sports events', 'Assist in organizing and facilitating community sports events, ensuring smooth operations and an enjoyable experience for participants and spectators alike.', '2022-02-11 3:00:00', '2022-02-17 4:00:00', '2022-01-24 3:00:00', '2022-01-29 3:00:00', 165, 23, '2022-02-03 3:00:00', 'Active', 0, 'Embrace your inner chef at our cooking class!', 4, '2024-04-09 6:00:00', '2023-03-19 9:00:00', 'onsite'),
+(93, 'Community Sports Event Assistance', 'Assist with organizing sports events', 'Assist in organizing and facilitating community sports events, ensuring smooth operations and an enjoyable experience for participants and spectators alike.', '2022-02-11 3:00:00', '2022-02-17 4:00:00', '2022-01-24 3:00:00', '2022-01-29 3:00:00', 165, 23, '2022-02-03 3:00:00', 'Active', 0, 'Embrace your inner chef at our cooking class!', 4, '2024-04-09 6:00:00', '2023-03-19 9:00:00', 'onsite');
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
 (101, 'Tree Planting', 'Contribute to reforestation efforts', 'Participate in tree planting initiatives to combat deforestation, mitigate climate change, and restore green spaces in urban and rural areas.', '2020-07-03 22:00:00', '2020-07-09 23:00:00', '2020-06-19 22:00:00', '2020-06-24 22:00:00', 135, 16, '2020-06-29 22:00:00', 'Active', 0, 'Lets hit the waves together for a surfing adventure!', 5, '2024-04-10 6:00:00', '2023-03-20 9:00:00', 'online'),
 (20, 'Creative Writing Workshops', 'Develop writing skills', 'Lead creative writing workshops for aspiring writers, providing guidance, feedback, and inspiration to foster their literary talents and storytelling skills.', '2022-10-26 20:00:00', '2022-11-09 21:00:00', '2022-10-12 20:00:00', '2022-10-17 20:00:00', 175, 16, '2022-10-22 20:00:00', 'Active', 0, 'Join us for a friendly soccer match at the park!', 6, '2024-04-11 6:00:00', '2023-03-21 9:00:00', 'online'),
 (38, 'Wildlife Rehabilitation', 'Develop writing skills', 'Aid in the rehabilitation of injured or orphaned wildlife, assisting with feeding, medical care, and habitat maintenance to prepare them for release back into the wild.', '2024-04-12 8:00:00', '2024-04-21 9:00:00', '2024-03-28 8:00:00', '2024-04-02 8:00:00', 145, 24, '2024-04-07 8:00:00', 'Active', 0, 'Feel the burn with our group fitness class!', 1, '2024-04-12 6:00:00', '2023-03-22 9:00:00', 'onsite'),
-(17,'Elderly Care Facilities Assistance','Volunteer at elderly care facilities','Volunteer at elderly care facilities, engaging in activities such as reading, playing games, or simply providing companionship to residents, enhancing their quality of life.','2020-05-03 5:00:00','2020-05-13 6:00:00','2020-04-26 5:00:00','2020-05-01 5:00:00',155, 25, '2020-05-02 5:00:00','Active',0, 'Calling all movie buffs! Movie marathon at my place!', 2,'2024-04-13 6:00:00','2023-03-23 9:00:00','onsite')
+(17,'Elderly Care Facilities Assistance','Volunteer at elderly care facilities','Volunteer at elderly care facilities, engaging in activities such as reading, playing games, or simply providing companionship to residents, enhancing their quality of life.','2020-05-03 5:00:00','2020-05-13 6:00:00','2020-04-26 5:00:00','2020-05-01 5:00:00',155, 25, '2020-05-02 5:00:00','Active',0, 'Calling all movie buffs! Movie marathon at my place!', 2,'2024-04-13 6:00:00','2023-03-23 9:00:00','onsite'),
 (205, 'Medical Mission Trips', 'Provide healthcare to underserved communities', 'Join medical mission trips to underserved communities, providing essential healthcare services, screenings, and treatments to improve health outcomes.', '2021-11-28 6:00:00', '2021-12-11 7:00:00', '2021-11-13 6:00:00', '2021-11-18 6:00:00', 80, 26, '2021-11-23 6:00:00', 'Active', 0, 'Join us for a scenic bike ride along the coast!', 3, '2024-04-14 6:00:00', '2023-03-24 9:00:00', 'onsite'),
 (68, 'Outdoor Adventure Guiding', 'Lead outdoor activities', 'Lead outdoor adventure activities such as hiking, kayaking, or rock climbing for individuals or groups, promoting outdoor recreation and appreciation for nature.', '2023-01-20 16:00:00', '2023-01-21 17:00:00', '2023-01-06 16:00:00', '2023-01-11 16:00:00', 145, 27, '2023-01-17 16:00:00', 'Active', 0, 'Unleash your creativity at our DIY craft workshop!', 4, '2024-04-15 6:00:00', '2023-03-25 9:00:00', 'onsite'),
 (60, 'River Cleanup', 'Clean up rivers to protect wildlife', 'Participate in river cleanup initiatives, removing trash and debris to protect water quality, aquatic habitats, and the health of ecosystems downstream.', '2021-09-06 14:00:00', '2021-09-07 15:00:00', '2021-08-23 14:00:00', '2021-08-28 14:00:00', 170, 28, '2021-09-02 14:00:00', 'Active', 0, 'Love photography? Lets explore the city together and capture its beauty!', 5, '2024-04-16 6:00:00', '2023-03-26 9:00:00', 'onsite'),
 (34, 'Performing Arts Workshops', 'Learn performing arts skills', 'Conduct performing arts workshops for youth, teaching acting, dancing, or music skills to foster creativity, confidence, and self-expression.', '2024-12-12 19:00:00', '2024-12-18 20:00:00', '2024-11-25 19:00:00', '2024-12-02 19:00:00', 125, 29, '2024-12-07 19:00:00', 'Active', 0, 'Embark on a thrilling whitewater rafting adventure with us!', 6, '2024-04-17 6:00:00', '2023-03-27 9:00:00', 'onsite'),
 (38, 'Robotics Workshop', 'Learn about building and programming robots', 'Engage in hands-on activities to design, build, and program robots, exploring principles of engineering and computer science in a fun and interactive environment.', '2020-02-18 0:00:00', '2020-02-23 1:00:00', '2020-02-07 0:00:00', '2020-02-12 0:00:00', 65, 30, '2020-02-13 0:00:00', 'Active', 0, 'Join our nature walk to discover the beauty of the local flora and fauna!', 8, '2024-04-18 6:00:00', '2023-03-28 9:00:00', 'onsite'),
-(17, 'Math Olympiad Training', 'Prepare for math competitions', 'Receive coaching and practice sessions to prepare for math competitions, solving challenging problems and developing problem-solving skills in various math disciplines.', '2023-08-11 21:00:00', '2023-08-17 22:00:00', '2023-07-30 21:00:00', '2023-08-05 21:00:00', 100, 31, '2023-08-08 21:00:00', 'Active', 0, 'Lets gather for a picnic in the park and enjoy some good food and company!', 9, '2024-04-19 6:00:00', '2023-03-29 9:00:00', 'onsite'),
+(17, 'Math Olympiad Training', 'Prepare for math competitions', 'Receive coaching and practice sessions to prepare for math competitions, solving challenging problems and developing problem-solving skills in various math disciplines.', '2023-08-11 21:00:00', '2023-08-17 22:00:00', '2023-07-30 21:00:00', '2023-08-05 21:00:00', 100, 31, '2023-08-08 21:00:00', 'Active', 0, 'Lets gather for a picnic in the park and enjoy some good food and company!', 9, '2024-04-19 6:00:00', '2023-03-29 9:00:00', 'onsite');
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
 (101, 'Fine Arts Painting Class', 'Learn painting techniques', 'Learn painting techniques and artistic expression through guided lessons, exploring various mediums and styles to unleash creativity and develop artistic skills.', '2020-10-17 7:00:00', '2020-10-25 8:00:00', '2020-10-10 7:00:00', '2020-10-15 7:00:00', 90, 16, '2020-10-16 7:00:00', 'Active', 0, 'Join us for a friendly game of basketball at the court!', 10, '2024-04-20 6:00:00', '2023-03-30 9:00:00', 'online'),
 (20, 'Music Theory Workshop', 'Learn music theory concepts', 'Study music theory concepts such as notation, harmony, and rhythm, applying theoretical knowledge to practice through exercises and musical compositions.', '2023-04-08 12:00:00', '2023-04-12 13:00:00', '2023-03-31 12:00:00', '2023-04-05 12:00:00', 130, 16, '2023-04-06 12:00:00', 'Active', 0, 'Dive into the world of mindfulness with our meditation session!', 11, '2024-04-21 6:00:00', '2023-03-31 9:00:00', 'online'),
 (60, 'Outdoor Biology Field Trip', 'Explore biology in nature', 'Embark on a field trip to explore local ecosystems, observing wildlife, conducting experiments, and learning about biodiversity and ecological principles in nature.', '2021-02-09 11:00:00', '2021-02-15 12:00:00', '2021-01-24 11:00:00', '2021-01-29 11:00:00', 140, 16, '2021-02-03 11:00:00', 'Active', 0, 'Explore the night sky with us at our stargazing event!', 12, '2024-04-22 6:00:00', '2023-04-01 9:00:00', 'online'),
@@ -1313,7 +1382,30 @@ VALUES
 (68, 'Coding Camp', 'Learn programming languages', 'Learn programming languages and coding skills through hands-on projects and challenges, developing problem-solving abilities and computational thinking skills.', '2020-08-27 8:00:00', '2020-08-28 9:00:00', '2020-08-20 8:00:00', '2020-08-25 8:00:00', 180, 34, '2020-08-26 8:00:00', 'Active', 0, 'Calling all adventure seekers! Lets go zip-lining!', 8, '2024-04-26 6:00:00', '2023-04-05 9:00:00', 'onsite'),
 (101, 'Math Tutoring Sessions', 'Receive math tutoring', 'Receive personalized tutoring in math subjects, addressing individual learning needs and reinforcing concepts through practice problems and guided instruction.', '2023-06-19 22:00:00', '2023-06-22 23:00:00', '2023-06-12 22:00:00', '2023-06-17 22:00:00', 175, 35, '2023-06-18 22:00:00', 'Active', 0, 'Discover the joy of gardening at our community garden event!', 9, '2024-04-27 6:00:00', '2023-04-06 9:00:00', 'onsite'),
 (20, 'Mixed Media Art Workshop', 'Receive math tutoring', 'Explore mixed media art techniques combining various materials such as collage, paint, and found objects to create expressive and layered works of art.', '2021-12-24 16:00:00', '2021-12-30 17:00:00', '2021-12-10 16:00:00', '2021-12-15 16:00:00', 70, 29, '2021-12-16 16:00:00', 'Active', 0, 'Join us for a thrilling skydiving experience and feel the rush of adrenaline!', 10, '2024-04-28 6:00:00', '2023-04-07 9:00:00', 'onsite'),
-(205, 'Vocal Choir', 'Sing in a choir', 'Join a vocal choir to rehearse and perform choral music, learning vocal techniques, harmonization, and teamwork while sharing the joy of singing with others.', '2022-03-07 5:00:00', '2022-03-21 6:00:00', '2022-02-21 5:00:00', '2022-02-26 5:00:00', 185, 36, '2022-02-27 5:00:00', 'Active', 0, 'Lets gather for a beach bonfire and enjoy some mores under the stars!', 11, '2024-04-29 6:00:00', '2023-04-08 9:00:00', 'onsite'),
+(205, 'Vocal Choir', 'Sing in a choir', 'Join a vocal choir to rehearse and perform choral music, learning vocal techniques, harmonization, and teamwork while sharing the joy of singing with others.', '2022-03-07 5:00:00', '2022-03-21 6:00:00', '2022-02-21 5:00:00', '2022-02-26 5:00:00', 185, 36, '2022-02-27 5:00:00', 'Active', 0, 'Lets gather for a beach bonfire and enjoy some mores under the stars!', 11, '2024-04-29 6:00:00', '2023-04-08 9:00:00', 'onsite');
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
 (60, 'Science Experiment Club', 'Conduct science experiments', 'Participate in science experiments and demonstrations, exploring scientific concepts and principles through hands-on activities and inquiry-based learning approaches.', '2021-01-07 7:00:00', '2021-01-08 8:00:00', '2021-01-23 7:00:00', '2021-01-28 7:00:00', 145, 36, '2021-01-29 7:00:00', 'Active', 0, 'Join our wildlife photography expedition and capture stunning shots of nature!', 8, '2024-04-30 6:00:00', '2023-04-09 9:00:00', 'onsite'),
 (17, 'Math Problem Solving Circle', 'Collaborate on math problems', 'Collaborate with peers to solve challenging math problems, discussing strategies, sharing insights, and developing critical thinking and problem-solving skills.', '2020-10-31 2:00:00', '2020-11-03 3:00:00', '2020-10-17 2:00:00', '2020-10-22 2:00:00', 95, 38, '2020-10-23 2:00:00', 'Active', 0, 'Love to solve puzzles? Join our escape room challenge!', 9, '2024-05-01 6:00:00', '2023-04-10 9:00:00', 'onsite'),
 (38, 'Pottery Making Workshop', 'Learn pottery techniques', 'Learn pottery techniques such as wheel throwing and hand-building, creating functional and decorative pottery pieces while exploring clay as an artistic medium.', '2022-09-15 1:00:00', '2022-09-16 2:00:00', '2022-09-08 1:00:00', '2022-09-13 1:00:00', 105, 17, '2022-09-14 1:00:00', 'Active', 0, 'Lets explore the local farmer market together and support local vendors!', 10, '2024-05-02 6:00:00', '2023-04-11 9:00:00', 'onsite'),
@@ -1323,7 +1415,30 @@ VALUES
 (60, 'Digital Art Design Studio', 'Create digital art', 'Explore digital art creation using software tools, learning techniques for digital painting, graphic design, and illustration to create visually stunning artworks.', '2020-12-08 10:00:00', '2020-12-23 11:00:00', '2020-11-30 10:00:00', '2020-12-05 10:00:00', 150, 16, '2020-12-06 10:00:00', 'Active', 0, 'Lets gather for a game night and have some friendly competition!', 10, '2024-05-06 6:00:00', '2024-05-06 6:00:00', 'online'),
 (20, 'Music Appreciation Course', 'Learn about music styles', 'Study the history, theory, and cultural context of music through listening, analysis, and discussion, gaining a deeper understanding and appreciation for music.', '2021-04-25 13:00:00', '2021-04-28 14:00:00', '2021-04-11 13:00:00', '2021-04-16 13:00:00', 5, 39, '2021-04-17 13:00:00', 'Active', 0, 'Join us for a day of volunteering and make a positive impact in our community!', 11, '2024-05-07 6:00:00', '2024-05-07 6:00:00', 'onsite'),
 (101, 'Boxing Fitness Class', 'Take boxing-inspired fitness classes', 'Join a high-intensity boxing fitness class to improve strength, agility, and cardiovascular fitness through boxing drills, exercises, and sparring techniques.', '2023-02-22 23:00:00', '2023-03-07 0:00:00', '2022-09-08 23:00:00', '2022-09-13 23:00:00', 160, 40, '2022-09-14 23:00:00', 'Active', 0, 'Love to explore new cuisines? Join our international cooking class!', 13, '2024-05-08 6:00:00', '2024-05-08 6:00:00', 'onsite'),
-(205, 'Mountain Hiking', 'Explore mountain trails', 'Embark on a challenging mountain hiking adventure, traversing rugged trails, and summiting peaks to enjoy breathtaking views and connect with nature.', '2024-11-12 21:00:00', '2024-11-13 22:00:00', '2024-11-05 21:00:00', '2024-11-10 21:00:00', 150, 41, '2024-11-11 21:00:00', 'Active', 0, 'Lets hit the slopes for a skiing and snowboarding adventure!', 14, '2024-05-09 6:00:00', '2024-05-09 6:00:00', 'onsite'),
+(205, 'Mountain Hiking', 'Explore mountain trails', 'Embark on a challenging mountain hiking adventure, traversing rugged trails, and summiting peaks to enjoy breathtaking views and connect with nature.', '2024-11-12 21:00:00', '2024-11-13 22:00:00', '2024-11-05 21:00:00', '2024-11-10 21:00:00', 150, 41, '2024-11-11 21:00:00', 'Active', 0, 'Lets hit the slopes for a skiing and snowboarding adventure!', 14, '2024-05-09 6:00:00', '2024-05-09 6:00:00', 'onsite');
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
 (17, 'Morning Jogging', 'Jog for fitness and well-being', 'Start your day with a brisk morning jog, enjoying the fresh air and peaceful surroundings while boosting your energy levels and improving overall fitness.', '2022-03-31 8:00:00', '2022-03-16 9:00:00', '2022-03-24 8:00:00', '2022-03-29 8:00:00', 155, 42, '2022-03-30 8:00:00', 'Active', 0, 'Join our birdwatching expedition and spot beautiful avian species in their habitat!', 15, '2024-05-10 6:00:00', '2024-05-10 6:00:00', 'onsite'),
 (38, 'Nature Walk', 'Take leisurely walks in nature', 'Take a leisurely stroll through scenic nature trails, immersing yourself in the beauty of the outdoors and experiencing the calming benefits of walking in nature.', '2021-08-15 20:00:00', '2021-08-28 21:00:00', '2021-07-31 20:00:00', '2021-08-05 20:00:00', 145, 43, '2021-08-06 20:00:00', 'Active', 0, 'Explore the wonders of marine life with us on a snorkeling excursion!', 16, '2024-05-11 6:00:00', '2024-05-11 6:00:00', 'onsite'),
 (34, 'Swim Training', 'Receive swim instruction', 'Dive into the pool for swim training sessions, improving technique, endurance, and speed through drills, laps, and coached workouts in the water.', '2022-05-29 4:00:00', '2022-06-12 5:00:00', '2022-05-15 4:00:00', '2022-05-20 4:00:00', 175, 44, '2022-05-21 4:00:00', 'Active', 0, 'Lets gather for a sunset photography session and capture the golden hour!', 17, '2024-05-12 6:00:00', '2024-05-12 6:00:00', 'onsite'),
@@ -1333,7 +1448,30 @@ VALUES
 (205, 'Outdoor Bootcamp', 'Attend outdoor fitness bootcamp', 'Join an outdoor bootcamp class for a total-body workout incorporating strength training, cardio exercises, and agility drills in a motivating group setting.', '2024-08-04 14:00:00', '2024-08-05 15:00:00', '2024-07-28 14:00:00', '2024-08-02 14:00:00', 160, 33, '2024-08-03 14:00:00', 'Active', 0, 'Join our language exchange meetup and practice speaking new languages!', 21, '2024-05-16 6:00:00', '2024-05-16 6:00:00', 'onsite'),
 (68, 'Boxing Sparring', 'Practice boxing techniques', 'Step into the ring for boxing sparring sessions, practicing defensive techniques, footwork, and combinations while sharpening reflexes and strategy in combat.', '2022-01-14 1:00:00', '2022-01-17 2:00:00', '2021-12-31 1:00:00', '2022-01-06 1:00:00', 160, 48, '2022-01-07 1:00:00', 'Active', 0, 'Discover the art of bonsai at our gardening workshop!', 13, '2024-05-17 6:00:00', '2024-05-17 6:00:00', 'onsite'),
 (17, 'Forest Hiking', 'Hike in forests', 'Explore lush forest trails on a hiking excursion, immersing yourself in natures beauty, spotting wildlife, and discovering hidden gems off the beaten path.', '2022-07-05 10:00:00', '2022-07-08 11:00:00', '2022-06-21 10:00:00', '2022-06-26 10:00:00', 15, 48, '2022-07-27 10:00:00', 'Active', 0, 'Lets gather for a group meditation session and find inner peace together!', 14, '2024-05-18 6:00:00', '2023-04-27 9:00:00', 'onsite'),
-(20, 'Interval Running', 'Run with intervals for fitness', 'Incorporate interval training into your running routine, alternating between bursts of high-intensity sprints and recovery periods to boost endurance and speed.', '2024-12-21 0:00:00', '2024-12-22 1:00:00', '2024-12-07 0:00:00', '2024-12-12 0:00:00', 60, 49, '2024-12-13 0:00:00', 'Active', 0, 'Join us for a wildlife safari and observe majestic animals in their natural habitat!', 15, '2024-05-19 6:00:00', '2023-04-28 9:00:00', 'onsite'),
+(20, 'Interval Running', 'Run with intervals for fitness', 'Incorporate interval training into your running routine, alternating between bursts of high-intensity sprints and recovery periods to boost endurance and speed.', '2024-12-21 0:00:00', '2024-12-22 1:00:00', '2024-12-07 0:00:00', '2024-12-12 0:00:00', 60, 49, '2024-12-13 0:00:00', 'Active', 0, 'Join us for a wildlife safari and observe majestic animals in their natural habitat!', 15, '2024-05-19 6:00:00', '2023-04-28 9:00:00', 'onsite');
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
 (38, 'Urban Walking', 'Walk in urban areas', 'Take a brisk walk through city streets and urban parks, exploring local landmarks, architecture, and culture while getting in your daily dose of exercise.', '2021-04-08 5:00:00', '2021-04-23 6:00:00', '2021-03-31 5:00:00', '2021-04-05 5:00:00', 105, 50, '2021-04-06 5:00:00', 'Active', 0, 'Love to cook? Join our gourmet cooking class and master culinary skills!', 16, '2024-05-20 6:00:00', '2023-04-29 9:00:00', 'onsite'),
 (93, 'Open Water Swimming', 'Walk in urban areas', 'Swim in open water settings such as lakes or oceans, enjoying the freedom and challenges of swimming in natural environments while building endurance and confidence.', '2023-06-07 23:00:00', '2023-07-23 0:00:00', '2023-05-25 23:00:00', '2023-06-29 23:00:00', 135, 51, '2023-07-01 23:00:00', 'Active', 0, 'Lets hit the dance floor for a night of salsa, bachata, and merengue!', 17, '2024-05-21 6:00:00', '2023-04-30 9:00:00', 'onsite'),
 (101, 'Soccer Match', 'Play soccer matches', 'Play in a friendly soccer match with friends or teammates, showcasing skills, teamwork, and strategy while enjoying the excitement and camaraderie of the game.', '2022-08-25 12:00:00', '2022-09-03 13:00:00', '2022-07-11 12:00:00', '2022-07-16 12:00:00', 55, 52, '2022-07-18 12:00:00', 'Active', 0, 'Join our outdoor painting session and capture the beauty of nature on canvas!', 18, '2024-05-22 6:00:00', '2023-05-01 9:00:00', 'onsite'),
@@ -1343,7 +1481,30 @@ VALUES
 (68, 'Kickboxing Class', 'Take kickboxing classes', 'Join a kickboxing class to learn striking techniques, kicks, and punches while burning calories and improving cardiovascular health in an energetic group environment.', '2024-02-05 22:00:00', '2024-02-11 23:00:00', '2024-01-22 22:00:00', '2024-01-27 22:00:00', 150, 16, '2024-01-28 22:00:00', 'Active', 0, 'Dive into the world of science fiction at our book discussion group!', 13, '2024-05-26 6:00:00', '2023-05-05 9:00:00', 'online'),
 (17, 'Aerobics Dance Class', 'Participate in dance aerobics', 'Join an energetic aerobics dance class combining dance routines with cardio exercises to improve fitness, coordination, and stamina in a fun and motivating atmosphere.', '2020-07-15 18:00:00', '2020-07-21 19:00:00', '2020-06-28 18:00:00', '2020-07-03 18:00:00', 105, 16, '2020-07-04 18:00:00', 'Active', 0, 'Lets gather for a beach clean-up and protect our coastal environment!', 22, '2024-05-27 6:00:00', '2023-05-06 9:00:00', 'online'),
 (20, 'Yoga Dance Fusion', 'Participate in dance aerobics', 'Experience a unique blend of yoga and dance, flowing through yoga poses and sequences with fluid movements and rhythmic expression to enhance body awareness and relaxation.', '2022-06-11 21:00:00', '2022-06-22 22:00:00', '2022-05-28 21:00:00', '2022-06-02 21:00:00', 150, 16, '2022-06-03 21:00:00', 'Active', 0, 'Join us for a pottery throwing workshop and create unique ceramic pieces!', 23, '2024-05-28 6:00:00', '2023-05-07 9:00:00', 'online'),
-(38, 'K-Pop Dance Workshop', 'Learn K-pop dance', 'Learn popular K-Pop dance choreographies and routines, mastering precise movements, synchronization, and performance techniques while grooving to catchy K-Pop beats.', '2021-03-24 15:00:00', '2021-04-08 16:00:00', '2021-03-10 15:00:00', '2021-03-15 15:00:00', 155, 55, '2021-03-16 15:00:00', 'Active', 0, 'Explore the local art scene with us on a gallery hopping tour!', 24, '2024-05-29 6:00:00', '2023-05-08 9:00:00', 'onsite'),
+(38, 'K-Pop Dance Workshop', 'Learn K-pop dance', 'Learn popular K-Pop dance choreographies and routines, mastering precise movements, synchronization, and performance techniques while grooving to catchy K-Pop beats.', '2021-03-24 15:00:00', '2021-04-08 16:00:00', '2021-03-10 15:00:00', '2021-03-15 15:00:00', 155, 55, '2021-03-16 15:00:00', 'Active', 0, 'Explore the local art scene with us on a gallery hopping tour!', 24, '2024-05-29 6:00:00', '2023-05-08 9:00:00', 'onsite');
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
 (60, 'Gymnastics Dance Routine', 'Practice gymnastics-inspired dance', 'Practice gymnastics-inspired dance routines incorporating flips, jumps, and acrobatic movements, combining athleticism with artistic expression in dynamic performances.', '2023-09-09 8:00:00', '2023-09-16 9:00:00', '2023-08-02 8:00:00', '2023-08-07 8:00:00', 85, 56, '2023-08-08 8:00:00', 'Active', 0, 'Lets gather for a group hike and explore scenic trails together!', 25, '2024-05-30 6:00:00', '2023-05-09 9:00:00', 'onsite'),
 (101, 'Latin Dance Party', 'Dance to Latin music', 'Join a Latin dance party featuring salsa, bachata, and merengue dances, learning basic steps, partner work, and styling while enjoying the vibrant rhythms of Latin music.', '2020-02-24 7:00:00', '2020-02-25 8:00:00', '2020-02-17 7:00:00', '2020-02-22 7:00:00', 110, 16, '2020-02-23 7:00:00', 'Active', 0, 'Join our mindfulness retreat and recharge your mind, body, and soul!', 26, '2024-05-31 6:00:00', '2023-05-10 9:00:00', 'online'),
 (93, 'Bollywood Dance Class', 'Learn Bollywood dance', 'Enroll in a Bollywood dance class to learn energetic and expressive dance styles from Indian cinema, mastering intricate footwork, gestures, and storytelling through dance.', '2022-12-20 2:00:00', '2023-01-04 3:00:00', '2022-12-13 2:00:00', '2022-12-18 2:00:00', 45, 57, '2022-12-19 2:00:00', 'Active', 0, 'Discover the art of origami at our paper folding workshop!', 24, '2024-06-01 6:00:00', '2023-05-11 9:00:00', 'onsite'),
@@ -1353,7 +1514,30 @@ VALUES
 (20, 'Zumba Fitness Party', 'Dance in a Zumba class', 'Join a Zumba fitness party to dance to upbeat rhythms and international music, burning calories, and boosting energy levels while having fun and sweating it out on the dance floor.', '2022-04-01 9:00:00', '2022-04-15 10:00:00', '2022-03-17 9:00:00', '2022-03-22 9:00:00', 155, 61, '2022-03-23 9:00:00', 'Active', 0, 'Lets gather for a bike repair workshop and learn basic maintenance skills!', 22, '2024-06-05 6:00:00', '2023-05-15 9:00:00', 'onsite'),
 (68, 'Vinyasa Flow Dance', 'Flow through yoga-inspired dance', 'Flow through a Vinyasa yoga-inspired dance practice, synchronizing breath with movement to create fluid sequences and transitions, promoting mindfulness and inner harmony.', '2021-01-02 19:00:00', '2021-01-16 20:00:00', '2020-12-14 19:00:00', '2020-12-19 19:00:00', 45, 62, '2020-12-20 19:00:00', 'Active', 0, 'Join our book swap event and exchange your favorite reads with others!', 23, '2024-06-06 6:00:00', '2023-05-16 9:00:00', 'onsite'),
 (38, 'K-Pop Cover Dance Group', 'Form a K-pop cover group', 'Form a K-Pop cover dance group with friends to learn and perform K-Pop music video choreographies, showcasing precision, creativity, and passion for Korean pop culture.', '2022-09-10 4:00:00', '2022-09-25 5:00:00', '2021-07-10 11:00:00', '2021-07-15 11:00:00', 110, 63, '2021-07-16 11:00:00', 'Active', 0, 'Discover the art of calligraphy at our handwriting improvement workshop!', 24, '2024-06-07 6:00:00', '2023-05-17 9:00:00', 'onsite'),
-(101, 'Aerial Silk Dance', 'Learn aerial silk techniques', 'Experience the beauty and grace of aerial silk dance, performing stunning aerial maneuvers, wraps, and drops while suspended from silks, expressing creativity in the air.', '2023-01-27 20:00:00', '2023-01-30 20:00:00', '2023-01-17 5:00:00', '2023-01-22 5:00:00', 135, 62, '2023-01-23 5:00:00', 'Active', 0, 'Lets gather for a photography walk and capture the beauty of the city!', 25, '2024-06-08 6:00:00', '2023-05-18 9:00:00', 'onsite'),
+(101, 'Aerial Silk Dance', 'Learn aerial silk techniques', 'Experience the beauty and grace of aerial silk dance, performing stunning aerial maneuvers, wraps, and drops while suspended from silks, expressing creativity in the air.', '2023-01-27 20:00:00', '2023-01-30 20:00:00', '2023-01-17 5:00:00', '2023-01-22 5:00:00', 135, 62, '2023-01-23 5:00:00', 'Active', 0, 'Lets gather for a photography walk and capture the beauty of the city!', 25, '2024-06-08 6:00:00', '2023-05-18 9:00:00', 'onsite');
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
 (60, 'Salsa Dance Workshop', 'Learn salsa dancing', 'Attend a salsa dance workshop to learn the fundamentals of salsa footwork, turns, and partnering techniques, mastering the rhythm and style of salsa dancing with confidence.', '2023-01-16 0:00:00', '2023-01-30 0:00:00', '2022-06-04 16:00:00', '2022-06-09 16:00:00', 160, 64, '2022-06-10 16:00:00', 'Active', 0, 'Join us for a pottery glazing workshop and add the finishing touches to your creations!', 26, '2024-06-09 6:00:00', '2023-05-19 9:00:00', 'onsite'),
 (34, 'Contemporary Dance Class', 'Take contemporary dance classes', 'Take a contemporary dance class to explore expressive movement, improvisation, and artistic interpretation, blending elements of ballet, jazz, and modern dance styles.', '2024-06-27 16:00:00', '2024-06-30 16:00:00', '2024-06-18 22:00:00', '2024-06-23 22:00:00', 70, 65, '2024-06-25 22:00:00', 'Active', 0, 'Dive into the world of robotics at our DIY robot building workshop!', 26, '2024-06-10 6:00:00', '2023-05-20 9:00:00', 'onsite'),
 (93, 'Bhangra Dance Workshop', 'Learn Bhangra dance', 'Join a Bhangra dance workshop to learn energetic and vibrant Punjabi folk dance movements, celebrating culture, and community through rhythmic footwork and joyful expressions.', '2023-03-10 18:00:00', '2023-03-12 19:00:00', '2023-02-28 18:00:00', '2023-03-05 18:00:00', 120, 63, '2023-03-06 18:00:00', 'Active', 0, 'Lets gather for a potluck dinner and enjoy a variety of homemade dishes!', 24, '2024-06-11 6:00:00', '2023-05-21 9:00:00', 'onsite'),
@@ -1363,7 +1547,30 @@ VALUES
 (68, 'Oil Painting Class', 'Learn oil painting techniques', 'Join an oil painting class to learn traditional oil painting techniques, exploring color mixing, brushwork, and composition to create stunning and expressive artworks.', '2020-07-26 3:00:00', '2020-08-11 4:00:00', '2020-07-08 18:00:00', '2020-07-13 18:00:00', 65, 66, '2020-07-18 18:00:00', 'Active', 0, 'Join us for a beach volleyball tournament and showcase your skills!', 27, '2024-06-15 6:00:00', '2023-05-25 9:00:00', 'onsite'),
 (38, 'Sketching Workshop', 'Improve sketching skills', 'Attend a sketching workshop to practice drawing fundamentals such as line, form, and shading, mastering observational drawing techniques and developing sketching skills.', '2022-11-25 20:00:00', '2022-12-12 21:00:00', '2022-05-05 6:00:00', '2022-05-10 6:00:00', 145, 67, '2022-05-15 6:00:00', 'Active', 0, 'Discover the art of glassblowing at our glass fusion workshop!', 28, '2024-06-16 6:00:00', '2023-05-26 9:00:00', 'onsite'),
 (101, 'Clay Sculpture Class', 'Learn clay sculpting', 'Take a clay sculpture class to learn hand-building techniques, sculpting forms, and textures in clay, expressing creativity and imagination through three-dimensional art.', '2020-11-28 20:00:00', '2020-11-30 20:00:00', '2020-11-11 20:00:00', '2020-11-16 20:00:00', 75, 67, '2020-11-22 20:00:00', 'Active', 0, 'Lets gather for a creative writing circle and share our stories!', 29, '2024-06-17 6:00:00', '2023-05-27 9:00:00', 'onsite'),
-(60, 'Guitar Lessons', 'Learn guitar', 'Learn to play the guitar with expert instruction, mastering chords, scales, and songs while developing technique, musicality, and appreciation for the art of guitar playing.', '2023-08-27 7:00:00', '2023-08-29 7:00:00', '2023-08-10 7:00:00', '2023-08-15 7:00:00', 90, 67, '2023-08-21 7:00:00', 'Active', 0, 'Join our gardening club and learn how to cultivate a beautiful garden!', 30, '2024-06-18 6:00:00', '2023-05-28 9:00:00', 'onsite'),
+(60, 'Guitar Lessons', 'Learn guitar', 'Learn to play the guitar with expert instruction, mastering chords, scales, and songs while developing technique, musicality, and appreciation for the art of guitar playing.', '2023-08-27 7:00:00', '2023-08-29 7:00:00', '2023-08-10 7:00:00', '2023-08-15 7:00:00', 90, 67, '2023-08-21 7:00:00', 'Active', 0, 'Join our gardening club and learn how to cultivate a beautiful garden!', 30, '2024-06-18 6:00:00', '2023-05-28 9:00:00', 'onsite');
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
 (93,'Vocal Training',' Receive vocal instruction','Receive vocal training sessions to improve singing technique, breath control, and vocal range, developing confidence and expression while refining your singing abilities.','2024-04-05 9:00:00','2024-04-05 9:00:00','2024-03-20 9:00:00','2024-03-25 9:00:00',130,68,'2024-03-31 9:00:00','Active',0,'Dive into the world of cryptocurrencies at our blockchain technology seminar!',31,'2024-06-19 6:00:00','2023-05-29 9:00:00','onsite')
 (34,'Creative Writing Class','Take creative writing classes','Enroll in a creative writing class to explore storytelling, character development, and narrative techniques, unleashing creativity and honing writing skills in a supportive environment.','2024-02-08 4:00:00','2024-02-16 5:00:00','2023-12-15 16:00:00','2024-01-20 16:00:00',155,67,'2024-01-26 16:00:00','Active',0,'Lets gather for a DIY skincare workshop and create natural beauty products!',33,'2024-06-20 6:00:00','2023-05-30 9:00:00','onsite')
 (206,'Poetry Workshop','Attend poetry workshops','Participate in a poetry workshop to explore poetic forms, imagery, and rhythm, crafting original poems and exploring the beauty and power of language through poetry writing.','2023-10-10 04:00:00','2023-10-15 04:00:00','2023-09-24 04:00:00','2023-09-29 04:00:00',65,67,'2023-09-30 04:00:00','Active',0,'Join us for a wildlife photography contest and showcase your best shots!',34,'2024-06-21 06:00:00','2023-05-31 09:00:00','onsite'),
@@ -1373,7 +1580,30 @@ VALUES
 (60,'Life Drawing Sessions','Practice life drawing','Attend life drawing sessions to sketch live models, studying anatomy, proportion, and gesture while honing observational drawing skills and capturing the human form on paper.','2022-03-20 12:00:00','2022-03-25 12:00:00','2022-03-05 12:00:00','2022-03-10 12:00:00',90,72,'2022-03-11 12:00:00','Active',0,'Explore the world of 3D printing at our hands-on workshop!',28,'2024-06-25 06:00:00','2023-06-04 09:00:00','onsite'),
 (101, 'Stone Carving Workshop','Learn stone carving', 'Participate in a stone carving workshop to learn carving techniques, tools, and safety practices, sculpting stone into sculptures and exploring the tactile art of stone carving.', '2022-02-17 11:00:00', '2022-02-30 11:00:00', '2021-12-26 11:00:00', '2022-01-05 11:00:00', 40, 71, '2022-01-06 11:00:00', 'Active', 0, 'Lets gather for a knitting circle and work on our latest projects together!', 29, '2024-06-26 6:00:00', '2023-06-05 9:00:00', 'onsite'),
 (93, 'Piano Recital Practice', 'Practice piano', 'Prepare for a piano recital with focused practice sessions, mastering pieces, technique, and musical expression to deliver a polished and captivating performance on the piano.', '2023-01-24 5:00:00', '2023-01-29 5:00:00', '2022-12-16 20:00:00', '2022-12-25 20:00:00', 75, 73, '2022-12-26 20:00:00', 'Active', 0, 'Join us for a sushi making class and learn the art of Japanese cuisine!', 30, '2024-06-27 6:00:00', '2023-06-06 9:00:00', 'onsite'),
-(34, 'Choir Rehearsals', 'Rehearse with a choir', 'Rehearse with a choir to learn vocal harmonies, blend, and dynamics, preparing repertoire for performances and enjoying the camaraderie and joy of singing with others.', '2023-06-18 0:00:00', '2023-06-20 0:00:00', '2023-05-31 0:00:00', '2023-06-05 0:00:00', 115, 74, '2023-06-06 0:00:00', 'Active', 0, 'Discover the art of mixology at our cocktail crafting workshop!', 31, '2024-06-28 6:00:00', '2023-06-07 9:00:00', 'onsite'),
+(34, 'Choir Rehearsals', 'Rehearse with a choir', 'Rehearse with a choir to learn vocal harmonies, blend, and dynamics, preparing repertoire for performances and enjoying the camaraderie and joy of singing with others.', '2023-06-18 0:00:00', '2023-06-20 0:00:00', '2023-05-31 0:00:00', '2023-06-05 0:00:00', 115, 74, '2023-06-06 0:00:00', 'Active', 0, 'Discover the art of mixology at our cocktail crafting workshop!', 31, '2024-06-28 6:00:00', '2023-06-07 9:00:00', 'onsite');
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
 (68, 'Fiction Writing Group', 'Join a fiction writing group', 'Join a fiction writing group to share and critique original works of fiction, receiving feedback, support, and inspiration from fellow writers in a collaborative writing community.', '2021-03-30 16:00:00', '2021-04-05 16:00:00', '2021-03-20 16:00:00', '2021-03-25 16:00:00', 40, 75, '2021-03-26 16:00:00', 'Active', 0, 'Lets gather for a DIY flower arrangement workshop and create beautiful bouquets!', 33, '2024-06-29 6:00:00', '2023-06-08 9:00:00', 'onsite'),
 (205, 'Spoken Word Poetry Slam', 'Perform spoken word poetry', 'Participate in a spoken word poetry slam, performing original spoken word poetry in a competitive or open-mic setting, expressing emotion, and sharing stories through spoken word.', '2023-11-13 18:00:00', '2023-11-20 18:00:00', '2023-10-24 18:00:00', '2023-10-29 18:00:00', 180, 76, '2023-10-30 18:00:00', 'Active', 0, 'Join our hiking club and explore new trails every weekend!', 34, '2024-06-30 6:00:00', '2023-06-09 9:00:00', 'onsite'),
 (17, 'Book Club Discussions', 'Discuss books in book clubs', 'Engage in book club discussions to explore and analyze literature, sharing insights, opinions, and reflections on selected books while connecting with fellow book enthusiasts.', '2021-09-09 3:00:00', '2021-09-11 3:00:00', '2021-08-05 10:00:00', '2021-08-10 10:00:00', 40, 73, '2021-08-11 10:00:00', 'Active', 0, 'Dive into the world of quantum physics at our science lecture series!', 35, '2024-07-01 6:00:00', '2023-06-10 9:00:00', 'onsite'),
@@ -1383,7 +1613,30 @@ VALUES
 (101, 'Digital Marketing Workshop', 'Learn digital marketing', 'Attend a digital marketing workshop to learn strategies and techniques for online marketing, including social media marketing, SEO, and content marketing, to promote businesses and reach target audiences.', '2020-11-22 13:00:00', '2020-11-25 13:00:00', '2020-11-11 13:00:00', '2020-11-16 13:00:00', 165, 78, '2020-11-17 13:00:00', 'Active', 0, 'Lets gather for a DIY jewelry making workshop and craft unique accessories!', 38, '2024-07-05 6:00:00', '2023-06-14 9:00:00', 'onsite'),
 (93, 'Financial Planning Seminar', 'Attend financial planning seminars', 'Join a financial planning seminar to learn about budgeting, investing, retirement planning, and wealth management, gaining essential knowledge and skills for personal and business financial success.', '2023-08-27 0:00:00', '2022-08-30 11:00:00', '2023-08-10 0:00:00', '2023-08-15 0:00:00', 65, 79, '2023-08-16 0:00:00', 'Active', 0, 'Join our storytelling circle and share your favorite tales!', 39, '2024-07-06 6:00:00', '2023-06-15 9:00:00', 'onsite'),
 (34, 'E-commerce Website Development','Attend financial planning seminars', 'Learn to develop and manage e-commerce websites, including design, product listings, payment gateways, and customer experience optimization, to establish an online presence and drive sales for businesses.', '2024-09-23 15:00:00', '2024-09-26 16:00:00', '2024-03-20 9:00:00', '2024-03-25 9:00:00', 160, 80, '2024-03-26 9:00:00', 'Active', 0, 'Lets gather for a DIY woodworking workshop and create handmade furniture!', 40, '2024-07-07 6:00:00', '2023-06-16 9:00:00', 'onsite'),
-(68, 'Supply Chain Management Course','Learn supply chain management', 'Enroll in a supply chain management course to learn about logistics, inventory management, transportation, and procurement strategies, optimizing supply chain operations for efficiency and cost-effectiveness.', '2023-02-20 6:00:00', '2023-02-23 7:00:00', '2022-12-22 16:00:00', '2023-01-27 16:00:00', 105, 81, '2023-01-28 16:00:00', 'Active', 0, 'Join us for a day of outdoor rock climbing and conquer new heights!', 41, '2024-07-08 6:00:00', '2023-06-17 9:00:00', 'onsite'),
+(68, 'Supply Chain Management Course','Learn supply chain management', 'Enroll in a supply chain management course to learn about logistics, inventory management, transportation, and procurement strategies, optimizing supply chain operations for efficiency and cost-effectiveness.', '2023-02-20 6:00:00', '2023-02-23 7:00:00', '2022-12-22 16:00:00', '2023-01-27 16:00:00', 105, 81, '2023-01-28 16:00:00', 'Active', 0, 'Join us for a day of outdoor rock climbing and conquer new heights!', 41, '2024-07-08 6:00:00', '2023-06-17 9:00:00', 'onsite');
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
 (205, 'Business Idea Pitch Competition','Pitch business ideas', 'Participate in a business idea pitch competition to present innovative business ideas to a panel of judges, receiving feedback, and potentially securing funding or support to turn ideas into viable businesses.', '2023-11-01 5:00:00', '2023-11-09 6:00:00', '2023-09-24 4:00:00', '2023-10-29 4:00:00', 55, 79, '2023-10-30 4:00:00', 'Active', 0, 'Discover the art of fermentation at our kombucha brewing workshop!', 42, '2024-07-09 6:00:00', '2023-06-18 9:00:00', 'onsite'),
 (17, 'Entrepreneurship Bootcamp','Attend entrepreneurship bootcamp', 'Join an entrepreneurship bootcamp to learn essential skills for starting and running a business, including idea generation, market research, business planning, and pitching, in an immersive and hands-on learning environment.', '2024-09-15 20:00:00', '2024-09-16 21:00:00', '2024-08-26 16:00:00', '2024-09-03 16:00:00', 25, 82, '2024-09-04 16:00:00', 'Active', 0, 'Lets gather for a DIY herb gardening workshop and grow fresh herbs at home!', 37, '2024-07-10 6:00:00', '2023-06-19 9:00:00', 'onsite'),
 (20, 'Social Media Marketing Course','Learn social media marketing ', 'Enroll in a social media marketing course to learn how to leverage social media platforms for business growth, including advertising, engagement strategies, and analytics, to reach and engage target audiences effectively.', '2020-05-17 12:00:00', '2020-05-26 13:00:00', '2020-04-17 18:00:00', '2020-04-27 18:00:00', 95, 83, '2020-04-28 18:00:00', 'Active', 0, 'Join our astronomy club and explore the mysteries of the universe!', 38, '2024-07-11 6:00:00', '2023-06-20 9:00:00', 'onsite'),
@@ -1393,7 +1646,30 @@ VALUES
 (93,'Business Networking Event','Attend networking events','Attend a business networking event to connect with industry professionals, entrepreneurs, and potential collaborators, building relationships, and exploring opportunities for partnerships and business growth.','2021-10-11 18:00:00','2021-10-18 19:00:00','2021-06-17 11:00:00','2021-06-22 11:00:00',135,82,'2021-06-23 11:00:00','Active',0,'Dive into the world of stand-up comedy at our comedy open mic night!',42,'2024-07-15 06:00:00','2023-06-24 09:00:00','onsite'),
 (34,'Business Model Innovation Workshop','Explore business models','Participate in a business model innovation workshop to explore new business models, revenue streams, and value propositions, fostering creativity and adaptability in responding to changing market dynamics.','2023-06-26 15:00:00','2023-07-10 16:00:00','2023-01-10 05:00:00','2023-01-15 05:00:00',75,81,'2023-01-16 05:00:00','Active',0,'Lets gather for a DIY woodworking workshop and craft custom cutting boards!',37,'2024-07-16 06:00:00','2023-06-25 09:00:00','onsite'),
 (68, 'Content Marketing Strategy Seminar','Learn content marketing', 'Join a content marketing strategy seminar to learn how to create and execute content marketing plans, including content creation, distribution, and measurement, to attract and engage audiences and drive business growth.', '2024-12-30 23:00:00', '2025-01-14 0:00:00', '2024-09-04 16:00:00', '2024-09-09 16:00:00', 50, 16, '2024-09-10 16:00:00', 'Active', 0, 'Join our bookbinding workshop and learn to bind your own books!', 38, '2024-07-17 6:00:00', '2023-06-26 9:00:00', 'online'),
-(205, 'Financial Risk Management Course','Learn risk management', 'Enroll in a financial risk management course to learn how to identify, assess, and mitigate financial risks such as market risk, credit risk, and operational risk, ensuring the stability and resilience of businesses.', '2024-09-20 20:00:00', '2024-09-28 21:00:00', '2024-06-17 22:00:00', '2024-06-22 22:00:00', 130, 16, '2024-06-23 22:00:00', 'Active', 0, 'Discover the art of Thai cooking at our authentic cooking class!', 39, '2024-07-18 6:00:00', '2023-06-27 9:00:00', 'online'),
+(205, 'Financial Risk Management Course','Learn risk management', 'Enroll in a financial risk management course to learn how to identify, assess, and mitigate financial risks such as market risk, credit risk, and operational risk, ensuring the stability and resilience of businesses.', '2024-09-20 20:00:00', '2024-09-28 21:00:00', '2024-06-17 22:00:00', '2024-06-22 22:00:00', 130, 16, '2024-06-23 22:00:00', 'Active', 0, 'Discover the art of Thai cooking at our authentic cooking class!', 39, '2024-07-18 6:00:00', '2023-06-27 9:00:00', 'online');
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
 (17, 'Online Retail Business Development','Develop online retail', 'Learn strategies for developing and growing online retail businesses, including market research, product sourcing, branding, and customer acquisition, to establish successful e-commerce ventures.', '2023-03-09 16:00:00', '2023-03-11 17:00:00', '2023-02-28 18:00:00', '2023-03-05 18:00:00', 165, 16, '2023-03-06 18:00:00', 'Active', 0, 'Lets gather for a DIY succulent planting workshop and create beautiful arrangements!', 40, '2024-07-19 6:00:00', '2023-06-28 9:00:00', 'online'),
 (20, 'Distribution Logistics Optimization','Optimize logistics', 'Explore techniques for optimizing distribution logistics, including route planning, warehouse location, and inventory management, to streamline operations and enhance efficiency in the supply chain.', '2022-01-06 19:00:00', '2022-01-21 19:00:00', '2021-08-31 3:00:00', '2021-09-08 3:00:00', 125, 16, '2021-09-09 3:00:00', 'Active', 0, 'Join us for a photography scavenger hunt and capture unique shots around the city!', 41, '2024-07-20 6:00:00', '2023-06-29 9:00:00', 'online'),
 (38, 'Business Pitch Practice Sessions','Practice pitching', 'Participate in business pitch practice sessions to refine presentation skills, storytelling, and delivery, preparing for pitching opportunities such as investor meetings, competitions, or networking events.', '2023-04-01 8:00:00', '2023-04-04 8:00:00', '2022-01-20 13:00:00', '2022-01-27 13:00:00', 75, 16, '2022-01-28 13:00:00', 'Active', 0, 'Explore the world of marine biology at our aquarium behind-the-scenes tour!', 42, '2024-07-21 6:00:00', '2023-06-30 9:00:00', 'online'),
@@ -1403,7 +1679,30 @@ VALUES
 (34, 'Leadership Development Retreat','Enhance leadership', 'Attend a leadership development retreat to enhance leadership skills, teamwork, and communication abilities through experiential activities, workshops, and group discussions.', '2023-12-19 11:00:00', '2023-12-25 12:00:00', '2023-12-04 11:00:00', '2023-12-15 20:00:00', 145, 84, '2023-12-16 20:00:00', 'Active', 0, 'Lets gather for a DIY screen printing workshop and design custom shirts!', 43, '2024-07-25 6:00:00', '2023-07-04 9:00:00', 'onsite'),
 (68, 'Community Service Initiative','Engage in community service', 'Engage in community service initiatives such as volunteering at local shelters, organizing environmental cleanups, or assisting with social welfare programs to give back to the community.', '2023-09-07 14:00:00', '2023-09-20 15:00:00', '2023-08-01 14:00:00', '2023-08-20 7:00:00', 90, 85, '2023-08-21 7:00:00', 'Active', 0, 'Join us for a chocolate making class and indulge in sweet creations!', 43, '2024-07-26 6:00:00', '2023-07-05 9:00:00', 'onsite'),
 (205, 'Personal Growth Workshop','Explore personal growth', 'Join a personal growth workshop to explore self-discovery, goal-setting, and mindfulness practices, fostering personal development, resilience, and well-being.', '2024-10-17 1:00:00', '2024-10-22 2:00:00', '2023-09-30 1:00:00', '2024-03-30 9:00:00', 115, 86, '2024-03-31 9:00:00', 'Active', 0, 'Embark on a scenic hot air balloon ride and admire breathtaking views from above!', 43, '2024-07-27 6:00:00', '2023-07-06 9:00:00', 'onsite'),
-(17, 'Creative Expression Retreat', 'Retreat into creativity', 'Retreat into creative expression through art, music, writing, or other mediums, allowing for self-expression, reflection, and rejuvenation in a supportive and inspiring environment.', '2021-08-23 10:00:00', '2021-08-31 11:00:00', '2020-08-16 10:00:00', '2020-12-25 16:00:00', 120, 87, '2021-01-26 16:00:00', 'Active', 0, 'Lets gather for a DIY kombucha tasting workshop and sample homemade brews!', 43, '2024-07-28 6:00:00', '2023-07-07 9:00:00', 'onsite'),
+(17, 'Creative Expression Retreat', 'Retreat into creativity', 'Retreat into creative expression through art, music, writing, or other mediums, allowing for self-expression, reflection, and rejuvenation in a supportive and inspiring environment.', '2021-08-23 10:00:00', '2021-08-31 11:00:00', '2020-08-16 10:00:00', '2020-12-25 16:00:00', 120, 87, '2021-01-26 16:00:00', 'Active', 0, 'Lets gather for a DIY kombucha tasting workshop and sample homemade brews!', 43, '2024-07-28 6:00:00', '2023-07-07 9:00:00', 'onsite');
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
 (20, 'Team Building Challenge Course', 'Build teamwork', 'Navigate through a team-building challenge course featuring high ropes, obstacle courses, and cooperative activities, fostering teamwork, trust, and problem-solving skills.', '2024-07-18 7:00:00', '2024-07-21 8:00:00', '2024-07-11 7:00:00', '2023-07-15 4:00:00', 85, 86, '2023-07-16 4:00:00', 'Active', 0, 'Join our jewelry making workshop and craft unique pieces to treasure!', 43, '2024-07-29 6:00:00', '2023-07-08 9:00:00', 'onsite'),
 (38, 'Mindfulness Meditation Retreat', 'Practice mindfulness', 'Experience a mindfulness meditation retreat to cultivate presence, relaxation, and inner peace through guided meditation, yoga, and mindfulness practices in a tranquil setting.', '2022-05-31 17:00:00', '2022-06-01 18:00:00', '2022-05-17 17:00:00', '2022-05-28 16:00:00', 155, 86, '2022-05-30 16:00:00', 'Active', 0, 'Discover the art of watercolor painting at our beginners workshop!', 43, '2024-07-30 6:00:00', '2023-07-09 9:00:00', 'onsite'),
 (60, 'Innovation and Design Thinking Workshop', 'Explore design thinking', 'Participate in an innovation and design thinking workshop to cultivate creativity, problem-solving, and innovation skills through brainstorming, prototyping, and user-centric design methods.', '2021-03-14 23:00:00', '2021-03-17 0:00:00', '2021-03-07 23:00:00', '2021-05-01 8:00:00', 5, 86, '2021-05-02 8:00:00', 'Active', 0, 'Lets gather for a DIY fermentation workshop and make homemade pickles!', 43, '2024-07-31 6:00:00', '2023-07-10 9:00:00', 'onsite'),
