@@ -1249,7 +1249,41 @@ VALUES
 		'https://maps.app.goo.gl/pJiiFXbdaVrju', 
 		00.00, 
 		00.00
-    );
+    )
+(54, 'Queen Sirikit Park', 'https://maps.app.goo.gl/ViDd6fErhSgSmgfJ8', 0, 0),
+(55, 'THE STUDIO Dance / Fitness Bangkok', 'https://maps.app.goo.gl/RakQfg5H1LFAgKaQA', 0, 0),
+(56, 'Rising Star Dance Studio', 'https://maps.app.goo.gl/7jb1X6cjYe8XjTmc8', 0, 0),
+(57, 'DDance Thailand', 'https://maps.app.goo.gl/yTCvaV2v3rJRZACd9', 0, 0),
+(58, 'The Dance Academy', 'https://maps.app.goo.gl/W6TK3ydotS8R2PTy6', 0, 0),
+(59, 'BIDA Bangkok International Dance Academy', 'https://maps.app.goo.gl/9ATXKFVaiW2s9rSU7', 0, 0),
+(60, 'Passion Dance School', 'https://maps.app.goo.gl/zs89Jhjnyw666EacA', 0, 0),
+(61, 'Pink Dance School', 'https://maps.app.goo.gl/iVgfr4oobdbSQXrZ9', 0, 0),
+(62, 'Bangkok Dance Academy Central World', 'https://maps.app.goo.gl/SCeRBbqpwfiPMkkF8', 0, 0),
+(63, 'VIP. Danzs School', 'https://maps.app.goo.gl/LnRV94hBVEEdwB4G7', 0, 0),
+(64, 'Dance origins', 'https://maps.app.goo.gl/8Khrr4LLre8KYAcL8', 0, 0),
+(65, 'Moda Dance Studio', 'https://maps.app.goo.gl/YXVFHh9ax9dj7s2y8', 0, 0),
+(66, 'HULLU Concert Gallery', 'https://maps.app.goo.gl/gpttxkrp33qXhD7U6', 0, 0),
+(67, 'MUSIC MODERN ART', 'https://maps.app.goo.gl/5umXek1xxyDdYDK87', 0, 0),
+(68, 'Sony Music Thailand', 'https://maps.app.goo.gl/2nP8wT1zXuWmXDMU7', 0, 0),
+(69, 'หอแสดงดนตรี จุฬาลงกรณ์มหาวิทยาลัย (CU MUSIC HALL)', 'https://maps.app.goo.gl/yeLneqGV7vXZgaAE6', 0, 0),
+(70, 'BMAS International Music & Performing Arts Academy', 'https://maps.app.goo.gl/QV5TvgdZrBbmSfuk6', 0, 0),
+(71, 'Prart Music Institute', 'https://maps.app.goo.gl/3aX9epprFTEW6h4u9', 0, 0),
+(72, 'Music and Art Tale - Phayathai', 'https://maps.app.goo.gl/GHYt215QBsUJVJW29', 0, 0),
+(73, 'Superstar College of Arts', 'https://maps.app.goo.gl/zs97LspbmvcL7N1V8', 0, 0),
+(74, 'Phattayakul Thai Music and Drama School', 'https://maps.app.goo.gl/4QMsK9QkcLbCppCj7', 0, 0),
+(75, 'P%R ART Wörk Studio (P.A.W.S)', 'https://maps.app.goo.gl/99rq3N6XN5aq6JsHA', 0, 0),
+(76, 'Muse Music Academy', 'https://maps.app.goo.gl/KGfMMcDvwqvm2dhq6', 0, 0),
+(77, 'UnionSPACE Ekkamai (HQ)', 'https://maps.app.goo.gl/xUB96ra5QTMF1QRH9', 0, 0),
+(78, 'Startup in Thailand', 'https://maps.app.goo.gl/8UyUm9jMUjHTf5uU7', 0, 0),
+(79, 'Google Thailand', 'https://maps.app.goo.gl/jH1iiU2FG2Ekjxi27', 0, 0),
+(80, 'ABN Impact Thailand', 'https://maps.app.goo.gl/d7w4UXKD7MjhQQceA', 0, 0),
+(81, 'Thinking Space Thailand', 'https://maps.app.goo.gl/EvyFZrtByjYPEyXR6', 0, 0),
+(82, 'BTS Business Consulting (Thailand) Co, Ltd', 'https://maps.app.goo.gl/D1YssmQMSzM1Vnqu5', 0, 0),
+(83, 'Trading Places Co., Ltd.', 'https://maps.app.goo.gl/gj8DtHkym2CjSFdo9', 0, 0),
+(84, 'Mahanakhon sculpture park', 'https://maps.app.goo.gl/HVqSNEc6hbzRrGp56', 0, 0),
+(85, 'Wat Mangkon Kamalawat (Wat Leng Noei Yi)', 'https://maps.app.goo.gl/BUuaR1xXXeUvGYyw9', 0, 0),
+(86, 'Kamthieng House Museum', 'https://maps.app.goo.gl/S3kUPzGdhn16wydD9', 0, 0),
+(87, 'Royal Pavilion Mahajetsadabadin', 'https://maps.app.goo.gl/ib7bScs4xiwokJFK8', 0, 0);
 
 	-- Insert data into the Activity table with activityEndDate and activityFormat columns
 INSERT INTO
