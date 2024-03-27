@@ -338,7 +338,7 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`image` (
   `activityId` INT NULL,
   `label` VARCHAR(100) NOT NULL,
   `alt` VARCHAR(100) NOT NULL,
-  `imagepath` VARCHAR(300) NOT NULL,
+  `imagepath` VARCHAR(500) NOT NULL,
   PRIMARY KEY (`imageId`),
   INDEX `fk_image_Activity1_idx` (`activityId` ASC) VISIBLE,
   CONSTRAINT `fk_image_Activity1`
@@ -933,357 +933,93 @@ INSERT INTO
         `locationLatitude`
     )
 VALUES
-   (
-        'Doi Suthep Temple',
-        'https://maps.google.com/maps?q=Doi+Suthep+Temple,Chiang+Mai,Thailand',
-        98.842499,
-        18.804388
-    ),
-    (
-        'James Bond Island',
-        'https://maps.google.com/maps?q=James+Bond+Island,Phang+Nga,Thailand',
-        98.529864,
-        8.269304
-    ),
-    (
-        'Hua Hin Beach',
-        'https://maps.google.com/maps?q=Hua+Hin+Beach,Prachuap+Khiri+Khan,Thailand',
-        99.956897,
-        12.561806
-    ),
-    (
-        'Pai Canyon',
-        'https://maps.google.com/maps?q=Pai+Canyon,Mae+Hong+Son,Thailand',
-        98.440406,
-        19.365791
-    ),
-    (
-        'Ko Phi Phi Leh',
-        'https://maps.google.com/maps?q=Ko+Phi+Phi+Leh,Krabi,Thailand',
-        98.764579,
-        7.681415
-    ),
-    (
-        'Erawan National Park',
-        'https://maps.google.com/maps?q=Erawan+National+Park,Kanchanaburi,Thailand',
-        99.213200,
-        14.402426
-    ),
-    (
-        'Similan Islands',
-        'https://maps.google.com/maps?q=Similan+Islands,Phang+Nga,Thailand',
-        97.645233,
-        8.655676
-    ),
-    (
-        'Ko Samui',
-        'https://maps.google.com/maps?q=Ko+Samui,Surat+Thani,Thailand',
-        100.063160,
-        9.512017
-    ),
-    (
-        'Wat Rong Khun (White Temple)',
-        'https://maps.google.com/maps?q=Wat+Rong+Khun,Chiang+Rai,Thailand',
-        99.779937,
-        19.824280
-    ),
-    (
-        'Ko Tao',
-        'https://maps.google.com/maps?q=Ko+Tao,Surat+Thani,Thailand',
-        99.840411,
-        10.100359
-    ),
-    (
-        'Wat Pho',
-        'https://maps.google.com/maps?q=Wat+Pho,Bangkok,Thailand',
-        100.493941,
-        13.746703
-    ),
-    (
-        'Phuket Beach',
-        'https://maps.google.com/maps?q=Patong+Beach,Phuket,Thailand',
-        98.293087,
-        7.895680
-    ),
-    (
-        'Chiang Mai Old City',
-        'https://maps.google.com/maps?q=Chiang+Mai+Old+City,Chiang+Mai,Thailand',
-        98.993685,
-        18.785124
-    ),
-    (
-        'Krabi Railay Beach',
-        'https://maps.google.com/maps?q=Railay+Beach,Krabi,Thailand',
-        98.838603,
-        8.010108
-    ),
-    (
-        'Ayutthaya Historical Park',
-        'https://maps.google.com/maps?q=Ayutthaya,Historical+Park,Ayutthaya,Thailand',
-        100.552113,
-        14.361914
-    ),
-    (
-        'ZOOM',
-        'https://demo-zoomlink.com/',
-        00.00,
-        00.00
-    ),
-	(
-		'The Grand Palace', 
-		'https://maps.app.goo.gl/p9x1rFE94t7hid5k9', 
-		00.00, 
-		00.00
-    ),
-    (
-		'The Temple of the Emerald Buddha', 
-		'https://maps.app.goo.gl/jgvigvUySCfCQEFy7', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Khao Sok National Park', 
-		'https://maps.app.goo.gl/6x8SWXJZKMSeiuw38', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Phra Sumen Fort', 
-		'https://maps.app.goo.gl/ZM2b2ACM4oUC96Wn9', 
-		00.00, 
-		00.00),
-    (
-		'Wat Suthat Thepwararam Ratchaworamahawihan', 
-		'https://maps.app.goo.gl/wQEZgbXRZv8394mSA', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Asiatique Sky', 
-		'https://maps.app.goo.gl/xV2dL2M9sUQF8kSSA', 
-		00.00, 
-		00.00
-    ),
-    (
-		'SEA LIFE Bangkok Ocean World', 
-		'https://maps.app.goo.gl/DkofsrPbR3JP9ncL9', 
-		00.00, 
-		00.00
-    ),
-    (
-		'The Ancient City', 
-		'https://maps.app.goo.gl/cRdjoNzpPScFUnEw9', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Phimai Historical Park', 
-		'https://maps.app.goo.gl/tVeXAVWNHzpUiH3Z6', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Siam Amazing Park', 
-		'https://maps.app.goo.gl/khHpfhXwaqdfkuXW9', 
-		00.00, 
-		00.00
-    ),
-    (
-		'OneSiam Skywalk', 
-		'https://maps.app.goo.gl/k2DtFvb1TpDtyAQg7', 
-		00.00, 
-		00.00
-	),
-    (
-		'Chao Phraya River', 
-		'https://maps.app.goo.gl/mLEKu183By9ADUAK9', 
-		00.00, 
-		00.00
-    ),
-    (
-		'King Prajadhipok Museum', 
-		'https://maps.app.goo.gl/ebZQu1zNmyM7zNfr6', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Norwich International School Bangkok', 
-		'https://maps.app.goo.gl/YrVuRCZs5xHuePXx5', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Thailand Experiences', 
-		'https://maps.app.goo.gl/jjuc8avx49m4kj1W8', 
-		00.00, 
-		00.00
-    ),
-    (
-		'The Camping Ground', 
-		'https://maps.app.goo.gl/ViknhsdZ99yBhJCUA', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Queen Sirikit Museum of Textiles', 
-		'https://maps.app.goo.gl/iYtUfok4GUAFQvL48', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Lhong 1919', 
-		'https://maps.app.goo.gl/3SBwunavgva8X4Nc6', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Pak Khlong Talat (Flower Market)', 
-		'https://maps.app.goo.gl/ywQppC8nPw7Ngqg56', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Phra Sumen Fort', 
-		'https://maps.app.goo.gl/jwtYE95GJ8BBbzcLA', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Statue of King Rama III', 
-		'https://maps.app.goo.gl/G2bGyf3JX5DK9Sr69', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Tha Tian Market', 
-		'https://maps.app.goo.gl/MsZJo75vXVgPEyKp8', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Museum Siam', 
-		'https://maps.app.goo.gl/2xFvVNUbfwwhvSUH8', 
-		00.00,
-		00.00
-    ),
-    (
-		'Chaloemla Park (Graffiti Park)', 
-		'https://maps.app.goo.gl/wMv93XsYGWdhgfQNA',
-		00.00, 
-		00.00
-    ),
-    (
-		'Wat Mangkon Kamalawat (Wat Leng Noei Yi)',
-		'https://maps.app.goo.gl/QHBqDNVeXiL2S2Cu9', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Khao Sam Roi Yot National Park', 
-		'https://maps.app.goo.gl/kxUPepaj51A3stKt5', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Suan Luang Rama IX', 
-		'https://maps.app.goo.gl/zR7D1xfBhEuKaUGh8', 
-		00.00,
-		00.00
-    ),
-    (
-		'Ong Ang Canal',
-		'https://maps.app.goo.gl/gtRGDNF6GTPaBuD38', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Alangkarn waterfall at Icon Siam', 
-		'https://maps.app.goo.gl/PmWH1PT7EXaotosK6',
-		00.00,
-		00.00
-    ),
-    (
-		'Wat Pathum Wanaram Rachaworawihan', 
-		'https://maps.app.goo.gl/GsnehbJpcVhTobcv7',
-		00.00, 
-		00.00
-    ),
-    (
-		'Bangkok Butterfly Garden and Insectarium', 
-		'https://maps.app.goo.gl/pgrg6csuys7KwF8J8', 
-		00.00,
-		00.00
-	),
-    (
-		'Benchasiri Park', 
-		'https://maps.app.goo.gl/8vThmRV8X612RPrEA', 
-		00.00, 
-		00.00
-     ),
-    (
-		'Princess Mother Memorial Park', 
-		'https://maps.app.goo.gl/DFiUbQrvprEzFM6x5', 
-		00.00, 
-		00.00
-    ),
-    (
-		'Rommaninat Park', 
-		'https://maps.app.goo.gl/QKuTwinN4yRTiAzF6',
-		00.00,
-		00.00
-    ),
-    (
-		'Chaloemla Gardens', 
-		'https://maps.app.goo.gl/hLQpmKn5QaGf74xh9',
-		00.00,
-		00.00
-    ),
-    (
-		'Chulalongkorn University Centenary Park',
-		'https://maps.app.goo.gl/zeenK8B15L5y1m256',
-		00.00, 
-		00.00
-    ),
-    (
-		'King Rama IX Memorial Park', 
-		'https://maps.app.goo.gl/pJiiFXbdaVrju', 
-		00.00, 
-		00.00
-    )
-(54, 'Queen Sirikit Park', 'https://maps.app.goo.gl/ViDd6fErhSgSmgfJ8', 0, 0),
-(55, 'THE STUDIO Dance / Fitness Bangkok', 'https://maps.app.goo.gl/RakQfg5H1LFAgKaQA', 0, 0),
-(56, 'Rising Star Dance Studio', 'https://maps.app.goo.gl/7jb1X6cjYe8XjTmc8', 0, 0),
-(57, 'DDance Thailand', 'https://maps.app.goo.gl/yTCvaV2v3rJRZACd9', 0, 0),
-(58, 'The Dance Academy', 'https://maps.app.goo.gl/W6TK3ydotS8R2PTy6', 0, 0),
-(59, 'BIDA Bangkok International Dance Academy', 'https://maps.app.goo.gl/9ATXKFVaiW2s9rSU7', 0, 0),
-(60, 'Passion Dance School', 'https://maps.app.goo.gl/zs89Jhjnyw666EacA', 0, 0),
-(61, 'Pink Dance School', 'https://maps.app.goo.gl/iVgfr4oobdbSQXrZ9', 0, 0),
-(62, 'Bangkok Dance Academy Central World', 'https://maps.app.goo.gl/SCeRBbqpwfiPMkkF8', 0, 0),
-(63, 'VIP. Danzs School', 'https://maps.app.goo.gl/LnRV94hBVEEdwB4G7', 0, 0),
-(64, 'Dance origins', 'https://maps.app.goo.gl/8Khrr4LLre8KYAcL8', 0, 0),
-(65, 'Moda Dance Studio', 'https://maps.app.goo.gl/YXVFHh9ax9dj7s2y8', 0, 0),
-(66, 'HULLU Concert Gallery', 'https://maps.app.goo.gl/gpttxkrp33qXhD7U6', 0, 0),
-(67, 'MUSIC MODERN ART', 'https://maps.app.goo.gl/5umXek1xxyDdYDK87', 0, 0),
-(68, 'Sony Music Thailand', 'https://maps.app.goo.gl/2nP8wT1zXuWmXDMU7', 0, 0),
-(69, 'หอแสดงดนตรี จุฬาลงกรณ์มหาวิทยาลัย (CU MUSIC HALL)', 'https://maps.app.goo.gl/yeLneqGV7vXZgaAE6', 0, 0),
-(70, 'BMAS International Music & Performing Arts Academy', 'https://maps.app.goo.gl/QV5TvgdZrBbmSfuk6', 0, 0),
-(71, 'Prart Music Institute', 'https://maps.app.goo.gl/3aX9epprFTEW6h4u9', 0, 0),
-(72, 'Music and Art Tale - Phayathai', 'https://maps.app.goo.gl/GHYt215QBsUJVJW29', 0, 0),
-(73, 'Superstar College of Arts', 'https://maps.app.goo.gl/zs97LspbmvcL7N1V8', 0, 0),
-(74, 'Phattayakul Thai Music and Drama School', 'https://maps.app.goo.gl/4QMsK9QkcLbCppCj7', 0, 0),
-(75, 'P%R ART Wörk Studio (P.A.W.S)', 'https://maps.app.goo.gl/99rq3N6XN5aq6JsHA', 0, 0),
-(76, 'Muse Music Academy', 'https://maps.app.goo.gl/KGfMMcDvwqvm2dhq6', 0, 0),
-(77, 'UnionSPACE Ekkamai (HQ)', 'https://maps.app.goo.gl/xUB96ra5QTMF1QRH9', 0, 0),
-(78, 'Startup in Thailand', 'https://maps.app.goo.gl/8UyUm9jMUjHTf5uU7', 0, 0),
-(79, 'Google Thailand', 'https://maps.app.goo.gl/jH1iiU2FG2Ekjxi27', 0, 0),
-(80, 'ABN Impact Thailand', 'https://maps.app.goo.gl/d7w4UXKD7MjhQQceA', 0, 0),
-(81, 'Thinking Space Thailand', 'https://maps.app.goo.gl/EvyFZrtByjYPEyXR6', 0, 0),
-(82, 'BTS Business Consulting (Thailand) Co, Ltd', 'https://maps.app.goo.gl/D1YssmQMSzM1Vnqu5', 0, 0),
-(83, 'Trading Places Co., Ltd.', 'https://maps.app.goo.gl/gj8DtHkym2CjSFdo9', 0, 0),
-(84, 'Mahanakhon sculpture park', 'https://maps.app.goo.gl/HVqSNEc6hbzRrGp56', 0, 0),
-(85, 'Wat Mangkon Kamalawat (Wat Leng Noei Yi)', 'https://maps.app.goo.gl/BUuaR1xXXeUvGYyw9', 0, 0),
-(86, 'Kamthieng House Museum', 'https://maps.app.goo.gl/S3kUPzGdhn16wydD9', 0, 0),
-(87, 'Royal Pavilion Mahajetsadabadin', 'https://maps.app.goo.gl/ib7bScs4xiwokJFK8', 0, 0);
+('Doi Suthep Temple','https://maps.google.com/maps?q=Doi+Suthep+Temple,Chiang+Mai,Thailand',98.842499,18.804388),
+('James Bond Island','https://maps.google.com/maps?q=James+Bond+Island,Phang+Nga,Thailand',98.529864,8.269304),
+('Hua Hin Beach','https://maps.google.com/maps?q=Hua+Hin+Beach,Prachuap+Khiri+Khan,Thailand',99.956897,12.561806),
+('Pai Canyon','https://maps.google.com/maps?q=Pai+Canyon,Mae+Hong+Son,Thailand',98.440406,19.365791),
+('Ko Phi Phi Leh','https://maps.google.com/maps?q=Ko+Phi+Phi+Leh,Krabi,Thailand',98.764579,7.681415),
+('Erawan National Park','https://maps.google.com/maps?q=Erawan+National+Park,Kanchanaburi,Thailand',99.213200,14.402426),
+('Similan Islands','https://maps.google.com/maps?q=Similan+Islands,Phang+Nga,Thailand',97.645233,8.655676),
+('Ko Samui','https://maps.google.com/maps?q=Ko+Samui,Surat+Thani,Thailand',100.063160,9.512017),
+('Wat Rong Khun (White Temple)','https://maps.google.com/maps?q=Wat+Rong+Khun,Chiang+Rai,Thailand',99.779937,19.824280),
+('Ko Tao','https://maps.google.com/maps?q=Ko+Tao,Surat+Thani,Thailand',99.840411,10.100359),
+('Wat Pho','https://maps.google.com/maps?q=Wat+Pho,Bangkok,Thailand',100.493941,13.746703),
+('Phuket Beach','https://maps.google.com/maps?q=Patong+Beach,Phuket,Thailand',98.293087,7.895680),
+('Chiang Mai Old City','https://maps.google.com/maps?q=Chiang+Mai+Old+City,Chiang+Mai,Thailand',98.993685,18.785124),
+('Krabi Railay Beach','https://maps.google.com/maps?q=Railay+Beach,Krabi,Thailand',98.838603,8.010108),
+('Ayutthaya Historical Park','https://maps.google.com/maps?q=Ayutthaya,Historical+Park,Ayutthaya,Thailand',100.552113,14.361914),
+('ZOOM','https://demo-zoomlink.com/',00.00,00.00),
+('The Grand Palace', 'https://maps.app.goo.gl/p9x1rFE94t7hid5k9', 00.00, 00.00),
+('The Temple of the Emerald Buddha', 'https://maps.app.goo.gl/jgvigvUySCfCQEFy7', 00.00, 00.00),
+('Khao Sok National Park', 'https://maps.app.goo.gl/6x8SWXJZKMSeiuw38', 00.00, 00.00),
+('Phra Sumen Fort', 'https://maps.app.goo.gl/ZM2b2ACM4oUC96Wn9', 00.00, 00.00),
+('Wat Suthat Thepwararam Ratchaworamahawihan', 'https://maps.app.goo.gl/wQEZgbXRZv8394mSA', 00.00, 00.00),
+('Asiatique Sky', 'https://maps.app.goo.gl/xV2dL2M9sUQF8kSSA', 00.00, 00.00),
+('SEA LIFE Bangkok Ocean World', 'https://maps.app.goo.gl/DkofsrPbR3JP9ncL9', 00.00, 00.00),
+('The Ancient City', 'https://maps.app.goo.gl/cRdjoNzpPScFUnEw9', 00.00, 00.00),
+('Phimai Historical Park', 'https://maps.app.goo.gl/tVeXAVWNHzpUiH3Z6', 00.00, 00.00),
+('Siam Amazing Park', 'https://maps.app.goo.gl/khHpfhXwaqdfkuXW9', 00.00, 00.00),
+('OneSiam Skywalk', 'https://maps.app.goo.gl/k2DtFvb1TpDtyAQg7', 00.00, 00.00),
+('Chao Phraya River', 'https://maps.app.goo.gl/mLEKu183By9ADUAK9', 00.00, 00.00),
+('King Prajadhipok Museum', 'https://maps.app.goo.gl/ebZQu1zNmyM7zNfr6', 00.00, 00.00),
+('Norwich International School Bangkok', 'https://maps.app.goo.gl/YrVuRCZs5xHuePXx5', 00.00, 00.00),
+('Thailand Experiences', 'https://maps.app.goo.gl/jjuc8avx49m4kj1W8', 00.00, 00.00),
+('The Camping Ground', 'https://maps.app.goo.gl/ViknhsdZ99yBhJCUA', 00.00, 00.00),
+('Queen Sirikit Museum of Textiles', 'https://maps.app.goo.gl/iYtUfok4GUAFQvL48', 00.00, 00.00),
+('Lhong 1919', 'https://maps.app.goo.gl/3SBwunavgva8X4Nc6', 00.00, 00.00),
+('Pak Khlong Talat (Flower Market)', 'https://maps.app.goo.gl/ywQppC8nPw7Ngqg56', 00.00, 00.00),
+('Phra Sumen Fort', 'https://maps.app.goo.gl/jwtYE95GJ8BBbzcLA', 00.00,00.00),
+('Statue of King Rama III', 'https://maps.app.goo.gl/G2bGyf3JX5DK9Sr69', 00.00, 00.00),
+('Tha Tian Market', 'https://maps.app.goo.gl/MsZJo75vXVgPEyKp8', 00.00, 00.00),
+('Museum Siam', 'https://maps.app.goo.gl/2xFvVNUbfwwhvSUH8', 00.00,00.00),
+('Chaloemla Park (Graffiti Park)', 'https://maps.app.goo.gl/wMv93XsYGWdhgfQNA',00.00, 00.00),
+('Wat Mangkon Kamalawat (Wat Leng Noei Yi)','https://maps.app.goo.gl/QHBqDNVeXiL2S2Cu9', 00.00, 00.00),
+('Khao Sam Roi Yot National Park', 'https://maps.app.goo.gl/kxUPepaj51A3stKt5', 00.00, 00.00),
+('Suan Luang Rama IX', 'https://maps.app.goo.gl/zR7D1xfBhEuKaUGh8', 00.00,00.00),
+('Ong Ang Canal','https://maps.app.goo.gl/gtRGDNF6GTPaBuD38', 00.00, 00.00),
+('Alangkarn waterfall at Icon Siam', 'https://maps.app.goo.gl/PmWH1PT7EXaotosK6',00.00,00.00),
+('Wat Pathum Wanaram Rachaworawihan', 'https://maps.app.goo.gl/GsnehbJpcVhTobcv7',00.00, 00.00),
+('Bangkok Butterfly Garden and Insectarium', 'https://maps.app.goo.gl/pgrg6csuys7KwF8J8', 00.00,00.00),
+('Benchasiri Park', 'https://maps.app.goo.gl/8vThmRV8X612RPrEA', 00.00, 00.00),
+('Princess Mother Memorial Park', 'https://maps.app.goo.gl/DFiUbQrvprEzFM6x5', 00.00, 00.00),
+('Rommaninat Park', 'https://maps.app.goo.gl/QKuTwinN4yRTiAzF6',00.00,00.00),
+('Chaloemla Gardens', 'https://maps.app.goo.gl/hLQpmKn5QaGf74xh9',00.00,00.00),
+('Chulalongkorn University Centenary Park','https://maps.app.goo.gl/zeenK8B15L5y1m256',00.00, 00.00),
+('King Rama IX Memorial Park', 'https://maps.app.goo.gl/pJiiFXbdaVrju', 00.00, 00.00),
+('Queen Sirikit Park', 'https://maps.app.goo.gl/ViDd6fErhSgSmgfJ8', 0, 0),
+('THE STUDIO Dance / Fitness Bangkok', 'https://maps.app.goo.gl/RakQfg5H1LFAgKaQA', 0, 0),
+('Rising Star Dance Studio', 'https://maps.app.goo.gl/7jb1X6cjYe8XjTmc8', 0, 0),
+('DDance Thailand', 'https://maps.app.goo.gl/yTCvaV2v3rJRZACd9', 0, 0),
+('The Dance Academy', 'https://maps.app.goo.gl/W6TK3ydotS8R2PTy6', 0, 0),
+('BIDA Bangkok International Dance Academy', 'https://maps.app.goo.gl/9ATXKFVaiW2s9rSU7', 0, 0),
+('Passion Dance School', 'https://maps.app.goo.gl/zs89Jhjnyw666EacA', 0, 0),
+('Pink Dance School', 'https://maps.app.goo.gl/iVgfr4oobdbSQXrZ9', 0, 0),
+('Bangkok Dance Academy Central World', 'https://maps.app.goo.gl/SCeRBbqpwfiPMkkF8', 0, 0),
+('VIP. Danzs School', 'https://maps.app.goo.gl/LnRV94hBVEEdwB4G7', 0, 0),
+('Dance origins', 'https://maps.app.goo.gl/8Khrr4LLre8KYAcL8', 0, 0),
+('Moda Dance Studio', 'https://maps.app.goo.gl/YXVFHh9ax9dj7s2y8', 0, 0),
+('HULLU Concert Gallery', 'https://maps.app.goo.gl/gpttxkrp33qXhD7U6', 0, 0),
+('MUSIC MODERN ART', 'https://maps.app.goo.gl/5umXek1xxyDdYDK87', 0, 0),
+('Sony Music Thailand', 'https://maps.app.goo.gl/2nP8wT1zXuWmXDMU7', 0, 0),
+('หอแสดงดนตรี จุฬาลงกรณ์มหาวิทยาลัย (CU MUSIC HALL)', 'https://maps.app.goo.gl/yeLneqGV7vXZgaAE6', 0, 0),
+('BMAS International Music & Performing Arts Academy', 'https://maps.app.goo.gl/QV5TvgdZrBbmSfuk6', 0, 0),
+('Prart Music Institute', 'https://maps.app.goo.gl/3aX9epprFTEW6h4u9', 0, 0),
+('Music and Art Tale - Phayathai', 'https://maps.app.goo.gl/GHYt215QBsUJVJW29', 0, 0),
+('Superstar College of Arts', 'https://maps.app.goo.gl/zs97LspbmvcL7N1V8', 0, 0),
+('Phattayakul Thai Music and Drama School', 'https://maps.app.goo.gl/4QMsK9QkcLbCppCj7', 0, 0),
+('P%R ART Wörk Studio (P.A.W.S)', 'https://maps.app.goo.gl/99rq3N6XN5aq6JsHA', 0, 0),
+('Muse Music Academy', 'https://maps.app.goo.gl/KGfMMcDvwqvm2dhq6', 0, 0),
+('UnionSPACE Ekkamai (HQ)', 'https://maps.app.goo.gl/xUB96ra5QTMF1QRH9', 0, 0),
+('Startup in Thailand', 'https://maps.app.goo.gl/8UyUm9jMUjHTf5uU7', 0, 0),
+('Google Thailand', 'https://maps.app.goo.gl/jH1iiU2FG2Ekjxi27', 0, 0),
+('ABN Impact Thailand', 'https://maps.app.goo.gl/d7w4UXKD7MjhQQceA', 0, 0),
+('Thinking Space Thailand', 'https://maps.app.goo.gl/EvyFZrtByjYPEyXR6', 0, 0),
+('BTS Business Consulting (Thailand) Co, Ltd', 'https://maps.app.goo.gl/D1YssmQMSzM1Vnqu5', 0, 0),
+('Trading Places Co., Ltd.', 'https://maps.app.goo.gl/gj8DtHkym2CjSFdo9', 0, 0),
+('Mahanakhon sculpture park', 'https://maps.app.goo.gl/HVqSNEc6hbzRrGp56', 0, 0),
+('Wat Mangkon Kamalawat (Wat Leng Noei Yi)', 'https://maps.app.goo.gl/BUuaR1xXXeUvGYyw9', 0, 0),
+('Kamthieng House Museum', 'https://maps.app.goo.gl/S3kUPzGdhn16wydD9', 0, 0),
+('Royal Pavilion Mahajetsadabadin', 'https://maps.app.goo.gl/ib7bScs4xiwokJFK8', 0, 0);
 
 	-- Insert data into the Activity table with activityEndDate and activityFormat columns
 INSERT INTO
@@ -1605,14 +1341,14 @@ INSERT INTO
         `activityFormat`
     )
 VALUES
-(93,'Vocal Training',' Receive vocal instruction','Receive vocal training sessions to improve singing technique, breath control, and vocal range, developing confidence and expression while refining your singing abilities.','2024-04-05 9:00:00','2024-04-05 9:00:00','2024-03-20 9:00:00','2024-03-25 9:00:00',130,68,'2024-03-31 9:00:00','Active',0,'Dive into the world of cryptocurrencies at our blockchain technology seminar!',31,'2024-06-19 6:00:00','2023-05-29 9:00:00','onsite')
-(34,'Creative Writing Class','Take creative writing classes','Enroll in a creative writing class to explore storytelling, character development, and narrative techniques, unleashing creativity and honing writing skills in a supportive environment.','2024-02-08 4:00:00','2024-02-16 5:00:00','2023-12-15 16:00:00','2024-01-20 16:00:00',155,67,'2024-01-26 16:00:00','Active',0,'Lets gather for a DIY skincare workshop and create natural beauty products!',33,'2024-06-20 6:00:00','2023-05-30 9:00:00','onsite')
-(206,'Poetry Workshop','Attend poetry workshops','Participate in a poetry workshop to explore poetic forms, imagery, and rhythm, crafting original poems and exploring the beauty and power of language through poetry writing.','2023-10-10 04:00:00','2023-10-15 04:00:00','2023-09-24 04:00:00','2023-09-29 04:00:00',65,67,'2023-09-30 04:00:00','Active',0,'Join us for a wildlife photography contest and showcase your best shots!',34,'2024-06-21 06:00:00','2023-05-31 09:00:00','onsite'),
+(93,'Vocal Training',' Receive vocal instruction','Receive vocal training sessions to improve singing technique, breath control, and vocal range, developing confidence and expression while refining your singing abilities.','2024-04-05 9:00:00','2024-04-05 9:00:00','2024-03-20 9:00:00','2024-03-25 9:00:00',130,68,'2024-03-31 9:00:00','Active',0,'Dive into the world of cryptocurrencies at our blockchain technology seminar!',31,'2024-06-19 6:00:00','2023-05-29 9:00:00','onsite'),
+(34,'Creative Writing Class','Take creative writing classes','Enroll in a creative writing class to explore storytelling, character development, and narrative techniques, unleashing creativity and honing writing skills in a supportive environment.','2024-02-08 4:00:00','2024-02-16 5:00:00','2023-12-15 16:00:00','2024-01-20 16:00:00',155,67,'2024-01-26 16:00:00','Active',0,'Lets gather for a DIY skincare workshop and create natural beauty products!',33,'2024-06-20 6:00:00','2023-05-30 9:00:00','onsite'),
+(205,'Poetry Workshop','Attend poetry workshops','Participate in a poetry workshop to explore poetic forms, imagery, and rhythm, crafting original poems and exploring the beauty and power of language through poetry writing.','2023-10-10 04:00:00','2023-10-15 04:00:00','2023-09-24 04:00:00','2023-09-29 04:00:00',65,67,'2023-09-30 04:00:00','Active',0,'Join us for a wildlife photography contest and showcase your best shots!',34,'2024-06-21 06:00:00','2023-05-31 09:00:00','onsite'),
 (17,'Literature Discussion','Discuss literature in book clubs','Join a literature discussion group to explore and analyze literary works, discussing themes, characters, and interpretations while fostering a deeper appreciation for literature.','2021-09-12 16:00:00','2021-09-15 16:00:00','2021-08-23 16:00:00','2021-08-28 16:00:00',125,69,'2021-08-29 16:00:00','Active',0,'Discover the art of Japanese tea ceremony at our traditional tea tasting event!',35,'2024-06-22 06:00:00','2023-06-01 09:00:00','onsite'),
 (20,'Digital Art Design','Create digital art','Learn digital art creation using software tools, mastering techniques for digital painting, graphic design, and illustration to create visually stunning artworks.','2024-06-12 21:00:00','2024-06-26 22:00:00','2024-04-26 08:00:00','2024-05-01 08:00:00',155,70,'2024-05-02 08:00:00','Active',0,'Lets gather for a DIY candle making workshop and create handmade candles!',36,'2024-06-23 06:00:00','2023-06-02 09:00:00','onsite'),
 (38,'Watercolor Painting','Learn watercolor painting techniques and create artworks.','Explore the versatility of watercolor painting in a class focusing on techniques such as washes, wet-on-wet, and dry brush, capturing light, color, and mood in vibrant watercolor artworks.','2023-12-18 21:00:00','2023-12-20 21:00:00','2023-12-05 21:00:00','2023-12-10 21:00:00',5,71,'2023-12-11 21:00:00','Active',0,'Join our coding bootcamp and learn to build your own websites and apps!',27,'2024-06-24 06:00:00','2023-06-03 09:00:00','onsite'),
 (60,'Life Drawing Sessions','Practice life drawing','Attend life drawing sessions to sketch live models, studying anatomy, proportion, and gesture while honing observational drawing skills and capturing the human form on paper.','2022-03-20 12:00:00','2022-03-25 12:00:00','2022-03-05 12:00:00','2022-03-10 12:00:00',90,72,'2022-03-11 12:00:00','Active',0,'Explore the world of 3D printing at our hands-on workshop!',28,'2024-06-25 06:00:00','2023-06-04 09:00:00','onsite'),
-(101, 'Stone Carving Workshop','Learn stone carving', 'Participate in a stone carving workshop to learn carving techniques, tools, and safety practices, sculpting stone into sculptures and exploring the tactile art of stone carving.', '2022-02-17 11:00:00', '2022-02-30 11:00:00', '2021-12-26 11:00:00', '2022-01-05 11:00:00', 40, 71, '2022-01-06 11:00:00', 'Active', 0, 'Lets gather for a knitting circle and work on our latest projects together!', 29, '2024-06-26 6:00:00', '2023-06-05 9:00:00', 'onsite'),
+(101, 'Stone Carving Workshop','Learn stone carving', 'Participate in a stone carving workshop to learn carving techniques, tools, and safety practices, sculpting stone into sculptures and exploring the tactile art of stone carving.', '2022-02-17 11:00:00', '2022-02-28 11:00:00', '2021-12-26 11:00:00', '2022-01-05 11:00:00', 40, 71, '2022-01-06 11:00:00', 'Active', 0, 'Lets gather for a knitting circle and work on our latest projects together!', 29, '2024-06-26 6:00:00', '2023-06-05 9:00:00', 'onsite'),
 (93, 'Piano Recital Practice', 'Practice piano', 'Prepare for a piano recital with focused practice sessions, mastering pieces, technique, and musical expression to deliver a polished and captivating performance on the piano.', '2023-01-24 5:00:00', '2023-01-29 5:00:00', '2022-12-16 20:00:00', '2022-12-25 20:00:00', 75, 73, '2022-12-26 20:00:00', 'Active', 0, 'Join us for a sushi making class and learn the art of Japanese cuisine!', 30, '2024-06-27 6:00:00', '2023-06-06 9:00:00', 'onsite'),
 (34, 'Choir Rehearsals', 'Rehearse with a choir', 'Rehearse with a choir to learn vocal harmonies, blend, and dynamics, preparing repertoire for performances and enjoying the camaraderie and joy of singing with others.', '2023-06-18 0:00:00', '2023-06-20 0:00:00', '2023-05-31 0:00:00', '2023-06-05 0:00:00', 115, 74, '2023-06-06 0:00:00', 'Active', 0, 'Discover the art of mixology at our cocktail crafting workshop!', 31, '2024-06-28 6:00:00', '2023-06-07 9:00:00', 'onsite');
 
@@ -2202,8 +1938,6 @@ INSERT INTO `unityDoDB`.`image` (`activityId`, `label`, `alt`, `imagepath`) VALU
 (132, 'activityDetail3', 'activityDetail3', 'https://firebasestorage.googleapis.com/v0/b/unitydoimage.appspot.com/o/Other%2FA8%2Fpexels-pixabay-289586.jpg?alt=media&token=84b13844-724b-4e28-8a3f-8a8363ba4bcb'),
 (132, 'activityDetail4', 'activityDetail4', 'https://firebasestorage.googleapis.com/v0/b/unitydoimage.appspot.com/o/Other%2FA8%2Fpexels-riccardo-307008.jpg?alt=media&token=dbdd96fc-437e-4a6d-94ac-638340d3e486');
 
-
-
 INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (1, 2, 1),
 (1, 3, 2),
@@ -2225,7 +1959,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (11, 3, 3),
 (12, 3, 1),
 (12, 2, 2),
-(12, 1, 3),
+(12, 1, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (13, 6, 1),
 (13, 2, 2),
 (13, 1, 3),
@@ -2246,7 +1982,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (18, 7, 3),
 (19, 4, 1),
 (19, 2, 2),
-(19, 6, 3),
+(19, 6, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (20, 2, 1),
 (20, 5, 2),
 (20, 3, 3),
@@ -2267,7 +2005,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (25, 1, 3),
 (26, 2, 1),
 (26, 1, 2),
-(26, 4, 3),
+(26, 4, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (27, 5, 1),
 (27, 3, 2),
 (27, 2, 3),
@@ -2288,7 +2028,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (32, 4, 3),
 (33, 1, 1),
 (33, 4, 2),
-(33, 3, 3),
+(33, 3, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (34, 2, 1),
 (34, 3, 2),
 (34, 5, 3),
@@ -2309,7 +2051,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (39, 7, 3),
 (40, 1, 1),
 (40, 3, 2),
-(40, 4, 3),
+(40, 4, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (41, 2, 1),
 (41, 3, 2),
 (41, 5, 3),
@@ -2330,7 +2074,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (46, 2, 3),
 (47, 2, 1),
 (47, 3, 2),
-(47, 1, 3),
+(47, 1, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (48, 2, 1),
 (48, 5, 2),
 (48, 6, 3),
@@ -2351,7 +2097,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (53, 4, 3),
 (54, 4, 1),
 (54, 2, 2),
-(54, 4, 3),
+(54, 4, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (55, 2, 1),
 (55, 1, 2),
 (55, 5, 3),
@@ -2372,7 +2120,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (60, 5, 3),
 (61, 6, 1),
 (61, 3, 2),
-(61, 1, 3),
+(61, 1, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (62, 1, 1),
 (62, 3, 2),
 (62, 2, 3),
@@ -2393,7 +2143,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (67, 7, 3),
 (68, 3, 1),
 (68, 2, 2),
-(68, 2, 3),
+(68, 2, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (69, 6, 1),
 (69, 2, 2),
 (69, 1, 3),
@@ -2414,7 +2166,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (74, 2, 3),
 (75, 2, 1),
 (75, 3, 2),
-(75, 4, 3),
+(75, 4, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (76, 5, 1),
 (76, 4, 2),
 (76, 3, 3),
@@ -2435,7 +2189,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (81, 5, 3),
 (82, 2, 1),
 (82, 1, 2),
-(82, 7, 3),
+(82, 7, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (83, 2, 1),
 (83, 6, 2),
 (83, 5, 3),
@@ -2456,7 +2212,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (88, 7, 3),
 (89, 2, 1),
 (89, 1, 2),
-(89, 3, 3),
+(89, 3, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (90, 4, 1),
 (90, 3, 2),
 (90, 1, 3),
@@ -2477,7 +2235,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (95, 1, 3),
 (96, 2, 1),
 (96, 6, 2),
-(96, 3, 3),
+(96, 3, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (97, 2, 1),
 (97, 3, 2),
 (97, 6, 3),
@@ -2498,13 +2258,15 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (102, 3, 3),
 (103, 3, 1),
 (103, 2, 2),
-(103, 1, 3),
+(103, 1, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (104, 6, 1),
 (104, 3, 2),
 (104, 1, 3),
 (105, 6, 1),
 (105, 3, 2),
-(105, 1, 3);
+(105, 1, 3),
 (106, 1, 1),
 (106, 3, 2),
 (106, 6, 3),
@@ -2519,7 +2281,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (109, 5, 3),
 (110, 3, 1),
 (110, 2, 2),
-(110, 1, 3),
+(110, 1, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (111, 4, 1),
 (111, 5, 2),
 (111, 6, 3),
@@ -2540,7 +2304,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (116, 6, 3),
 (117, 5, 1),
 (117, 6, 2),
-(117, 7, 3),
+(117, 7, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (118, 5, 1),
 (118, 1, 2),
 (118, 2, 3),
@@ -2561,7 +2327,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (123, 3, 3),
 (124, 2, 1),
 (124, 1, 2),
-(124, 3, 3),
+(124, 3, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (125, 3, 1),
 (125, 2, 2),
 (125, 1, 3),
@@ -2582,7 +2350,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (130, 4, 3),
 (131, 5, 1),
 (131, 6, 2),
-(131, 7, 3),
+(131, 7, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (132, 1, 1),
 (132, 2, 2),
 (132, 3, 3),
@@ -2603,7 +2373,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (137, 6, 3),
 (138, 6, 1),
 (138, 7, 2),
-(138, 2, 3),
+(138, 2, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (139, 6, 1),
 (139, 1, 2),
 (139, 2, 3),
@@ -2624,7 +2396,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (144, 6, 3),
 (145, 3, 1),
 (145, 6, 2),
-(145, 7, 3),
+(145, 7, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (146, 3, 1),
 (146, 2, 2),
 (146, 1, 3),
@@ -2639,13 +2413,15 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (149, 3, 3),
 (150, 6, 1),
 (150, 7, 2),
-(150, 8, 3),
+(150, 3, 3),
 (151, 2, 1),
 (151, 2, 2),
 (151, 6, 3),
 (152, 3, 1),
 (152, 1, 2),
-(152, 7, 3),
+(152, 7, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (153, 7, 1),
 (153, 2, 2),
 (153, 1, 3),
@@ -2666,7 +2442,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (158, 1, 3),
 (159, 5, 1),
 (159, 6, 2),
-(159, 7, 3),
+(159, 7, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (160, 1, 1),
 (160, 3, 2),
 (160, 2, 3),
@@ -2687,7 +2465,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (165, 1, 3),
 (166, 5, 1),
 (166, 6, 2),
-(166, 4, 3),
+(166, 4, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (167, 2, 1),
 (167, 3, 2),
 (167, 1, 3),
@@ -2708,7 +2488,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (172, 1, 3),
 (173, 1, 1),
 (173, 2, 2),
-(173, 3, 3),
+(173, 3, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (174, 3, 1),
 (174, 2, 2),
 (174, 1, 3),
@@ -2729,7 +2511,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (179, 1, 3),
 (180, 3, 1),
 (180, 2, 2),
-(180, 1, 3),
+(180, 1, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (181, 1, 1),
 (181, 2, 2),
 (181, 3, 3),
@@ -2750,7 +2534,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (186, 1, 3),
 (187, 5, 1),
 (187, 6, 2),
-(187, 5, 3),
+(187, 5, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (188, 6, 1),
 (188, 7, 2),
 (188, 3, 3),
@@ -2771,7 +2557,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (193, 7, 3),
 (194, 3, 1),
 (194, 5, 2),
-(194, 2, 3),
+(194, 2, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (195, 1, 1),
 (195, 6, 2),
 (195, 3, 3),
@@ -2792,7 +2580,9 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (200, 6, 3),
 (201, 3, 1),
 (201, 4, 2),
-(201, 1, 3),
+(201, 1, 3);
+
+INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categoryRank`) VALUES
 (202, 2, 1),
 (202, 5, 2),
 (202, 7, 3),
@@ -2805,4 +2595,3 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (205, 5, 1),
 (205, 3, 2),
 (205, 4, 3);
-
