@@ -1476,7 +1476,216 @@ VALUES
 (20, 'Team Building Challenge Course', 'Build teamwork', 'Navigate through a team-building challenge course featuring high ropes, obstacle courses, and cooperative activities, fostering teamwork, trust, and problem-solving skills.', '2024-07-18 7:00:00', '2024-07-21 8:00:00', '2024-07-11 7:00:00', '2023-07-15 4:00:00', 85, 86, '2023-07-16 4:00:00', 'Active', 0, 'Join our jewelry making workshop and craft unique pieces to treasure!', 43, '2024-07-29 6:00:00', '2023-07-08 9:00:00', 'onsite'),
 (38, 'Mindfulness Meditation Retreat', 'Practice mindfulness', 'Experience a mindfulness meditation retreat to cultivate presence, relaxation, and inner peace through guided meditation, yoga, and mindfulness practices in a tranquil setting.', '2022-05-31 17:00:00', '2022-06-01 18:00:00', '2022-05-17 17:00:00', '2022-05-28 16:00:00', 155, 86, '2022-05-30 16:00:00', 'Active', 0, 'Discover the art of watercolor painting at our beginners workshop!', 43, '2024-07-30 6:00:00', '2023-07-09 9:00:00', 'onsite'),
 (60, 'Innovation and Design Thinking Workshop', 'Explore design thinking', 'Participate in an innovation and design thinking workshop to cultivate creativity, problem-solving, and innovation skills through brainstorming, prototyping, and user-centric design methods.', '2021-03-14 23:00:00', '2021-03-17 0:00:00', '2021-03-07 23:00:00', '2021-05-01 8:00:00', 5, 86, '2021-05-02 8:00:00', 'Active', 0, 'Lets gather for a DIY fermentation workshop and make homemade pickles!', 43, '2024-07-31 6:00:00', '2023-07-10 9:00:00', 'onsite'),
-(101, 'Wellness and Self-Care Retreat', 'Retreat into wellness', 'Retreat into wellness and self-care with activities such as yoga, meditation, spa treatments, and nature walks, prioritizing self-care, relaxation, and holistic well-being.', '2024-01-06 22:00:00', '2024-01-12 22:00:00', '2023-10-30 15:00:00', '2023-12-15 21:00:00', 40, 87, '2023-12-16 21:00:00', 'Active', 0, 'Join us for a guided horseback riding tour through picturesque landscapes!', 43, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite');
+(101, 'Wellness and Self-Care Retreat', 'Retreat into wellness', 'Retreat into wellness and self-care with activities such as yoga, meditation, spa treatments, and nature walks, prioritizing self-care, relaxation, and holistic well-being.', '2024-01-06 22:00:00', '2024-01-12 22:00:00', '2023-10-30 15:00:00', '2023-12-15 21:00:00', 40, 87, '2023-12-16 21:00:00', 'Active', 0, 'Join us for a guided horseback riding tour through picturesque landscapes!', 43, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(38, 'Pawsitive Pals Pet Therapy Program', 'Spread joy with therapy animals!', 'Spread joy with therapy animals! Volunteers and their furry friends visit hospitals, nursing homes, schools, and rehab centers, providing comfort and support.', '2024-01-18 9:00:00', '2024-01-19 9:00:00', '2024-01-03 9:00:00', '2024-01-10 9:00:00', 55, 16, '2024-01-11 9:00:00', 'Active', 0, 'Discover the joy of spreading positivity.', 1, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
+(60, 'Community Outreach Food Pantry', 'Support your community by volunteering', 'Support your community by volunteering at our Food Pantry. Help organize donations, distribute food to those in need, and spread compassion.', '2024-03-06 16:00:00', '2024-03-12 16:00:00', '2024-02-15 16:00:00', '2024-02-22 16:00:00', 60, 17, '2024-02-26 16:00:00', 'Active', 0, 'Make a difference in someone''s day.', 2, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(101, 'Wellness Checkup Wellness Fair', 'Prioritize your well-being', 'Prioritize your well-being at our Wellness Fair. Enjoy health screenings, fitness activities, and wellness workshops for a balanced lifestyle.', '2024-04-15 11:00:00', '2024-04-22 11:00:00', '2024-03-21 11:00:00', '2024-03-28 11:00:00', 170, 16, '2024-04-01 11:00:00', 'Active', 0, 'Experience the heartwarming bond between humans and animals.', 3, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
+(93, 'Community Sports Day Extravaganza', 'Join us for a fun-filled day', 'Join us for a fun-filled day of sports and games at our Community Sports Day Extravaganza. Bring your family and friends for a day of active fun.', '2024-05-01 8:00:00', '2024-05-08 8:00:00', '2024-04-07 8:00:00', '2024-04-14 8:00:00', 125, 16, '2024-04-17 8:00:00', 'Active', 0, 'Brighten the lives of those in need.', 4, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
+(34, 'Green Guardians Recycling Initiative', 'Be an environmental steward', 'Be an environmental steward by participating in our Recycling Initiative. Join efforts to reduce waste and promote recycling in our community.', '2024-06-07 14:00:00', '2024-06-14 14:00:00', '2024-05-09 14:00:00', '2024-05-16 14:00:00', 65, 18, '2024-05-21 14:00:00', 'Active', 0, 'Join a compassionate community of volunteers.', 40, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(68, 'Art for All Community Mural Project', 'Unleash your creativity and beautify', 'Unleash your creativity and beautify our community with the Art for All Mural Project. Join fellow artists in creating a vibrant masterpiece for all to enjoy.', '2024-07-12 17:00:00', '2024-07-19 17:00:00', '2024-06-12 17:00:00', '2024-06-19 17:00:00', 100, 19, '2024-06-24 17:00:00', 'Active', 0, 'Share your love for animals.', 6, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
+(205, 'Tech Tutoring for Seniors Program', 'Empower seniors with technology skills', 'Empower seniors with technology skills through our tutoring program. Help them navigate the digital world with confidence and independence.', '2024-08-10 10:00:00', '2024-08-17 10:00:00', '2024-07-19 10:00:00', '2024-07-26 10:00:00', 90, 36, '2024-07-31 10:00:00', 'Active', 0, 'Bring comfort and happiness to others.', 7, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(17, 'Wildlife Habitat Restoration Expedition', 'Explore nature and contribute', 'Explore nature and contribute to conservation efforts on our Restoration Expedition. Restore habitats for wildlife and preserve biodiversity.', '2024-09-22 13:00:00', '2024-09-29 13:00:00', '2024-08-28 13:00:00', '2024-09-04 13:00:00', 130, 21, '2024-09-08 13:00:00', 'Active', 0, 'Create lasting memories with furry friends.', 40, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(20, 'Music Therapy Sessions for Special Needs', 'Experience the healing power of music', 'Experience the healing power of music in our therapy sessions tailored for individuals with special needs.', '2024-09-27 22:00:00', '2024-10-04 22:00:00', '2024-09-01 22:00:00', '2024-09-08 22:00:00', 140, 22, '2024-09-13 22:00:00', 'Active', 0, 'Make meaningful connections with people in your community.', 3, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(38, 'Book Buddies Literacy Program', 'Foster a love for reading in children', 'Foster a love for reading in children by volunteering as a Book Buddy. Read together, inspire imagination, and empower young minds through literacy.', '2024-10-29 7:00:00', '2024-11-05 7:00:00', '2024-10-05 7:00:00', '2024-10-12 7:00:00', 35, 23, '2024-10-17 7:00:00', 'Active', 0, 'Witness the transformative power of pet therapy.', 2, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(60, 'Sustainable Fashion Workshop Series', 'Learn about sustainable fashion practices', 'Learn about sustainable fashion practices and create eco-friendly clothing in our workshop series. Make a stylish statement while protecting the planet.', '2024-12-16 20:00:00', '2024-12-22 20:00:00', '2024-11-20 20:00:00', '2024-11-27 20:00:00', 75, 16, '2024-12-02 20:00:00', 'Active', 0, 'Embrace the opportunity to give back.', 6, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
+(101, 'Therapeutic Horseback Riding Program', 'Find joy and therapeutic benefits', 'Find joy and therapeutic benefits through horseback riding. Join our program to experience the bond between humans and horses for emotional healing.', '2024-01-17 19:00:00', '2024-01-21 19:00:00', '2024-12-29 19:00:00', '2024-01-05 19:00:00', 145, 16, '2024-01-10 19:00:00', 'Active', 0, 'Volunteer your time for a good cause.', 4, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
+(93, 'Community Cooking Classes', 'Explore the joys of cooking', 'Explore the joys of cooking and connect with your community in our cooking classes. Learn new recipes, share culinary experiences, and savor delicious meals together.', '2024-01-27 12:00:00', '2024-01-31 12:00:00', '2024-01-08 12:00:00', '2024-01-15 12:00:00', 180, 24, '2024-01-20 12:00:00', 'Active', 0, 'Explore the rewarding world of pet therapy.', 7, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(34, 'Coding for Kids', 'Ignite a passion for technology', 'Ignite a passion for technology in children with our Coding for Kids program. Introduce coding concepts in a fun and interactive way, sparking creativity and problem-solving skills.', '2024-03-20 18:00:00', '2024-03-23 18:00:00', '2024-02-25 18:00:00', '2024-03-06 18:00:00', 175, 30, '2024-03-10 18:00:00', 'Active', 0, 'Be a source of comfort and support.', 8, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(68, 'Math Olympiad Challenge', 'Engage students in a friendly math', 'Engage students in a friendly math competition that tests their problem-solving skills and mathematical knowledge. Participants will tackle challenging math problems individually or in teams, promoting critical thinking and collaboration.', '2024-03-30 21:00:00', '2024-04-02 21:00:00', '2024-03-05 21:00:00', '2024-03-16 21:00:00', 70, 31, '2024-03-20 21:00:00', 'Active', 0, 'Spread smiles and joy wherever you go.', 9, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(205, 'Community Mural Painting', 'Collaborate with local artists', 'Collaborate with local artists and community members to create a vibrant mural that celebrates the diversity and culture of our community. Participants of all ages and skill levels are welcome to contribute to this public art project.', '2024-05-06 15:00:00', '2024-05-09 15:00:00', '2024-04-16 15:00:00', '2024-04-23 15:00:00', 185, 16, '2024-04-27 15:00:00', 'Active', 0, 'Make a positive impact on someones day.', 10, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
+(17, 'Instrument Petting Zoo', 'Introduce children to the world', 'Introduce children to the world of music by allowing them to explore and play various musical instruments in a hands-on setting. Volunteers will provide guidance and demonstrations, sparking curiosity and appreciation for music.', '2024-06-10 6:00:00', '2024-06-13 6:00:00', '2024-05-20 6:00:00', '2024-05-27 6:00:00', 145, 16, '2024-05-31 6:00:00', 'Active', 0, 'Experience the healing power of animal companionship.', 30, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
+(20, 'Random Acts of Kindness Challenge', 'Spread kindness and positivity', 'Spread kindness and positivity throughout the community by participating in a Random Acts of Kindness Challenge. Volunteers will perform small acts of kindness, such as writing uplifting notes or helping strangers, to brighten someones day.', '2024-07-17 23:00:00', '2024-07-20 23:00:00', '2024-06-25 23:00:00', '2024-07-02 23:00:00', 95, 16, '2024-07-06 23:00:00', 'Active', 0, 'Brighten someones day with a furry visit.', 12, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
+(38, 'Robotics Workshop', 'Inspire future engineers and innovators', 'Inspire future engineers and innovators by hosting a Robotics Workshop. Participants will learn about robotics technology, design and build their own robots, and compete in exciting challenges that test their creations capabilities.', '2024-08-21 3:00:00', '2024-08-24 3:00:00', '2024-07-30 3:00:00', '2024-08-06 3:00:00', 105, 32, '2024-08-10 3:00:00', 'Active', 0, 'Join us in making a difference, one wagging tail at a time.', 8, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(60, 'Math Tutoring Program', 'Support students in their math learning journey', 'Support students in their math learning journey by volunteering for a Math Tutoring Program. Volunteers will provide personalized tutoring sessions to help students improve their understanding and confidence in math concepts.', '2024-09-01 2:00:00', '2024-09-04 2:00:00', '2024-08-10 2:00:00', '2024-08-17 2:00:00', 150, 16, '2024-08-21 2:00:00', 'Active', 0, 'Share the love and happiness of pet therapy.', 9, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
+(101, 'Creative Crafting Class', 'Unleash your creativity', 'Unleash your creativity in a Creative Crafting Class where participants will explore various artistic techniques and mediums to create unique handmade crafts. This hands-on class is perfect for individuals looking to express themselves artistically.', '2024-10-05 4:00:00', '2024-10-08 4:00:00', '2024-09-17 4:00:00', '2024-09-24 4:00:00', 155, 33, '2024-09-28 4:00:00', 'Active', 0, 'Bring warmth and companionship to those in need.', 10, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(34, 'Community Choir', 'Join a Community Choir', 'Join a Community Choir and experience the joy of singing together with fellow music enthusiasts. Participants of all singing levels are welcome to join rehearsals and performances, fostering a sense of camaraderie and musical expression.', '2024-11-24 5:00:00', '2024-11-27 5:00:00', '2024-10-30 5:00:00', '2024-11-06 5:00:00', 20, 34, '2024-11-10 5:00:00', 'Active', 0, 'Volunteer with your furry friend and make a difference together.', 30, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(68, 'Community Garden Beautification Project', 'Beautify and enhance', 'Beautify and enhance our community by participating in a Community Garden Beautification Project. Volunteers will work together to plant flowers, maintain garden beds, and create a welcoming outdoor space for everyone to enjoy.', '2024-12-08 8:00:00', '2024-12-11 8:00:00', '2024-11-13 8:00:00', '2024-11-20 8:00:00', 150, 35, '2024-11-24 8:00:00', 'Active', 0, 'Be part of something bigger than yourself.', 12, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(205, 'Science Fair Mentorship Program', 'Support young scientists and innovators', 'Support young scientists and innovators by volunteering as mentors for a Science Fair Mentorship Program. Mentors will provide guidance, feedback, and resources to students as they develop and present their science fair projects.', '2024-02-02 9:00:00', '2024-02-09 9:00:00', '2024-12-19 9:00:00', '2024-12-26 9:00:00', 5, 29, '2024-01-30 9:00:00', 'Active', 0, 'Give the gift of joy and companionship.', 8, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(17, 'Punch for Fitness Challenge', 'Join our Punch for Fitness Challenge', 'Join our Punch for Fitness Challenge and experience the exhilarating workout of boxing while improving your strength, agility, and cardiovascular health.', '2024-01-20 10:00:00', '2024-01-26 10:00:00', '2024-01-02 10:00:00', '2024-01-09 10:00:00', 160, 36, '2024-01-13 10:00:00', 'Active', 0, 'Become a paw-sitive influence in your community.', 13, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(20, 'Summit Seekers Adventure', 'Embark on a thrilling journey', 'Embark on a thrilling journey with our Summit Seekers Adventure! Explore scenic trails, conquer majestic peaks, and connect with nature while enjoying the camaraderie of fellow hikers.', '2024-03-06 11:00:00', '2024-03-12 11:00:00', '2024-02-16 11:00:00', '2024-02-23 11:00:00', 150, 36, '2024-02-28 11:00:00', 'Active', 0, 'Spread love and happiness through pet therapy.', 14, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite');
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
+
+(38, 'Race for a Cause', 'Lace up your running shoes', 'Lace up your running shoes and join us for Race for a Cause! Whether you\re a seasoned runner or a beginner, participate in our charity run and make a positive impact in our community.', '2024-04-09 12:00:00', '2024-04-15 12:00:00', '2024-03-20 12:00:00', '2024-03-26 12:00:00', 170, 38, '2024-04-02 12:00:00', 'Active', 0, 'Experience the joy of making someone smile.', 15, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(60, 'Step Up Challenge', 'Step up to the challenge', 'Step up to the challenge and join our Step Up Challenge! Walk your way to better health, set personal goals, and track your progress as you take steps towards a healthier lifestyle.', '2024-04-24 13:00:00', '2024-04-30 13:00:00', '2024-04-05 13:00:00', '2024-04-11 13:00:00', 125, 17, '2024-04-17 13:00:00', 'Active', 0, 'Make a difference in the lives of others, one visit at a time.', 16, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(101, 'Splash for Wellness', 'Dive into our Splash for Wellness program', 'Dive into our Splash for Wellness program and experience the refreshing benefits of swimming. Improve your endurance, tone your muscles, and rejuvenate your mind and body in the water.', '2024-05-26 14:00:00', '2024-06-01 14:00:00', '2024-05-07 14:00:00', '2024-05-13 14:00:00', 65, 16, '2024-05-19 14:00:00', 'Active', 0, 'Volunteer with your pet and share the love.', 17, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
+(93, 'Gridiron Glory League', 'Gear up for gridiron glory', 'Gear up for gridiron glory and join our Football League! Whether youre a seasoned player or new to the game, come together with teammates to compete, bond, and chase victory on the field.', '2024-06-28 15:00:00', '2024-07-03 15:00:00', '2024-06-09 15:00:00', '2024-06-15 15:00:00', 100, 16, '2024-06-21 15:00:00', 'Active', 0, 'Join a compassionate team dedicated to helping others.', 18, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
+(34, 'Hoop Dreams Tournament', 'Shoot for the stars in our Hoop Dreams Tournament!', 'Shoot for the stars in our Hoop Dreams Tournament! Showcase your basketball skills, compete in thrilling matchups, and experience the excitement of teamwork and friendly competition.', '2024-08-04 16:00:00', '2024-08-10 16:00:00', '2024-07-16 16:00:00', '2024-07-22 16:00:00', 90, 16, '2024-07-28 16:00:00', 'Active', 0, 'Discover the joy of giving back through pet therapy.', 19, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
+(68, 'Spike & Serve Showdown', 'Set, spike, and serve your way', 'Set, spike, and serve your way to victory in our Spike & Serve Showdown! Join fellow volleyball enthusiasts for spirited matches, friendly competition, and fun in the sun on the court.', '2024-09-14 17:00:00', '2024-09-20 17:00:00', '2024-08-25 17:00:00', '2024-08-31 17:00:00', 130, 16, '2024-09-06 17:00:00', 'Active', 0, 'Share the special bond between humans and animals with those in need.', 20, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
+(205, 'Dance Fitness Fusion Workshop', 'Get ready to groove and sweat', 'Get ready to groove and sweat in our Dance Fitness Fusion Workshop! Experience the joy of dance while getting a full-body workout, combining various dance styles for a dynamic fitness experience.', '2024-09-22 18:00:00', '2024-09-28 18:00:00', '2024-09-02 18:00:00', '2024-09-09 18:00:00', 140, 39, '2024-09-14 18:00:00', 'Active', 0, 'Be a beacon of hope and happiness.', 21, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(17, 'Mindfulness Meditation Retreat', 'Find inner peace and tranquility', 'Find inner peace and tranquility in our Mindfulness Meditation Retreat! Escape the hustle and bustle of daily life, and embark on a journey of self-discovery and relaxation through meditation.', '2024-10-26 19:00:00', '2024-11-01 19:00:00', '2024-10-08 19:00:00', '2024-10-15 19:00:00', 35, 40, '2024-10-20 19:00:00', 'Active', 0, 'Volunteer your time to bring comfort and support to those who need it most.', 21, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(20, 'Art Therapy Expressive Painting', 'Unleash your creativity and soothe your soul', 'Unleash your creativity and soothe your soul with our Art Therapy Expressive Painting sessions! Tap into your artistic side, explore self-expression, and experience the therapeutic benefits of painting.', '2024-12-13 20:00:00', '2024-12-18 20:00:00', '2024-11-21 20:00:00', '2024-11-28 20:00:00', 75, 41, '2024-12-03 20:00:00', 'Active', 0, 'Join us in creating moments of joy and connection.', 21, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(38, 'Cardio Blast Fitness Sessions', 'Engage in high-energy aerobic', 'Engage in high-energy aerobic workouts designed to improve cardiovascular health and endurance.', '2024-01-24 21:00:00', '2024-01-29 21:00:00', '2024-01-07 21:00:00', '2024-01-12 21:00:00', 145, 16, '2024-01-12 21:00:00', 'Active', 0, 'Make a difference in your community with pet therapy.', 22, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online');
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
+(60, 'Sunrise Serenity Yoga Retreat', 'Embrace the tranquility of dawn', 'Embrace the tranquility of dawn with rejuvenating yoga sessions aimed at promoting relaxation and balance.', '2024-02-03 22:00:00', '2024-02-08 22:00:00', '2024-01-10 22:00:00', '2024-01-17 22:00:00', 180, 16, '2024-01-22 22:00:00', 'Active', 0, 'Experience the magic of bringing happiness to others.', 23, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
+(101, 'Rhythmic Fusion Dance Workshop', 'Explore the art of cover dance', 'Explore the art of cover dance by blending different dance styles and choreographies into dynamic routines.', '2024-03-27 23:00:00', '2024-03-31 23:00:00', '2024-02-22 23:00:00', '2024-03-09 23:00:00', 175, 55, '2024-03-14 23:00:00', 'Active', 0, 'Volunteer your time and make someone''s day brighter.', 24, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(93, 'Gravity-Defying Gymnastics Show', 'Witness breathtaking displays ', 'Witness breathtaking displays of agility, strength, and precision in a captivating gymnastics performance.', '2024-04-04 1:00:00', '2024-04-07 1:00:00', '2024-03-03 1:00:00', '2024-03-17 1:00:00', 70, 56, '2024-03-22 1:00:00', 'Active', 0, 'Be part of a team that makes a difference through pet therapy.', 25, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(34, 'Creative Movement Exploration', 'Unleash your creativity and expressiveness', 'Unleash your creativity and expressiveness through a variety of movement-based activities and improvisation.', '2024-05-07 2:00:00', '2024-05-10 2:00:00', '2024-04-13 2:00:00', '2024-04-20 2:00:00', 185, 16, '2024-04-25 2:00:00', 'Active', 0, 'Spread love and positivity with every visit.', 26, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
+(68, 'Beat the Burn Aerobics Challenge', 'Take on the challenge of intense aerobic ', 'Take on the challenge of intense aerobic exercises targeting calorie burn and muscle toning for a fitter you.', '2024-06-11 3:00:00', '2024-06-14 3:00:00', '2024-05-17 3:00:00', '2024-05-24 3:00:00', 145, 57, '2024-05-29 3:00:00', 'Active', 0, 'Join us in making the world a better place, one furry friend at a time.', 22, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(205, 'Mindful Movement Meditation', 'Immerse yourself in the present moment', 'Immerse yourself in the present moment through gentle movement and meditation practices for inner peace.', '2024-07-18 4:00:00', '2024-07-21 4:00:00', '2024-06-21 4:00:00', '2024-06-28 4:00:00', 95, 58, '2024-07-03 4:00:00', 'Active', 0, 'Volunteer your time and make a meaningful impact.', 23, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(17, 'Pop Diva Dance Party', 'Learn iconic dance routines ', 'Learn iconic dance routines from your favorite pop divas and unleash your inner star on the dance floor.', '2024-08-21 5:00:00', '2024-08-24 5:00:00', '2024-07-28 5:00:00', '2024-08-04 5:00:00', 105, 59, '2024-08-09 5:00:00', 'Active', 0, 'Share your passion for animals while helping others.', 24, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(20, 'Tumbling Tricks Workshop', 'Learn fundamental tumbling techniques ', 'Learn fundamental tumbling techniques and progressions in a fun and supportive gymnastics workshop.', '2024-09-01 6:00:00', '2024-09-04 6:00:00', '2024-08-29 6:00:00', '2024-09-05 6:00:00', 150, 60, '2024-09-10 6:00:00', 'Active', 0, 'Bring comfort and companionship to those who need it most.', 25, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(38, 'Dance Therapy Healing Session', 'Discover the therapeutic benefits of dance ', 'Discover the therapeutic benefits of dance as a form of self-expression and emotional release.', '2024-09-08 7:00:00', '2024-09-11 7:00:00', '2024-09-05 7:00:00', '2024-09-12 7:00:00', 155, 61, '2024-09-17 7:00:00', 'Active', 0, 'Be a source of joy and comfort for those facing challenges.', 26, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(60, 'Dance Cardio Fiesta', 'Get your heart pumping and your body', 'Get your heart pumping and your body moving to the beat of lively music in a festive dance cardio party.', '2024-10-15 8:00:00', '2024-10-18 8:00:00', '2024-10-10 8:00:00', '2024-10-17 8:00:00', 20, 62, '2024-10-22 8:00:00', 'Active', 0, 'Volunteer with your pet and spread happiness together.', 22, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite');
+
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
+(101, 'Community Mural Project', 'Join us in creating a vibrant mural that celebrates', 'Join us in creating a vibrant mural that celebrates the diversity and spirit of our community. This collaborative painting project will beautify public spaces and inspire connection through art.', '2024-12-02 9:00:00', '2024-12-05 9:00:00', '2024-11-26 9:00:00', '2024-12-02 9:00:00', 150, 73, '2024-12-07 9:00:00', 'Active', 0, 'Join a community dedicated to making a difference through pet therapy.', 27, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(38, 'Sketching for Change', 'Unleash your creativity for a cause! Participants', 'Unleash your creativity for a cause! Participants will use their drawing skills to illustrate issues such as social justice, environmental conservation, or mental health awareness, sparking dialogue and empathy.', '2024-01-15 10:00:00', '2024-01-18 10:00:00', '2024-12-28 10:00:00', '2024-01-04 10:00:00', 5, 74, '2024-01-09 10:00:00', 'Active', 0, 'Experience the joy of brightening someone''s day.', 28, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(20, 'Recycled Art Workshop', 'Get hands-on with sustainability', 'Get hands-on with sustainability by crafting sculptures from recycled materials. This workshop encourages creative expression while promoting environmental stewardship and resourcefulness.', '2024-02-28 11:00:00', '2024-03-02 11:00:00', '2024-01-05 11:00:00', '2024-02-17 11:00:00', 160, 75, '2024-02-22 11:00:00', 'Active', 0, 'Make a difference in the lives of others with pet therapy.', 29, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(205, 'Melodies for Healing', 'Share the gift of music', 'Share the gift of music with those in need through live performances at hospitals, nursing homes, or shelters. Music has the power to uplift spirits and bring comfort during challenging times.', '2024-03-06 12:00:00', '2024-03-09 12:00:00', '2024-02-18 12:00:00', '2024-03-23 12:00:00', 150, 76, '2024-03-28 12:00:00', 'Active', 0, 'Volunteer your time and make a paw-sitive impact.', 30, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(93, 'Harmonize for Harmony', 'Join voices in harmony', 'Join voices in harmony to spread joy and unity within our community. Whether it''s a choir performance or a sing-along event, singing together fosters connection and uplifts the human spirit.', '2024-04-17 13:00:00', '2024-04-20 13:00:00', '2024-03-24 13:00:00', '2024-04-02 13:00:00', 170, 73, '2024-04-06 13:00:00', 'Active', 0, 'Share your furry friend''s love with those in need.', 31, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(101, 'Storytelling Workshop', 'Explore the art of storytelling', 'Explore the art of storytelling in a supportive and creative environment. Participants will craft narratives, share personal experiences, and hone their writing skills while building community bonds.', '2024-05-21 14:00:00', '2024-05-24 14:00:00', '2024-04-02 14:00:00', '2024-05-04 14:00:00', 125, 76, '2024-05-08 14:00:00', 'Active', 0, 'Be part of a team that brings happiness to others.', 33, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(60, 'Poetic Expression Circle', 'Dive into the world of poetry with like-minded individuals', 'Dive into the world of poetry with like-minded individuals in a safe and inclusive space. Through reading, writing, and sharing poems, we''ll explore the beauty and power of language and self-expression.', '2024-06-24 15:00:00', '2024-06-27 15:00:00', '2024-05-04 15:00:00', '2024-06-07 15:00:00', 65, 76, '2024-06-11 15:00:00', 'Active', 0, 'Volunteer your time and make a difference in someone''s life.', 34, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(17, 'Book Club Gathering', 'Engage in lively discussions and exchange ideas ', 'Engage in lively discussions and exchange ideas with fellow book lovers in our community book club. Each month, we''ll explore a new literary work, expanding our perspectives and fostering a love for literature.', '2024-08-01 16:00:00', '2024-08-03 16:00:00', '2024-06-07 16:00:00', '2024-07-14 16:00:00', 100, 73, '2024-07-18 16:00:00', 'Active', 0, 'Join us in spreading happiness and love through pet therapy.', 35, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(34, 'Creative Journaling Session', 'Tap into your inner creativity', 'Tap into your inner creativity with guided journaling prompts and artistic exercises. This session provides a therapeutic outlet for self-reflection, mindfulness, and personal growth through creative expression.', '2024-09-11 17:00:00', '2024-09-13 17:00:00', '2024-07-14 17:00:00', '2024-08-23 17:00:00', 90, 76, '2024-08-27 17:00:00', 'Active', 0, 'Experience the joy of making a meaningful connection.', 36, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(68, 'Art Therapy Workshop', 'Discover the healing power ', 'Discover the healing power of art in a supportive therapeutic setting. Through guided exercises and creative exploration, participants will process emotions, reduce stress, and foster self-discovery and healing.', '2024-09-21 18:00:00', '2024-09-23 18:00:00', '2024-08-23 18:00:00', '2024-09-03 18:00:00', 130, 76, '2024-09-07 18:00:00', 'Active', 0, 'Share the love and companionship of your pet with those who need it most.', 36, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite');
+
+
+INSERT INTO
+    `unityDoDB`.`activity` (
+        `activityOwner`,
+        `activityName`,
+        `activityBriefDescription`,
+        `activityDescription`,
+        `activityDate`,
+        `activityEndDate`,
+        `registerStartDate`,
+        `registerEndDate`,
+        `amount`,
+        `locationId`,
+        `announcementDate`,
+        `activityStatus`,
+        `isGamification`,
+        `suggestionNotes`,
+        `categoryId`,
+        `lastUpdate`,
+        `createTime`,
+        `activityFormat`
+    )
+VALUES
+(93, 'Cultural Arts Exchange', 'Celebrate diversity and promote cultural ', 'Celebrate diversity and promote cultural understanding through an arts exchange program. Participants will share traditional art forms, music, dance, and cuisine, fostering appreciation and unity among communities.', '2024-10-25 19:00:00', '2024-10-27 19:00:00', '2024-09-03 19:00:00', '2024-10-09 19:00:00', 140, 73, '2024-10-13 19:00:00', 'Active', 0, 'Bring comfort and joy to those facing challenges.', 36, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(101, 'LaunchPad Bootcamp', 'Join our LaunchPad Bootcamp designed t', 'Join our LaunchPad Bootcamp designed to equip aspiring entrepreneurs with essential skills and knowledge to kickstart their startup journey.', '2024-12-12 20:00:00', '2024-12-14 20:00:00', '2024-10-07 20:00:00', '2024-11-25 20:00:00', 35, 77, '2024-11-29 20:00:00', 'Active', 0, 'Volunteer your time and make a lasting impact.', 37, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(20, 'Digital Marketing Workshop', 'Dive into the world of digital marketing ', 'Dive into the world of digital marketing with our hands-on workshop. Learn about social media marketing, search engine optimization (SEO), content marketing, and email marketing techniques to effectively reach and engage your target audience.', '2024-01-23 21:00:00', '2024-01-25 21:00:00', '2024-11-23 21:00:00', '2024-01-04 21:00:00', 75, 78, '2024-01-08 21:00:00', 'Active', 0, 'Join a community of compassionate volunteers.', 38, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(38, 'Financial Literacy Seminar', 'Enhance your financial knowledge and skills ', 'Enhance your financial knowledge and skills with our Financial Literacy Seminar. Participants will learn about budgeting, saving, investing, and debt management strategies to achieve financial stability and prosperity.', '2024-03-01 22:00:00', '2024-03-03 22:00:00', '2024-12-30 22:00:00', '2024-02-11 22:00:00', 145, 79, '2024-02-15 22:00:00', 'Active', 0, 'Be part of something special with pet therapy.', 39, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(17, 'Online Store Optimization Workshop', 'Maximize the potential of your online store', 'Maximize the potential of your online store with our Optimization Workshop. Explore strategies to improve website usability, enhance product listings, optimize checkout processes, and drive conversions.', '2024-03-31 23:00:00', '2024-04-02 23:00:00', '2024-01-09 23:00:00', '2024-03-20 23:00:00', 180, 80, '2024-03-24 23:00:00', 'Active', 0, 'Spread joy and happiness through the power of pet therapy.', 40, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(205, 'Supply Chain Efficiency Summit', 'Join industry leaders and experts', 'Join industry leaders and experts at our Supply Chain Efficiency Summit. Explore innovative technologies, best practices, and strategies to optimize supply chain operations, reduce costs, and enhance efficiency.', '2024-04-15 0:00:00', '2024-04-16 0:00:00', '2024-02-21 0:00:00', '2024-04-05 0:00:00', 175, 81, '2024-04-09 0:00:00', 'Active', 0, 'Volunteer with your furry friend and make a difference together.', 41, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(60, 'Community Volunteer Fair', 'Make a difference in your community', 'Make a difference in your community by participating in our Volunteer Fair. Connect with local nonprofits, charities, and community organizations seeking volunteers for various causes and initiatives.', '2024-05-18 1:00:00', '2024-05-19 1:00:00', '2024-03-31 1:00:00', '2024-05-07 1:00:00', 70, 79, '2024-05-11 1:00:00', 'Active', 0, 'Experience the joy of bringing smiles to others.', 42, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(34, 'Wellness Retreat', 'Take a break from the hustle', 'Take a break from the hustle and bustle of everyday life and join us for a Wellness Retreat. Rejuvenate your mind, body, and soul with yoga sessions, meditation practices, nature walks, and healthy meals. Disconnect from technology, reconnect with yourself, and leave feeling refreshed and revitalized.', '2024-06-21 2:00:00', '2024-06-22 2:00:00', '2024-04-08 2:00:00', '2024-06-10 2:00:00', 185, 82, '2024-06-14 2:00:00', 'Active', 0, 'Share your love for animals while helping those in need.', 42, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(38, 'Creative Writing Workshop', 'Unleash your creativity', 'Unleash your creativity and hone your writing skills at our Creative Writing Workshop. Whether you''re an aspiring novelist, poet, or storyteller, this workshop offers a supportive environment to explore different writing genres, techniques, and styles.', '2024-07-28 3:00:00', '2024-07-29 3:00:00', '2024-05-10 3:00:00', '2024-07-17 3:00:00', 145, 83, '2024-07-21 3:00:00', 'Active', 0, 'Be a source of comfort and support for those facing difficult times.', 42, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(17, 'Cultural Exchange Program', 'Immerse yourself in new cultures', 'Immerse yourself in new cultures and perspectives through our Cultural Exchange Program. Participants will have the opportunity to interact with people from diverse backgrounds, learn about different traditions, languages, and customs, and foster mutual understanding and appreciation.', '2024-09-06 4:00:00', '2024-09-07 4:00:00', '2024-06-13 4:00:00', '2024-08-26 4:00:00', 95, 80, '2024-08-30 4:00:00', 'Active', 0, 'Join us in making a difference in the lives of others through pet therapy.', 42, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite');
+
+
 
 INSERT INTO `unityDoDB`.`image` (`activityId`, `label`, `alt`, `imagepath`) VALUES
 (11, 'poster', 'poster', 'https://firebasestorage.googleapis.com/v0/b/unitydoimage.appspot.com/o/Volunteer%2FA1%2FArt%26MusicA01-1.jpg?alt=media&token=2b8ee897-f572-44c4-b186-844d9d7698ad'),
