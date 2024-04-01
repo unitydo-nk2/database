@@ -1,10 +1,10 @@
-CREATE DATABASE  IF NOT EXISTS `unitydodb` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `unitydodb`;
+CREATE DATABASE  IF NOT EXISTS `unityDoDB` /*!40100 DEFAULT CHARACTER SET utf8mb3 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `unityDoDB`;
 -- MySQL dump 10.13  Distrib 8.0.26, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: unitydodb
+-- Host: 10.4.85.19    Database: unityDoDB
 -- ------------------------------------------------------
--- Server version	8.0.26
+-- Server version	8.3.0
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -66,13 +66,13 @@ INSERT INTO `activity` VALUES (1,7,'Paint and Sip Night','Artistic expression wi
 UNLOCK TABLES;
 
 --
--- Table structure for table `activityfavorite`
+-- Table structure for table `activityFavorite`
 --
 
-DROP TABLE IF EXISTS `activityfavorite`;
+DROP TABLE IF EXISTS `activityFavorite`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `activityfavorite` (
+CREATE TABLE `activityFavorite` (
   `activityFavoriteId` int NOT NULL AUTO_INCREMENT,
   `userId` int NOT NULL,
   `activityId` int NOT NULL,
@@ -85,53 +85,23 @@ CREATE TABLE `activityfavorite` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `activityfavorite`
+-- Dumping data for table `activityFavorite`
 --
 
-LOCK TABLES `activityfavorite` WRITE;
-/*!40000 ALTER TABLE `activityfavorite` DISABLE KEYS */;
-/*!40000 ALTER TABLE `activityfavorite` ENABLE KEYS */;
+LOCK TABLES `activityFavorite` WRITE;
+/*!40000 ALTER TABLE `activityFavorite` DISABLE KEYS */;
+/*!40000 ALTER TABLE `activityFavorite` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `activityreview`
+-- Temporary view structure for view `activityWithCategoryView`
 --
 
-DROP TABLE IF EXISTS `activityreview`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `activityreview` (
-  `activityReviewId` int NOT NULL AUTO_INCREMENT,
-  `activityId` int NOT NULL,
-  `userId` int NOT NULL,
-  `score` int NOT NULL,
-  `reviewDescription` varchar(500) NOT NULL,
-  PRIMARY KEY (`activityReviewId`),
-  KEY `fk_activityReview_Activity1_idx` (`activityId`),
-  KEY `fk_activityReview_Users1_idx` (`userId`),
-  CONSTRAINT `fk_activityReview_Activity1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`) ON DELETE CASCADE,
-  CONSTRAINT `fk_activityReview_Users1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `activityreview`
---
-
-LOCK TABLES `activityreview` WRITE;
-/*!40000 ALTER TABLE `activityreview` DISABLE KEYS */;
-/*!40000 ALTER TABLE `activityreview` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Temporary view structure for view `activitywithcategoryview`
---
-
-DROP TABLE IF EXISTS `activitywithcategoryview`;
-/*!50001 DROP VIEW IF EXISTS `activitywithcategoryview`*/;
+DROP TABLE IF EXISTS `activityWithCategoryView`;
+/*!50001 DROP VIEW IF EXISTS `activityWithCategoryView`*/;
 SET @saved_cs_client     = @@character_set_client;
 /*!50503 SET character_set_client = utf8mb4 */;
-/*!50001 CREATE VIEW `activitywithcategoryview` AS SELECT 
+/*!50001 CREATE VIEW `activityWithCategoryView` AS SELECT 
  1 AS `activityId`,
  1 AS `activityName`,
  1 AS `categoryId`,
@@ -152,7 +122,7 @@ CREATE TABLE `category` (
   `mainCategory` int NOT NULL,
   PRIMARY KEY (`categoryId`),
   KEY `fk_Category_subCategory1_idx` (`mainCategory`),
-  CONSTRAINT `fk_Category_subCategory1` FOREIGN KEY (`mainCategory`) REFERENCES `maincategory` (`mainCategoryId`)
+  CONSTRAINT `fk_Category_subCategory1` FOREIGN KEY (`mainCategory`) REFERENCES `mainCategory` (`mainCategoryId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -167,13 +137,13 @@ INSERT INTO `category` VALUES (1,'Animal care',1),(2,'Social services',1),(3,'He
 UNLOCK TABLES;
 
 --
--- Table structure for table `favoritecategory`
+-- Table structure for table `favoriteCategory`
 --
 
-DROP TABLE IF EXISTS `favoritecategory`;
+DROP TABLE IF EXISTS `favoriteCategory`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `favoritecategory` (
+CREATE TABLE `favoriteCategory` (
   `favoriteCategoryId` int NOT NULL AUTO_INCREMENT,
   `userId` int NOT NULL,
   `mainCategoryId` int NOT NULL,
@@ -181,19 +151,19 @@ CREATE TABLE `favoritecategory` (
   PRIMARY KEY (`favoriteCategoryId`),
   KEY `fk_categoryInterested_User1_idx` (`userId`),
   KEY `fk_categoryInterested_mainCategory1_idx` (`mainCategoryId`),
-  CONSTRAINT `fk_categoryInterested_mainCategory1` FOREIGN KEY (`mainCategoryId`) REFERENCES `maincategory` (`mainCategoryId`),
+  CONSTRAINT `fk_categoryInterested_mainCategory1` FOREIGN KEY (`mainCategoryId`) REFERENCES `mainCategory` (`mainCategoryId`),
   CONSTRAINT `fk_categoryInterested_User1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=601 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `favoritecategory`
+-- Dumping data for table `favoriteCategory`
 --
 
-LOCK TABLES `favoritecategory` WRITE;
-/*!40000 ALTER TABLE `favoritecategory` DISABLE KEYS */;
-INSERT INTO `favoritecategory` VALUES (1,1,2,1),(2,1,3,2),(3,1,5,3),(4,4,2,1),(5,4,1,2),(6,4,4,3),(7,5,1,1),(8,5,2,2),(9,5,4,3),(10,9,5,1),(11,9,1,2),(12,9,2,3),(13,10,5,1),(14,10,2,2),(15,10,3,3),(16,11,1,1),(17,11,2,2),(18,11,3,3),(19,12,3,1),(20,12,2,2),(21,12,1,3),(22,13,6,1),(23,13,2,2),(24,13,1,3),(25,14,2,1),(26,14,3,2),(27,14,4,3),(28,15,2,1),(29,15,1,2),(30,15,5,3),(31,16,2,1),(32,16,5,2),(33,16,7,3),(34,17,5,1),(35,17,4,2),(36,17,1,3),(37,18,2,1),(38,18,4,2),(39,18,7,3),(40,19,4,1),(41,19,2,2),(42,19,6,3),(43,20,2,1),(44,20,5,2),(45,20,3,3),(46,21,3,1),(47,21,2,2),(48,21,7,3),(49,22,3,1),(50,22,4,2),(51,22,2,3),(52,23,2,1),(53,23,3,2),(54,23,4,3),(55,24,1,1),(56,24,2,2),(57,24,3,3),(58,25,5,1),(59,25,2,2),(60,25,1,3),(61,26,2,1),(62,26,1,2),(63,26,4,3),(64,27,5,1),(65,27,3,2),(66,27,2,3),(67,28,1,1),(68,28,2,2),(69,28,3,3),(70,29,4,1),(71,29,5,2),(72,29,6,3),(73,30,1,1),(74,30,2,2),(75,30,3,3),(76,31,4,1),(77,31,5,2),(78,31,7,3),(79,32,3,1),(80,32,2,2),(81,32,4,3),(82,33,1,1),(83,33,4,2),(84,33,3,3),(85,34,2,1),(86,34,3,2),(87,34,5,3),(88,35,4,1),(89,35,2,2),(90,35,1,3),(91,36,2,1),(92,36,3,2),(93,36,4,3),(94,37,2,1),(95,37,3,2),(96,37,4,3),(97,38,1,1),(98,38,3,2),(99,38,5,3),(100,39,5,1),(101,39,4,2),(102,39,7,3),(103,40,1,1),(104,40,3,2),(105,40,4,3),(106,41,2,1),(107,41,3,2),(108,41,5,3),(109,42,3,1),(110,42,4,2),(111,42,1,3),(112,43,2,1),(113,43,3,2),(114,43,4,3),(115,44,4,1),(116,44,5,2),(117,44,6,3),(118,45,2,1),(119,45,3,2),(120,45,1,3),(121,46,5,1),(122,46,4,2),(123,46,2,3),(124,47,2,1),(125,47,3,2),(126,47,1,3),(127,48,2,1),(128,48,5,2),(129,48,6,3),(130,49,4,1),(131,49,2,2),(132,49,7,3),(133,50,4,1),(134,50,3,2),(135,50,2,3),(136,51,6,1),(137,51,3,2),(138,51,1,3),(139,52,1,1),(140,52,3,2),(141,52,6,3),(142,53,6,1),(143,53,5,2),(144,53,4,3),(145,54,4,1),(146,54,2,2),(147,54,4,3),(148,55,2,1),(149,55,1,2),(150,55,5,3),(151,56,6,1),(152,56,1,2),(153,56,5,3),(154,57,2,1),(155,57,1,2),(156,57,4,3),(157,58,4,1),(158,58,3,2),(159,58,1,3),(160,59,2,1),(161,59,4,2),(162,59,7,3),(163,60,2,1),(164,60,3,2),(165,60,5,3),(166,61,6,1),(167,61,3,2),(168,61,1,3),(169,62,1,1),(170,62,3,2),(171,62,2,3),(172,63,2,1),(173,63,3,2),(174,63,4,3),(175,64,6,1),(176,64,3,2),(177,64,1,3),(178,65,2,1),(179,65,3,2),(180,65,5,3),(181,66,1,1),(182,66,2,2),(183,66,3,3),(184,67,5,1),(185,67,4,2),(186,67,7,3),(187,68,3,1),(188,68,2,2),(189,68,2,3),(190,69,6,1),(191,69,2,2),(192,69,1,3),(193,70,1,1),(194,70,2,2),(195,70,7,3),(196,71,6,1),(197,71,3,2),(198,71,1,3),(199,72,6,1),(200,72,2,2),(201,72,5,3),(202,73,5,1),(203,73,6,2),(204,73,7,3),(205,74,6,1),(206,74,4,2),(207,74,2,3),(208,75,2,1),(209,75,3,2),(210,75,4,3),(211,76,5,1),(212,76,4,2),(213,76,3,3),(214,77,3,1),(215,77,4,2),(216,77,5,3),(217,78,6,1),(218,78,7,2),(219,78,4,3),(220,79,1,1),(221,79,2,2),(222,79,3,3),(223,80,6,1),(224,80,3,2),(225,80,2,3),(226,81,3,1),(227,81,4,2),(228,81,5,3),(229,82,2,1),(230,82,1,2),(231,82,7,3),(232,83,2,1),(233,83,6,2),(234,83,5,3),(235,84,1,1),(236,84,3,2),(237,84,6,3),(238,85,3,1),(239,85,4,2),(240,85,5,3),(241,86,6,1),(242,86,4,2),(243,86,1,3),(244,87,2,1),(245,87,3,2),(246,87,4,3),(247,88,3,1),(248,88,5,2),(249,88,7,3),(250,89,2,1),(251,89,1,2),(252,89,3,3),(253,90,4,1),(254,90,3,2),(255,90,1,3),(256,91,3,1),(257,91,6,2),(258,91,7,3),(259,92,3,1),(260,92,1,2),(261,92,7,3),(262,93,2,1),(263,93,1,2),(264,93,4,3),(265,94,5,1),(266,94,6,2),(267,94,7,3),(268,95,3,1),(269,95,2,2),(270,95,1,3),(271,96,2,1),(272,96,6,2),(273,96,3,3),(274,97,2,1),(275,97,3,2),(276,97,6,3),(277,98,6,1),(278,98,5,2),(279,98,1,3),(280,99,1,1),(281,99,2,2),(282,99,3,3),(283,100,5,1),(284,100,2,2),(285,100,1,3),(286,101,6,1),(287,101,7,2),(288,101,5,3),(289,102,6,1),(290,102,1,2),(291,102,3,3),(292,103,3,1),(293,103,2,2),(294,103,1,3),(295,104,6,1),(296,104,3,2),(297,104,1,3),(298,105,6,1),(299,105,3,2),(300,105,1,3),(301,106,1,1),(302,106,3,2),(303,106,6,3),(304,107,3,1),(305,107,1,2),(306,107,6,3),(307,108,7,1),(308,108,6,2),(309,108,1,3),(310,109,3,1),(311,109,4,2),(312,109,5,3),(313,110,3,1),(314,110,2,2),(315,110,1,3),(316,111,4,1),(317,111,5,2),(318,111,6,3),(319,112,3,1),(320,112,4,2),(321,112,5,3),(322,113,5,1),(323,113,4,2),(324,113,3,3),(325,114,6,1),(326,114,7,2),(327,114,1,3),(328,115,2,1),(329,115,3,2),(330,115,5,3),(331,116,5,1),(332,116,4,2),(333,116,6,3),(334,117,5,1),(335,117,6,2),(336,117,7,3),(337,118,5,1),(338,118,1,2),(339,118,2,3),(340,119,3,1),(341,119,4,2),(342,119,5,3),(343,120,6,1),(344,120,4,2),(345,120,2,3),(346,121,1,1),(347,121,6,2),(348,121,2,3),(349,122,3,1),(350,122,2,2),(351,122,1,3),(352,123,1,1),(353,123,2,2),(354,123,3,3),(355,124,2,1),(356,124,1,2),(357,124,3,3),(358,125,3,1),(359,125,2,2),(360,125,1,3),(361,126,6,1),(362,126,1,2),(363,126,2,3),(364,127,3,1),(365,127,2,2),(366,127,1,3),(367,128,2,1),(368,128,3,2),(369,128,4,3),(370,129,4,1),(371,129,3,2),(372,129,1,3),(373,130,2,1),(374,130,3,2),(375,130,4,3),(376,131,5,1),(377,131,6,2),(378,131,7,3),(379,132,1,1),(380,132,2,2),(381,132,3,3),(382,133,3,1),(383,133,2,2),(384,133,1,3),(385,134,6,1),(386,134,7,2),(387,134,5,3),(388,135,3,1),(389,135,5,2),(390,135,6,3),(391,136,2,1),(392,136,1,2),(393,136,3,3),(394,137,2,1),(395,137,4,2),(396,137,6,3),(397,138,6,1),(398,138,7,2),(399,138,2,3),(400,139,6,1),(401,139,1,2),(402,139,2,3),(403,140,2,1),(404,140,1,2),(405,140,3,3),(406,141,5,1),(407,141,6,2),(408,141,7,3),(409,142,3,1),(410,142,2,2),(411,142,1,3),(412,143,5,1),(413,143,3,2),(414,143,2,3),(415,144,1,1),(416,144,2,2),(417,144,6,3),(418,145,3,1),(419,145,6,2),(420,145,7,3),(421,146,3,1),(422,146,2,2),(423,146,1,3),(424,147,2,1),(425,147,3,2),(426,147,5,3),(427,148,3,1),(428,148,5,2),(429,148,4,3),(430,149,6,1),(431,149,4,2),(432,149,3,3),(433,150,6,1),(434,150,7,2),(435,150,3,3),(436,151,2,1),(437,151,2,2),(438,151,6,3),(439,152,3,1),(440,152,1,2),(441,152,7,3),(442,153,7,1),(443,153,2,2),(444,153,1,3),(445,154,3,1),(446,154,1,2),(447,154,6,3),(448,155,6,1),(449,155,3,2),(450,155,2,3),(451,156,1,1),(452,156,2,2),(453,156,3,3),(454,157,3,1),(455,157,2,2),(456,157,1,3),(457,158,2,1),(458,158,3,2),(459,158,1,3),(460,159,5,1),(461,159,6,2),(462,159,7,3),(463,160,1,1),(464,160,3,2),(465,160,2,3),(466,161,2,1),(467,161,3,2),(468,161,5,3),(469,162,1,1),(470,162,2,2),(471,162,3,3),(472,163,3,1),(473,163,5,2),(474,163,6,3),(475,164,7,1),(476,164,6,2),(477,164,5,3),(478,165,2,1),(479,165,3,2),(480,165,1,3),(481,166,5,1),(482,166,6,2),(483,166,4,3),(484,167,2,1),(485,167,3,2),(486,167,1,3),(487,168,3,1),(488,168,4,2),(489,168,2,3),(490,169,6,1),(491,169,7,2),(492,169,1,3),(493,170,1,1),(494,170,2,2),(495,170,3,3),(496,171,3,1),(497,171,2,2),(498,171,1,3),(499,172,6,1),(500,172,3,2),(501,172,1,3),(502,173,1,1),(503,173,2,2),(504,173,3,3),(505,174,3,1),(506,174,2,2),(507,174,1,3),(508,175,5,1),(509,175,6,2),(510,175,7,3),(511,176,7,1),(512,176,6,2),(513,176,5,3),(514,177,2,1),(515,177,3,2),(516,177,2,3),(517,178,1,1),(518,178,1,2),(519,178,6,3),(520,179,7,1),(521,179,2,2),(522,179,1,3),(523,180,3,1),(524,180,2,2),(525,180,1,3),(526,181,1,1),(527,181,2,2),(528,181,3,3),(529,182,5,1),(530,182,6,2),(531,182,7,3),(532,183,5,1),(533,183,3,2),(534,183,1,3),(535,184,2,1),(536,184,3,2),(537,184,1,3),(538,185,2,1),(539,185,1,2),(540,185,3,3),(541,186,3,1),(542,186,2,2),(543,186,1,3),(544,187,5,1),(545,187,6,2),(546,187,5,3),(547,188,6,1),(548,188,7,2),(549,188,3,3),(550,189,2,1),(551,189,1,2),(552,189,3,3),(553,190,1,1),(554,190,2,2),(555,190,3,3),(556,191,5,1),(557,191,6,2),(558,191,3,3),(559,192,1,1),(560,192,2,2),(561,192,3,3),(562,193,5,1),(563,193,6,2),(564,193,7,3),(565,194,3,1),(566,194,5,2),(567,194,2,3),(568,195,1,1),(569,195,6,2),(570,195,3,3),(571,196,2,1),(572,196,7,2),(573,196,3,3),(574,197,2,1),(575,197,5,2),(576,197,4,3),(577,198,2,1),(578,198,3,2),(579,198,4,3),(580,199,3,1),(581,199,5,2),(582,199,7,3),(583,200,5,1),(584,200,3,2),(585,200,6,3),(586,201,3,1),(587,201,4,2),(588,201,1,3),(589,202,2,1),(590,202,5,2),(591,202,7,3),(592,203,5,1),(593,203,4,2),(594,203,3,3),(595,204,2,1),(596,204,1,2),(597,204,4,3),(598,205,5,1),(599,205,3,2),(600,205,4,3);
-/*!40000 ALTER TABLE `favoritecategory` ENABLE KEYS */;
+LOCK TABLES `favoriteCategory` WRITE;
+/*!40000 ALTER TABLE `favoriteCategory` DISABLE KEYS */;
+INSERT INTO `favoriteCategory` VALUES (1,1,2,1),(2,1,3,2),(3,1,5,3),(4,4,2,1),(5,4,1,2),(6,4,4,3),(7,5,1,1),(8,5,2,2),(9,5,4,3),(10,9,5,1),(11,9,1,2),(12,9,2,3),(13,10,5,1),(14,10,2,2),(15,10,3,3),(16,11,1,1),(17,11,2,2),(18,11,3,3),(19,12,3,1),(20,12,2,2),(21,12,1,3),(22,13,6,1),(23,13,2,2),(24,13,1,3),(25,14,2,1),(26,14,3,2),(27,14,4,3),(28,15,2,1),(29,15,1,2),(30,15,5,3),(31,16,2,1),(32,16,5,2),(33,16,7,3),(34,17,5,1),(35,17,4,2),(36,17,1,3),(37,18,2,1),(38,18,4,2),(39,18,7,3),(40,19,4,1),(41,19,2,2),(42,19,6,3),(43,20,2,1),(44,20,5,2),(45,20,3,3),(46,21,3,1),(47,21,2,2),(48,21,7,3),(49,22,3,1),(50,22,4,2),(51,22,2,3),(52,23,2,1),(53,23,3,2),(54,23,4,3),(55,24,1,1),(56,24,2,2),(57,24,3,3),(58,25,5,1),(59,25,2,2),(60,25,1,3),(61,26,2,1),(62,26,1,2),(63,26,4,3),(64,27,5,1),(65,27,3,2),(66,27,2,3),(67,28,1,1),(68,28,2,2),(69,28,3,3),(70,29,4,1),(71,29,5,2),(72,29,6,3),(73,30,1,1),(74,30,2,2),(75,30,3,3),(76,31,4,1),(77,31,5,2),(78,31,7,3),(79,32,3,1),(80,32,2,2),(81,32,4,3),(82,33,1,1),(83,33,4,2),(84,33,3,3),(85,34,2,1),(86,34,3,2),(87,34,5,3),(88,35,4,1),(89,35,2,2),(90,35,1,3),(91,36,2,1),(92,36,3,2),(93,36,4,3),(94,37,2,1),(95,37,3,2),(96,37,4,3),(97,38,1,1),(98,38,3,2),(99,38,5,3),(100,39,5,1),(101,39,4,2),(102,39,7,3),(103,40,1,1),(104,40,3,2),(105,40,4,3),(106,41,2,1),(107,41,3,2),(108,41,5,3),(109,42,3,1),(110,42,4,2),(111,42,1,3),(112,43,2,1),(113,43,3,2),(114,43,4,3),(115,44,4,1),(116,44,5,2),(117,44,6,3),(118,45,2,1),(119,45,3,2),(120,45,1,3),(121,46,5,1),(122,46,4,2),(123,46,2,3),(124,47,2,1),(125,47,3,2),(126,47,1,3),(127,48,2,1),(128,48,5,2),(129,48,6,3),(130,49,4,1),(131,49,2,2),(132,49,7,3),(133,50,4,1),(134,50,3,2),(135,50,2,3),(136,51,6,1),(137,51,3,2),(138,51,1,3),(139,52,1,1),(140,52,3,2),(141,52,6,3),(142,53,6,1),(143,53,5,2),(144,53,4,3),(145,54,4,1),(146,54,2,2),(147,54,4,3),(148,55,2,1),(149,55,1,2),(150,55,5,3),(151,56,6,1),(152,56,1,2),(153,56,5,3),(154,57,2,1),(155,57,1,2),(156,57,4,3),(157,58,4,1),(158,58,3,2),(159,58,1,3),(160,59,2,1),(161,59,4,2),(162,59,7,3),(163,60,2,1),(164,60,3,2),(165,60,5,3),(166,61,6,1),(167,61,3,2),(168,61,1,3),(169,62,1,1),(170,62,3,2),(171,62,2,3),(172,63,2,1),(173,63,3,2),(174,63,4,3),(175,64,6,1),(176,64,3,2),(177,64,1,3),(178,65,2,1),(179,65,3,2),(180,65,5,3),(181,66,1,1),(182,66,2,2),(183,66,3,3),(184,67,5,1),(185,67,4,2),(186,67,7,3),(187,68,3,1),(188,68,2,2),(189,68,2,3),(190,69,6,1),(191,69,2,2),(192,69,1,3),(193,70,1,1),(194,70,2,2),(195,70,7,3),(196,71,6,1),(197,71,3,2),(198,71,1,3),(199,72,6,1),(200,72,2,2),(201,72,5,3),(202,73,5,1),(203,73,6,2),(204,73,7,3),(205,74,6,1),(206,74,4,2),(207,74,2,3),(208,75,2,1),(209,75,3,2),(210,75,4,3),(211,76,5,1),(212,76,4,2),(213,76,3,3),(214,77,3,1),(215,77,4,2),(216,77,5,3),(217,78,6,1),(218,78,7,2),(219,78,4,3),(220,79,1,1),(221,79,2,2),(222,79,3,3),(223,80,6,1),(224,80,3,2),(225,80,2,3),(226,81,3,1),(227,81,4,2),(228,81,5,3),(229,82,2,1),(230,82,1,2),(231,82,7,3),(232,83,2,1),(233,83,6,2),(234,83,5,3),(235,84,1,1),(236,84,3,2),(237,84,6,3),(238,85,3,1),(239,85,4,2),(240,85,5,3),(241,86,6,1),(242,86,4,2),(243,86,1,3),(244,87,2,1),(245,87,3,2),(246,87,4,3),(247,88,3,1),(248,88,5,2),(249,88,7,3),(250,89,2,1),(251,89,1,2),(252,89,3,3),(253,90,4,1),(254,90,3,2),(255,90,1,3),(256,91,3,1),(257,91,6,2),(258,91,7,3),(259,92,3,1),(260,92,1,2),(261,92,7,3),(262,93,2,1),(263,93,1,2),(264,93,4,3),(265,94,5,1),(266,94,6,2),(267,94,7,3),(268,95,3,1),(269,95,2,2),(270,95,1,3),(271,96,2,1),(272,96,6,2),(273,96,3,3),(274,97,2,1),(275,97,3,2),(276,97,6,3),(277,98,6,1),(278,98,5,2),(279,98,1,3),(280,99,1,1),(281,99,2,2),(282,99,3,3),(283,100,5,1),(284,100,2,2),(285,100,1,3),(286,101,6,1),(287,101,7,2),(288,101,5,3),(289,102,6,1),(290,102,1,2),(291,102,3,3),(292,103,3,1),(293,103,2,2),(294,103,1,3),(295,104,6,1),(296,104,3,2),(297,104,1,3),(298,105,6,1),(299,105,3,2),(300,105,1,3),(301,106,1,1),(302,106,3,2),(303,106,6,3),(304,107,3,1),(305,107,1,2),(306,107,6,3),(307,108,7,1),(308,108,6,2),(309,108,1,3),(310,109,3,1),(311,109,4,2),(312,109,5,3),(313,110,3,1),(314,110,2,2),(315,110,1,3),(316,111,4,1),(317,111,5,2),(318,111,6,3),(319,112,3,1),(320,112,4,2),(321,112,5,3),(322,113,5,1),(323,113,4,2),(324,113,3,3),(325,114,6,1),(326,114,7,2),(327,114,1,3),(328,115,2,1),(329,115,3,2),(330,115,5,3),(331,116,5,1),(332,116,4,2),(333,116,6,3),(334,117,5,1),(335,117,6,2),(336,117,7,3),(337,118,5,1),(338,118,1,2),(339,118,2,3),(340,119,3,1),(341,119,4,2),(342,119,5,3),(343,120,6,1),(344,120,4,2),(345,120,2,3),(346,121,1,1),(347,121,6,2),(348,121,2,3),(349,122,3,1),(350,122,2,2),(351,122,1,3),(352,123,1,1),(353,123,2,2),(354,123,3,3),(355,124,2,1),(356,124,1,2),(357,124,3,3),(358,125,3,1),(359,125,2,2),(360,125,1,3),(361,126,6,1),(362,126,1,2),(363,126,2,3),(364,127,3,1),(365,127,2,2),(366,127,1,3),(367,128,2,1),(368,128,3,2),(369,128,4,3),(370,129,4,1),(371,129,3,2),(372,129,1,3),(373,130,2,1),(374,130,3,2),(375,130,4,3),(376,131,5,1),(377,131,6,2),(378,131,7,3),(379,132,1,1),(380,132,2,2),(381,132,3,3),(382,133,3,1),(383,133,2,2),(384,133,1,3),(385,134,6,1),(386,134,7,2),(387,134,5,3),(388,135,3,1),(389,135,5,2),(390,135,6,3),(391,136,2,1),(392,136,1,2),(393,136,3,3),(394,137,2,1),(395,137,4,2),(396,137,6,3),(397,138,6,1),(398,138,7,2),(399,138,2,3),(400,139,6,1),(401,139,1,2),(402,139,2,3),(403,140,2,1),(404,140,1,2),(405,140,3,3),(406,141,5,1),(407,141,6,2),(408,141,7,3),(409,142,3,1),(410,142,2,2),(411,142,1,3),(412,143,5,1),(413,143,3,2),(414,143,2,3),(415,144,1,1),(416,144,2,2),(417,144,6,3),(418,145,3,1),(419,145,6,2),(420,145,7,3),(421,146,3,1),(422,146,2,2),(423,146,1,3),(424,147,2,1),(425,147,3,2),(426,147,5,3),(427,148,3,1),(428,148,5,2),(429,148,4,3),(430,149,6,1),(431,149,4,2),(432,149,3,3),(433,150,6,1),(434,150,7,2),(435,150,3,3),(436,151,2,1),(437,151,2,2),(438,151,6,3),(439,152,3,1),(440,152,1,2),(441,152,7,3),(442,153,7,1),(443,153,2,2),(444,153,1,3),(445,154,3,1),(446,154,1,2),(447,154,6,3),(448,155,6,1),(449,155,3,2),(450,155,2,3),(451,156,1,1),(452,156,2,2),(453,156,3,3),(454,157,3,1),(455,157,2,2),(456,157,1,3),(457,158,2,1),(458,158,3,2),(459,158,1,3),(460,159,5,1),(461,159,6,2),(462,159,7,3),(463,160,1,1),(464,160,3,2),(465,160,2,3),(466,161,2,1),(467,161,3,2),(468,161,5,3),(469,162,1,1),(470,162,2,2),(471,162,3,3),(472,163,3,1),(473,163,5,2),(474,163,6,3),(475,164,7,1),(476,164,6,2),(477,164,5,3),(478,165,2,1),(479,165,3,2),(480,165,1,3),(481,166,5,1),(482,166,6,2),(483,166,4,3),(484,167,2,1),(485,167,3,2),(486,167,1,3),(487,168,3,1),(488,168,4,2),(489,168,2,3),(490,169,6,1),(491,169,7,2),(492,169,1,3),(493,170,1,1),(494,170,2,2),(495,170,3,3),(496,171,3,1),(497,171,2,2),(498,171,1,3),(499,172,6,1),(500,172,3,2),(501,172,1,3),(502,173,1,1),(503,173,2,2),(504,173,3,3),(505,174,3,1),(506,174,2,2),(507,174,1,3),(508,175,5,1),(509,175,6,2),(510,175,7,3),(511,176,7,1),(512,176,6,2),(513,176,5,3),(514,177,2,1),(515,177,3,2),(516,177,2,3),(517,178,1,1),(518,178,1,2),(519,178,6,3),(520,179,7,1),(521,179,2,2),(522,179,1,3),(523,180,3,1),(524,180,2,2),(525,180,1,3),(526,181,1,1),(527,181,2,2),(528,181,3,3),(529,182,5,1),(530,182,6,2),(531,182,7,3),(532,183,5,1),(533,183,3,2),(534,183,1,3),(535,184,2,1),(536,184,3,2),(537,184,1,3),(538,185,2,1),(539,185,1,2),(540,185,3,3),(541,186,3,1),(542,186,2,2),(543,186,1,3),(544,187,5,1),(545,187,6,2),(546,187,5,3),(547,188,6,1),(548,188,7,2),(549,188,3,3),(550,189,2,1),(551,189,1,2),(552,189,3,3),(553,190,1,1),(554,190,2,2),(555,190,3,3),(556,191,5,1),(557,191,6,2),(558,191,3,3),(559,192,1,1),(560,192,2,2),(561,192,3,3),(562,193,5,1),(563,193,6,2),(564,193,7,3),(565,194,3,1),(566,194,5,2),(567,194,2,3),(568,195,1,1),(569,195,6,2),(570,195,3,3),(571,196,2,1),(572,196,7,2),(573,196,3,3),(574,197,2,1),(575,197,5,2),(576,197,4,3),(577,198,2,1),(578,198,3,2),(579,198,4,3),(580,199,3,1),(581,199,5,2),(582,199,7,3),(583,200,5,1),(584,200,3,2),(585,200,6,3),(586,201,3,1),(587,201,4,2),(588,201,1,3),(589,202,2,1),(590,202,5,2),(591,202,7,3),(592,203,5,1),(593,203,4,2),(594,203,3,3),(595,204,2,1),(596,204,1,2),(597,204,4,3),(598,205,5,1),(599,205,3,2),(600,205,4,3);
+/*!40000 ALTER TABLE `favoriteCategory` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -253,13 +223,13 @@ INSERT INTO `location` VALUES (1,'Doi Suthep Temple','https://maps.google.com/ma
 UNLOCK TABLES;
 
 --
--- Table structure for table `maincategory`
+-- Table structure for table `mainCategory`
 --
 
-DROP TABLE IF EXISTS `maincategory`;
+DROP TABLE IF EXISTS `mainCategory`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `maincategory` (
+CREATE TABLE `mainCategory` (
   `mainCategoryId` int NOT NULL AUTO_INCREMENT,
   `mainCategory` varchar(100) NOT NULL,
   `description` varchar(300) DEFAULT NULL,
@@ -268,13 +238,13 @@ CREATE TABLE `maincategory` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `maincategory`
+-- Dumping data for table `mainCategory`
 --
 
-LOCK TABLES `maincategory` WRITE;
-/*!40000 ALTER TABLE `maincategory` DISABLE KEYS */;
-INSERT INTO `maincategory` VALUES (1,'Volunteers',NULL),(2,'Education',NULL),(3,'Exercises',NULL),(4,'Dance',NULL),(5,'Art & Music',NULL),(6,'Business',NULL),(7,'Others',NULL);
-/*!40000 ALTER TABLE `maincategory` ENABLE KEYS */;
+LOCK TABLES `mainCategory` WRITE;
+/*!40000 ALTER TABLE `mainCategory` DISABLE KEYS */;
+INSERT INTO `mainCategory` VALUES (1,'Volunteers',NULL),(2,'Education',NULL),(3,'Exercises',NULL),(4,'Dance',NULL),(5,'Art & Music',NULL),(6,'Business',NULL),(7,'Others',NULL);
+/*!40000 ALTER TABLE `mainCategory` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -351,13 +321,13 @@ INSERT INTO `user` VALUES (1,'user1','$argon2id$v=19$m=16,t=2,p=1$/6upZgEMnLivZL
 UNLOCK TABLES;
 
 --
--- Table structure for table `useractivityhistory`
+-- Table structure for table `userActivityHistory`
 --
 
-DROP TABLE IF EXISTS `useractivityhistory`;
+DROP TABLE IF EXISTS `userActivityHistory`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `useractivityhistory` (
+CREATE TABLE `userActivityHistory` (
   `activityHistoryId` int NOT NULL AUTO_INCREMENT,
   `userId` int DEFAULT NULL,
   `activityId` int NOT NULL,
@@ -370,24 +340,25 @@ CREATE TABLE `useractivityhistory` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `useractivityhistory`
+-- Dumping data for table `userActivityHistory`
 --
 
-LOCK TABLES `useractivityhistory` WRITE;
-/*!40000 ALTER TABLE `useractivityhistory` DISABLE KEYS */;
-INSERT INTO `useractivityhistory` VALUES (1,188,23),(2,188,196),(3,188,185),(4,189,162),(5,189,138),(6,189,150),(7,190,23),(8,190,23),(9,190,196),(10,191,185),(11,191,150),(12,191,162),(13,192,150),(14,192,150),(15,192,138),(16,193,162),(17,193,196),(18,193,23),(19,194,23),(20,194,23),(21,194,23);
-/*!40000 ALTER TABLE `useractivityhistory` ENABLE KEYS */;
+LOCK TABLES `userActivityHistory` WRITE;
+/*!40000 ALTER TABLE `userActivityHistory` DISABLE KEYS */;
+INSERT INTO `userActivityHistory` VALUES (1,188,23),(2,188,196),(3,188,185),(4,189,162),(5,189,138),(6,189,150),(7,190,23),(8,190,23),(9,190,196),(10,191,185),(11,191,150),(12,191,162),(13,192,150),(14,192,150),(15,192,138),(16,193,162),(17,193,196),(18,193,23),(19,194,23),(20,194,23),(21,194,23);
+/*!40000 ALTER TABLE `userActivityHistory` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Temporary view structure for view `usercategoryrankingview`
+-- Temporary view structure for view `userCategoryRankingView`
 --
 
-DROP TABLE IF EXISTS `usercategoryrankingview`;
-/*!50001 DROP VIEW IF EXISTS `usercategoryrankingview`*/;
+DROP TABLE IF EXISTS `userCategoryRankingView`;
+/*!50001 DROP VIEW IF EXISTS `userCategoryRankingView`*/;
 SET @saved_cs_client     = @@character_set_client;
 /*!50503 SET character_set_client = utf8mb4 */;
-/*!50001 CREATE VIEW `usercategoryrankingview` AS SELECT 
+/*!50001 CREATE VIEW `userCategoryRankingView` AS SELECT 
+ 1 AS `favoriteCategoryId`,
  1 AS `userId`,
  1 AS `age`,
  1 AS `mainCategoryId`,
@@ -395,10 +366,10 @@ SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = @saved_cs_client;
 
 --
--- Final view structure for view `activitywithcategoryview`
+-- Final view structure for view `activityWithCategoryView`
 --
 
-/*!50001 DROP VIEW IF EXISTS `activitywithcategoryview`*/;
+/*!50001 DROP VIEW IF EXISTS `activityWithCategoryView`*/;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
@@ -406,17 +377,17 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8mb4 */;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `activitywithcategoryview` AS select `a`.`activityId` AS `activityId`,`a`.`activityName` AS `activityName`,`a`.`categoryId` AS `categoryId`,`m`.`mainCategoryId` AS `mainCategoryId`,`m`.`mainCategory` AS `mainCategory` from ((`activity` `a` join `category` `s` on((`a`.`categoryId` = `s`.`categoryId`))) join `maincategory` `m` on((`s`.`mainCategory` = `m`.`mainCategoryId`))) */;
+/*!50013 DEFINER=`root`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `activityWithCategoryView` AS select `a`.`activityId` AS `activityId`,`a`.`activityName` AS `activityName`,`a`.`categoryId` AS `categoryId`,`m`.`mainCategoryId` AS `mainCategoryId`,`m`.`mainCategory` AS `mainCategory` from ((`activity` `a` join `category` `s` on((`a`.`categoryId` = `s`.`categoryId`))) join `mainCategory` `m` on((`s`.`mainCategory` = `m`.`mainCategoryId`))) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
 
 --
--- Final view structure for view `usercategoryrankingview`
+-- Final view structure for view `userCategoryRankingView`
 --
 
-/*!50001 DROP VIEW IF EXISTS `usercategoryrankingview`*/;
+/*!50001 DROP VIEW IF EXISTS `userCategoryRankingView`*/;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
@@ -424,8 +395,8 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8mb4 */;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `usercategoryrankingview` AS select `u`.`userId` AS `userId`,timestampdiff(YEAR,`u`.`dateOfBirth`,curdate()) AS `age`,`f`.`mainCategoryId` AS `mainCategoryId`,`f`.`categoryRank` AS `categoryRank` from (`favoritecategory` `f` join `user` `u`) where (`u`.`userId` = `f`.`userId`) */;
+/*!50013 DEFINER=`root`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `userCategoryRankingView` AS select `f`.`favoriteCategoryId` AS `favoriteCategoryId`,`u`.`userId` AS `userId`,timestampdiff(YEAR,`u`.`dateOfBirth`,curdate()) AS `age`,`f`.`mainCategoryId` AS `mainCategoryId`,`f`.`categoryRank` AS `categoryRank` from (`favoriteCategory` `f` join `user` `u`) where (`u`.`userId` = `f`.`userId`) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -439,4 +410,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-01 21:35:41
+-- Dump completed on 2024-04-01 23:24:27
