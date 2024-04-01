@@ -200,7 +200,7 @@ DROP TABLE IF EXISTS `unityDoDB`.`userActivityHistory` ;
 
 CREATE TABLE IF NOT EXISTS `unityDoDB`.`userActivityHistory` (
   `activityHistoryId` INT NOT NULL auto_increment,
-  `userId` INT NOT NULL,
+  `userId` INT,
   `activityId` INT NOT NULL,
   PRIMARY KEY (`activityHistoryId`),
   INDEX `fk_activityHistory_Users1_idx` (`userId` ASC) VISIBLE,
@@ -1482,7 +1482,7 @@ VALUES
 (101, 'Wellness Checkup Wellness Fair', 'Prioritize your well-being', 'Prioritize your well-being at our Wellness Fair. Enjoy health screenings, fitness activities, and wellness workshops for a balanced lifestyle.', '2024-04-15 11:00:00', '2024-04-22 11:00:00', '2024-03-21 11:00:00', '2024-03-28 11:00:00', 170, 16, '2024-04-01 11:00:00', 'Active', 0, 'Experience the heartwarming bond between humans and animals.', 3, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
 (93, 'Community Sports Day Extravaganza', 'Join us for a fun-filled day', 'Join us for a fun-filled day of sports and games at our Community Sports Day Extravaganza. Bring your family and friends for a day of active fun.', '2024-05-01 8:00:00', '2024-05-08 8:00:00', '2024-04-07 8:00:00', '2024-04-14 8:00:00', 125, 16, '2024-04-17 8:00:00', 'Active', 0, 'Brighten the lives of those in need.', 4, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
 (34, 'Green Guardians Recycling Initiative', 'Be an environmental steward', 'Be an environmental steward by participating in our Recycling Initiative. Join efforts to reduce waste and promote recycling in our community.', '2024-06-07 14:00:00', '2024-06-14 14:00:00', '2024-05-09 14:00:00', '2024-05-16 14:00:00', 65, 18, '2024-05-21 14:00:00', 'Active', 0, 'Join a compassionate community of volunteers.', 40, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
-(68, 'Art for All Community Mural Project', 'Unleash your creativity and beautify', 'Unleash your creativity and beautify our community with the Art for All Mural Project. Join fellow artists in creating a vibrant masterpiece for all to enjoy.', '2024-07-12 17:00:00', '2024-07-19 17:00:00', '2024-06-12 17:00:00', '2024-06-19 17:00:00', 100, 19, '2024-06-24 17:00:00', 'Active', 0, 'Share your love for animals.', 6, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(68, 'Art for All Community Mural Project', 'Unleash your creativity and beautify', 'Unleash your creativity and beautify our community with the Art for All Mural Project. Join fellow artists in creating a vibrant masterpiece for all to enjoy.', '2024-07-12 17:00:00', '2024-07-19 17:00:00', '2024-06-12 17:00:00', '2024-06-19 17:00:00', 100, 19, '2024-06-24 17:00:00', 'Active', 0, 'Share your love for animals.', 6, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite');
 
 INSERT INTO
     `unityDoDB`.`activity` (
@@ -1515,7 +1515,7 @@ VALUES
 (93, 'Community Cooking Classes', 'Explore the joys of cooking', 'Explore the joys of cooking and connect with your community in our cooking classes. Learn new recipes, share culinary experiences, and savor delicious meals together.', '2024-01-27 12:00:00', '2024-01-31 12:00:00', '2024-01-08 12:00:00', '2024-01-15 12:00:00', 180, 24, '2024-01-20 12:00:00', 'Active', 0, 'Explore the rewarding world of pet therapy.', 7, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
 (34, 'Coding for Kids', 'Ignite a passion for technology', 'Ignite a passion for technology in children with our Coding for Kids program. Introduce coding concepts in a fun and interactive way, sparking creativity and problem-solving skills.', '2024-03-20 18:00:00', '2024-03-23 18:00:00', '2024-02-25 18:00:00', '2024-03-06 18:00:00', 175, 30, '2024-03-10 18:00:00', 'Active', 0, 'Be a source of comfort and support.', 8, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
 (68, 'Math Olympiad Challenge', 'Engage students in a friendly math', 'Engage students in a friendly math competition that tests their problem-solving skills and mathematical knowledge. Participants will tackle challenging math problems individually or in teams, promoting critical thinking and collaboration.', '2024-03-30 21:00:00', '2024-04-02 21:00:00', '2024-03-05 21:00:00', '2024-03-16 21:00:00', 70, 31, '2024-03-20 21:00:00', 'Active', 0, 'Spread smiles and joy wherever you go.', 9, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
-(205, 'Community Mural Painting', 'Collaborate with local artists', 'Collaborate with local artists and community members to create a vibrant mural that celebrates the diversity and culture of our community. Participants of all ages and skill levels are welcome to contribute to this public art project.', '2024-05-06 15:00:00', '2024-05-09 15:00:00', '2024-04-16 15:00:00', '2024-04-23 15:00:00', 185, 16, '2024-04-27 15:00:00', 'Active', 0, 'Make a positive impact on someones day.', 10, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online'),
+(205, 'Community Mural Painting', 'Collaborate with local artists', 'Collaborate with local artists and community members to create a vibrant mural that celebrates the diversity and culture of our community. Participants of all ages and skill levels are welcome to contribute to this public art project.', '2024-05-06 15:00:00', '2024-05-09 15:00:00', '2024-04-16 15:00:00', '2024-04-23 15:00:00', 185, 16, '2024-04-27 15:00:00', 'Active', 0, 'Make a positive impact on someones day.', 10, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'online');
 
 INSERT INTO
     `unityDoDB`.`activity` (
@@ -1681,7 +1681,7 @@ VALUES
 (17, 'Online Store Optimization Workshop', 'Maximize the potential of your online store', 'Maximize the potential of your online store with our Optimization Workshop. Explore strategies to improve website usability, enhance product listings, optimize checkout processes, and drive conversions.', '2024-03-31 23:00:00', '2024-04-02 23:00:00', '2024-01-09 23:00:00', '2024-03-20 23:00:00', 180, 80, '2024-03-24 23:00:00', 'Active', 0, 'Spread joy and happiness through the power of pet therapy.', 40, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
 (205, 'Supply Chain Efficiency Summit', 'Join industry leaders and experts', 'Join industry leaders and experts at our Supply Chain Efficiency Summit. Explore innovative technologies, best practices, and strategies to optimize supply chain operations, reduce costs, and enhance efficiency.', '2024-04-15 0:00:00', '2024-04-16 0:00:00', '2024-02-21 0:00:00', '2024-04-05 0:00:00', 175, 81, '2024-04-09 0:00:00', 'Active', 0, 'Volunteer with your furry friend and make a difference together.', 41, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
 (60, 'Community Volunteer Fair', 'Make a difference in your community', 'Make a difference in your community by participating in our Volunteer Fair. Connect with local nonprofits, charities, and community organizations seeking volunteers for various causes and initiatives.', '2024-05-18 1:00:00', '2024-05-19 1:00:00', '2024-03-31 1:00:00', '2024-05-07 1:00:00', 70, 79, '2024-05-11 1:00:00', 'Active', 0, 'Experience the joy of bringing smiles to others.', 42, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
-(34, 'Wellness Retreat', 'Take a break from the hustle', 'Take a break from the hustle and bustle of everyday life and join us for a Wellness Retreat. Rejuvenate your mind, body, and soul with yoga sessions, meditation practices, nature walks, and healthy meals. Disconnect from technology, reconnect with yourself, and leave feeling refreshed and revitalized.', '2024-06-21 2:00:00', '2024-06-22 2:00:00', '2024-04-08 2:00:00', '2024-06-10 2:00:00', 185, 82, '2024-06-14 2:00:00', 'Active', 0, 'Share your love for animals while helping those in need.', 42, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
+(34, 'Wellness Retreat', 'Take a break from the hustle', 'Take a break from the hustle and bustle of everyday life and join us for a Wellness Retreat. Rejuvenate your mind, body, and soul with yoga sessions, meditation practices, nature walks, and healthy meals.', '2024-06-21 2:00:00', '2024-06-22 2:00:00', '2024-04-08 2:00:00', '2024-06-10 2:00:00', 185, 82, '2024-06-14 2:00:00', 'Active', 0, 'Share your love for animals while helping those in need.', 42, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
 (38, 'Creative Writing Workshop', 'Unleash your creativity', 'Unleash your creativity and hone your writing skills at our Creative Writing Workshop. Whether you''re an aspiring novelist, poet, or storyteller, this workshop offers a supportive environment to explore different writing genres, techniques, and styles.', '2024-07-28 3:00:00', '2024-07-29 3:00:00', '2024-05-10 3:00:00', '2024-07-17 3:00:00', 145, 83, '2024-07-21 3:00:00', 'Active', 0, 'Be a source of comfort and support for those facing difficult times.', 42, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite'),
 (17, 'Cultural Exchange Program', 'Immerse yourself in new cultures', 'Immerse yourself in new cultures and perspectives through our Cultural Exchange Program. Participants will have the opportunity to interact with people from diverse backgrounds, learn about different traditions, languages, and customs, and foster mutual understanding and appreciation.', '2024-09-06 4:00:00', '2024-09-07 4:00:00', '2024-06-13 4:00:00', '2024-08-26 4:00:00', 95, 80, '2024-08-30 4:00:00', 'Active', 0, 'Join us in making a difference in the lives of others through pet therapy.', 42, '2024-08-01 6:00:00', '2023-07-11 9:00:00', 'onsite');
 
@@ -3040,3 +3040,42 @@ INSERT INTO `unityDoDB`.`favoriteCategory` (`userId`, `mainCategoryId`, `categor
 (205, 5, 1),
 (205, 3, 2),
 (205, 4, 3);
+
+INSERT INTO `unityDoDB`.`useractivityhistory` (`userId`,`activityId`) VALUES
+(188, 23),
+(188, 196),
+(188, 185),
+(189, 162),
+(189, 138),
+(189, 150),
+(190, 23),
+(190, 23),
+(190, 196),
+(191, 185),
+(191, 150),
+(191, 162),
+(192, 150),
+(192, 150),
+(192, 138),
+(193, 162),
+(193, 196),
+(193, 23),
+(194, 23),
+(194, 23),
+(194, 23);
+
+CREATE VIEW userCategoryRankingView AS
+select u.userId, TIMESTAMPDIFF(YEAR, u.dateOfBirth, CURDATE()) AS age
+, f.mainCategoryId, f.categoryRank 
+from favoriteCategory f 
+inner join user u 
+where u.userId = f.userId;
+
+CREATE VIEW activityWithCategoryView AS
+select a.activityId, a.activityName, a.categoryId, m.mainCategoryId, m.mainCategory
+from activity a
+inner join category s
+on a.categoryId = s.categoryId
+inner join mainCategory m
+on s.mainCategory = m.mainCategoryId;
+
