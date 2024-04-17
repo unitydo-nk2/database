@@ -1,5 +1,5 @@
-create database IF NOT EXISTS unityDoDB DEFAULT CHARACTER SET utf8;
-use unityDoDB;
+CREATE DATABASE IF NOT EXISTS `unityDoDB` DEFAULT CHARACTER SET utf8;
+USE `unityDoDB`;
 
 SET GLOBAL max_allowed_packet = 536870912;
 
@@ -27,8 +27,9 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`user` (
   `line` VARCHAR(100) NULL,
   `instagram` VARCHAR(100) NULL,
   `x` VARCHAR(100) NULL,
-  `createTime` TIMESTAMP NOT NULL,
-  `updateTime` TIMESTAMP NOT NULL,
+  `createTime` DATETIME NOT NULL,
+  `updateTime` DATETIME NOT NULL,
+  `status` ENUM('Active', 'Inactive') NOT NULL DEFAULT 'Active',
   PRIMARY KEY (`userId`))
 ENGINE = InnoDB;
 
@@ -87,19 +88,19 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`activity` (
   `activityName` VARCHAR(150) NOT NULL,
   `activityBriefDescription` VARCHAR(100) NOT NULL,
   `activityDescription` VARCHAR(300) NOT NULL,
-  `activityDate` TIMESTAMP NOT NULL,
-  `activityEndDate` TIMESTAMP NOT NULL,
-  `registerStartDate` TIMESTAMP NOT NULL,
-  `registerEndDate` TIMESTAMP NOT NULL,
+  `activityDate` DATETIME NOT NULL,
+  `activityEndDate` DATETIME NOT NULL,
+  `registerStartDate` DATETIME NOT NULL,
+  `registerEndDate` DATETIME NOT NULL,
   `amount` INT NOT NULL,
   `locationId` INT,
-  `announcementDate` TIMESTAMP NOT NULL,
-  `activityStatus` ENUM('Active', 'Done') NOT NULL,
+  `announcementDate` DATETIME NOT NULL,
+  `activityStatus` ENUM('Active', 'Done', 'Inactive') NOT NULL,
   `isGamification` TINYINT NOT NULL,
   `suggestionNotes` VARCHAR(500) NULL,
   `categoryId` INT NOT NULL,
-  `lastUpdate` TIMESTAMP NOT NULL,
-  `createTime` TIMESTAMP NOT NULL,
+  `lastUpdate` DATETIME NOT NULL,
+  `createTime` DATETIME NOT NULL,
   `activityFormat` ENUM('online', 'onsite' ,'onsiteOverNight') NOT NULL,
   PRIMARY KEY (`activityId`),
   UNIQUE INDEX `activityId_UNIQUE` (`activityId` ASC) VISIBLE,
@@ -132,7 +133,7 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`registration` (
   `registrationId` INT NOT NULL auto_increment,
   `userId` INT NOT NULL,
   `registrationDate` DATETIME NOT NULL,
-  `status` ENUM('registered','selected','confirmed','success','review') NOT NULL,
+  `status` ENUM('registered','selected','confirmed','success','review','activityInactive') NOT NULL,
   `activityId` INT NOT NULL,
   PRIMARY KEY (`registrationId`),
   UNIQUE INDEX `registrationId_UNIQUE` (`registrationId` ASC) VISIBLE,
@@ -218,30 +219,25 @@ CREATE TABLE IF NOT EXISTS `unityDoDB`.`userActivityHistory` (
 ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- Table `unityDoDB`.`ActivityReview`
+-- Table `mydb`.`activityReview`
 -- -----------------------------------------------------
--- DROP TABLE IF EXISTS `unityDoDB`.`activityReview` ;
+DROP TABLE IF EXISTS `unityDoDB`.`activityReview` ;
 
--- CREATE TABLE IF NOT EXISTS `unityDoDB`.`activityReview` (
---   `activityReviewId` INT NOT NULL auto_increment,
---   `activityId` INT NOT NULL,
---   `userId` INT NOT NULL,
---   `score` INT NOT NULL,
---   `reviewDescription` VARCHAR(500) NOT NULL,
---   PRIMARY KEY (`activityReviewId`),
---   INDEX `fk_activityReview_Activity1_idx` (`activityId` ASC) VISIBLE,
---   INDEX `fk_activityReview_Users1_idx` (`userId` ASC) VISIBLE,
---   CONSTRAINT `fk_activityReview_Activity1`
---     FOREIGN KEY (`activityId`)
---     REFERENCES `unityDoDB`.`activity` (`activityId`)
---     ON DELETE CASCADE
---     ON UPDATE NO ACTION,
---   CONSTRAINT `fk_activityReview_Users1`
---     FOREIGN KEY (`userId`)
---     REFERENCES `unityDoDB`.`user` (`userId`)
---     ON DELETE NO ACTION
---     ON UPDATE NO ACTION)
--- ENGINE = InnoDB;
+CREATE TABLE IF NOT EXISTS `unityDoDB`.`activityReview` (
+  `activityReviewId` INT NOT NULL auto_increment,
+  `registrationId` INT NOT NULL,
+  `rates` INT NOT NULL,
+  `description` VARCHAR(500) NULL,
+  `createTime` DATETIME NOT NULL,
+  `updateTime` DATETIME NOT NULL,
+  PRIMARY KEY (`activityReviewId`),
+  INDEX `fk_activityReview_Registration1_idx` (`registrationId` ASC) VISIBLE,
+  CONSTRAINT `fk_activityReview_Registration1`
+    FOREIGN KEY (`registrationId`)
+    REFERENCES `unityDoDB`.`registration` (`registrationId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
 -- -----------------------------------------------------
 -- Table `unityDoDB`.`medicalInfomation`
@@ -3065,13 +3061,25 @@ INSERT INTO `unityDoDB`.`userActivityHistory` (`userId`,`activityId`) VALUES
 (194, 23);
 
 CREATE VIEW userCategoryRankingView AS
-select f.favoriteCategoryId, u.userId, TIMESTAMPDIFF(YEAR, u.dateOfBirth, CURDATE()) AS age
-, f.mainCategoryId, f.categoryRank 
-from favoriteCategory f 
-inner join user u 
-where u.userId = f.userId;
+SELECT
+    f.favoriteCategoryId,
+    u.userId,
+    TIMESTAMPDIFF(YEAR, u.dateOfBirth, CURDATE()) AS age,
+    f.mainCategoryId,
+    CASE
+        WHEN f.categoryRank = 1 THEN 15
+        WHEN f.categoryRank = 2 THEN 10
+        WHEN f.categoryRank = 3 THEN 5
+        ELSE f.categoryRank
+    END AS categoryRank
+FROM
+    favoriteCategory f
+INNER JOIN
+    user u ON u.userId = f.userId
+    where u.role = 'user';
 
-CREATE VIEW activityWithCategoryView AS
+
+CREATE VIEW `activityWithCategoryView` AS
 select a.activityId, a.activityName, a.categoryId, m.mainCategoryId, m.mainCategory
 from activity a
 inner join category s
